@@ -3,53 +3,47 @@ import Logo from "../components/Logo";
 
 import Button from "@material-ui/core/Button";
 
-import styles from "../styles/Topnavbar.module.css";
+import { useStyles } from "../styles/TopNavbarStyle";
 
-const navigationItems = [
-  {
-    navText: "Home",
-    navUrl: "/",
-  },
-  {
-    navText: "Services",
-    navUrl: "/services",
-    subNav: [
-      {
-        navText: "Website Design & Development",
-        url: "/services/web-design",
-      },
-      {
-        navText: "Web Application Development",
-        url: "services/web-application",
-      },
-      {
-        navText: "Custom Software Development",
-        url: "services/custom-software",
-      },
-    ],
-  },
-  {
-    navText: "About",
-    navUrl: "/about",
-  },
-];
+export default function TopNavbar(props) {
+  const styles = useStyles();
+  const navigationItems = props?.navItems;
 
-export default function TopNavbar() {
   return (
-    <div className={styles.navbarContainer}>
-      <div>
-        <Logo />
-      </div>
-      <div className={styles.navItemContainer}>
-        {navigationItems.map((navItem) => (
-          <Link key={navItem.navText} href={navItem.navUrl}>
-            <Button className={styles.navButton}>{navItem.navText}</Button>
-          </Link>
-        ))}
-        <Link href="/contact">
-          <Button className={styles.navContactButton}>Get in touch</Button>
-        </Link>
-      </div>
+    <div className={styles.navItemContainer}>
+      {navigationItems.map((navItem) => {
+        if (navItem.navText === "Services") {
+          return (
+            <div className={styles.navItem}>
+              <Link key={navItem.navText} href={navItem.navUrl}>
+                <Button className={styles.navButton}>{navItem.navText}</Button>
+              </Link>
+              <div className={styles.submenuContainer}>
+                <ul className={styles.submenuList}>
+                  {navItem.subNav.map((subNavItem) => (
+                    <li key={subNavItem.navText} className={styles.submenuItem}>
+                      <Link href={subNavItem.url}>
+                        <Button className={styles.subNavButton}>{subNavItem.navText}</Button>
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          );
+        } else {
+          return (
+            <div className={styles.navItem}>
+              <Link key={navItem.navText} href={navItem.navUrl}>
+                <Button className={styles.navButton}>{navItem.navText}</Button>
+              </Link>
+            </div>
+          );
+        }
+      })}
+      <Link href="/contact">
+        <Button className={styles.navContactButton}>Get in touch</Button>
+      </Link>
     </div>
   );
 }
