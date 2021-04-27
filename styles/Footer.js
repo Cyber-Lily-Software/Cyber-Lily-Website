@@ -123,7 +123,7 @@ const useStyles = makeStyles({
         }
       },
       bottomGridComp: {
-        fontSize: "2rem !important",
+        fontSize: "2rem",
         [theme.breakpoints.up(768)]: {
           textAlign: "right",
           marginTop: "1.1rem",
