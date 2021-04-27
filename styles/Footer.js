@@ -52,9 +52,9 @@ const useStyles = makeStyles({
         backgroundSize: "100% 0.2em",
         backgroundPosition: "0 88%",
         transition: "background-size 0.25s ease-in",
-        "&:hover": {
-          backgroundSize: "100% 88%",
-        }
+        // "&:hover": {
+        //   backgroundSize: "100% 88%",
+        // }
       },
       headers: {
         fontWeight: '500',
@@ -69,9 +69,9 @@ const useStyles = makeStyles({
         backgroundSize: "100% 0.2em",
         backgroundPosition: "0 88%",
         transition: "background-size 0.25s ease-in",
-        "&:hover": {
-          backgroundSize: "100% 88%",
-        }
+        // "&:hover": {
+        //   backgroundSize: "100% 88%",
+        // }
       },
       headers2: {
         fontWeight: '500',
@@ -86,9 +86,9 @@ const useStyles = makeStyles({
         backgroundSize: "100% 0.2em",
         backgroundPosition: "0 88%",
         transition: "background-size 0.25s ease-in",
-        "&:hover": {
-          backgroundSize: "100% 88%",
-        }
+        // "&:hover": {
+        //   backgroundSize: "100% 88%",
+        // }
       },
       headers3: {
         fontWeight: '500',
