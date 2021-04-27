@@ -22,16 +22,21 @@ export const useStyles = makeStyles((theme) => ({
       paddingRight: "1.25rem",
     },
   },
+  logoDiv: {
+    cursor: "pointer",
+  },
   isScrolled: {
-    backgroundColor: "#ffffff",
-    boxShadow: "0px 2px 4px rgba(67, 67, 92, 0.16)",
+    [theme.breakpoints.up(769)]: {
+      backgroundColor: "#ffffff",
+      boxShadow: "0px 2px 4px rgba(67, 67, 92, 0.16)",
 
-    "& > div > div > div:nth-child(2) > div": {
-      color: "#151534 !important",
-    },
+      "& > div > div > div:nth-child(2) > div": {
+        color: "#151534 !important",
+      },
 
-    "& > div:nth-child(2) > div > div > button": {
-      color: "#151534 !important",
+      "& > div:nth-child(2) > div > div > button": {
+        color: "#151534 !important",
+      },
     },
   },
   logoImgContainer: {
