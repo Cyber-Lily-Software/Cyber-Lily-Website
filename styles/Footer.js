@@ -95,7 +95,6 @@ const useStyles = makeStyles({
         display: "inline-block",
         [theme.breakpoints.down(400)]: {
           marginBottom: 0,
-          borderBottom: "0.125rem solid #FFFFFF",
         },
       },
       bottomStrip: {
