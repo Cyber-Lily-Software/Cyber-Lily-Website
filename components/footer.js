@@ -76,32 +76,40 @@ export default function TopNavbar() {
         <div className={classes.footerContainer}>
             <div className={classes.columnContainer}>
                 <Grid container orientation="column">
-                    <Grid item xs={12} sm={4}>
-                        <div className={clsx(classes.footerColumns, classes.footerLinks)}>
-                            <h2 className={classes.headers} >COMPANY</h2>
-                            {companyNavItems.map((companyNavItem) => (
-                            <Link href={companyNavItem.url} key={companyNavItem.text}>
-                                <p>{companyNavItem.text}</p>
-                            </Link>
-                            ))}
+                    <Grid item xs={12} sm={12} md={4}>
+                        <div className={clsx(classes.footerColumns)}>
+                            <div className={classes.footerColumnTwo}>
+                              <h2 className={classes.headers} ><span className={classes.line1}>COMPANY</span></h2>
+                              <div className={classes.footerLinks}>
+                                {companyNavItems.map((companyNavItem) => (
+                                <Link href={companyNavItem.url} key={companyNavItem.text}>
+                                    <p>{companyNavItem.text}</p>
+                                </Link>
+                                ))}
+                              </div>
+                            </div>
                         </div>
                     </Grid>
-                    <Grid item xs={12} sm={4}>
-                        <div className={clsx(classes.footerColumns, classes.footerLinks)}>
-                            <h2 className={classes.headers2} >SERVICES</h2>
+                    <Grid item xs={12} sm={12} md={4}>
+                        <div className={clsx(classes.footerColumns)}>
+                          <div className={classes.footerColumnTwo}>
+                            <h2 className={classes.headers2} ><span className={classes.line2}>SERVICES</span></h2>
                             {serviceNavItems.map((companyNavItem) => (
                             <Link href={companyNavItem.url} key={companyNavItem.text}>
                                 <p>{companyNavItem.text}</p>
                             </Link>
                             ))}
+                          </div>
                         </div>
                     </Grid>
-                    <Grid item xs={12} sm={4}>
-                        <div className={clsx(classes.footerColumns, classes.footerLinks)}>
-                            <h2 className={classes.headers3} >GET IN TOUCH</h2>
+                    <Grid item xs={12} sm={12} md={4}>
+                        <div className={clsx(classes.footerColumns)}>
+                          <div className={classes.footerColumnTwo}>
+                            <h2 className={classes.headers3} ><span className={classes.line3}>GET IN TOUCH</span></h2>
                             {getInTouchNavItems.map((companyNavItem) => (
                                 <p>{companyNavItem.text}</p>
                             ))}
+                          </div>
                         </div>
                     </Grid>
                 </Grid>
@@ -109,19 +117,15 @@ export default function TopNavbar() {
         </div>
         <div className={classes.bottomStrip}>
             <Grid container orientation="column">
-                <Grid item xs={6}>
+                <Grid item className={classes.bottomGridGrid} xs={12} sm={6}>
                     <p weight={400}>&#169; 2021 Cyber Lily Software | Sitemap | Privacy Policy</p>
                 </Grid>
-                <Grid item className={classes.bottomGridComp} xs={6}>
-                    <Grid className={classes.bottomGridGrid} container orientation="row" justify="flex-end" alignItems="center">
-                        <Grid item xs={3}>
-                            {socialMediaItems.map((navItem) => (
-                                <Link href={navItem.url} key={navItem.text}>
-                                    {navItem.icon}
-                                </Link>
-                                ))}
-                        </Grid>
-                    </Grid>
+                <Grid item className={classes.bottomGridComp} xs={12} sm={6}>
+                  {socialMediaItems.map((navItem) => (
+                      <Link href={navItem.url} key={navItem.text}>
+                          {navItem.icon}
+                      </Link>
+                      ))}
                 </Grid>
             </Grid>
         </div>
