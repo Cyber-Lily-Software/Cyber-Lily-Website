@@ -39,7 +39,10 @@ const useStyles = makeStyles({
         },
       },
       footerLinks: {
+        fontWeight: "400",
+        fontSize: "1rem",
         marginTop: "0rem",
+        color: "#E8E8EB",
       },
       footerColumnTwo: {
         [theme.breakpoints.down(769)]: {
@@ -47,20 +50,22 @@ const useStyles = makeStyles({
         },
       },
       line1: {
-        backgroundImage: "linear-gradient(120deg, #B2080B 0%, #B2080B 100%)",
+        backgroundImage: "linear-gradient(120deg, #CF1A21 0%, #CF1A21 100%)",
         backgroundRepeat: "no-repeat",
         backgroundSize: "100% 0.2em",
         backgroundPosition: "0 88%",
         transition: "background-size 0.25s ease-in",
-        // "&:hover": {
-        //   backgroundSize: "100% 88%",
-        // }
       },
       headers: {
-        fontWeight: '500',
+        fontWeight: '700',
         display: "inline-block",
-        [theme.breakpoints.down(400)]: {
+        fontSize: "1rem",
+        [theme.breakpoints.up(770)]: {
+          marginTop: "2.75rem",
+        },
+        [theme.breakpoints.down(450)]: {
           marginBottom: 0,
+          marginTop: "1.5rem !important",
         },
       },
       line2: {
@@ -69,32 +74,36 @@ const useStyles = makeStyles({
         backgroundSize: "100% 0.2em",
         backgroundPosition: "0 88%",
         transition: "background-size 0.25s ease-in",
-        // "&:hover": {
-        //   backgroundSize: "100% 88%",
-        // }
       },
       headers2: {
-        fontWeight: '500',
+        fontWeight: '700',
         display: "inline-block",
-        [theme.breakpoints.down(400)]: {
+        fontSize: "1rem",
+        [theme.breakpoints.up(770)]: {
+          marginTop: "2.75rem",
+        },
+        [theme.breakpoints.down(450)]: {
           marginBottom: 0,
+          marginTop: "1.5rem !important",
         },
       },
       line3: {
-        backgroundImage: "linear-gradient(120deg, #FC8B06 0%, #FC8B06 100%)",
+        backgroundImage: "linear-gradient(120deg, #FDB314 0%, #FDB314 100%)",
         backgroundRepeat: "no-repeat",
         backgroundSize: "100% 0.2em",
         backgroundPosition: "0 88%",
         transition: "background-size 0.25s ease-in",
-        // "&:hover": {
-        //   backgroundSize: "100% 88%",
-        // }
       },
       headers3: {
-        fontWeight: '500',
+        fontWeight: '700',
         display: "inline-block",
-        [theme.breakpoints.down(400)]: {
+        fontSize: "1rem",
+        [theme.breakpoints.up(770)]: {
+          marginTop: "2.75rem",
+        },
+        [theme.breakpoints.down(450)]: {
           marginBottom: 0,
+          marginTop: "1.5rem !important",
         },
       },
       bottomStrip: {
@@ -114,22 +123,36 @@ const useStyles = makeStyles({
         }
       },
       bottomGridComp: {
+        fontSize: "2rem !important",
         [theme.breakpoints.up(768)]: {
           textAlign: "right",
-          marginTop: "1.625rem",
+          marginTop: "1.1rem",
+          paddingRight: "6.25rem",
         },
         [theme.breakpoints.down(660)]: {
           textAlign: "center",
-          innerHeight: "1rem",
+          
+          marginBottom: "20rem",
+        },
+        [theme.breakpoints.down(400)]: {
+          fontSize: "1rem",
         },
       },
       bottomGridGrid: {
-        [theme.breakpoints.up(767)]: {
+        [theme.breakpoints.up(770)]: {
           marginTop: "0.625rem",
           alignItems: "right",
+          paddingLeft: "6.25rem",
         },
-        [theme.breakpoints.down(760)]: {
+        [theme.breakpoints.down(769)]: {
+          marginTop: "0.625rem",
+          alignItems: "left",
+          fontSize: "0.875rem",
+          paddingLeft: "1.25rem !important",
+        },
+        [theme.breakpoints.down(460)]: {
           alignItems: "center",
+          marginTop: "0rem",
         },
       },
 }); 

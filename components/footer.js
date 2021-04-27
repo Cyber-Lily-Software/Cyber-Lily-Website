@@ -55,17 +55,17 @@ export default function TopNavbar() {
 
       const socialMediaItems = [
         {
-          text: "Bottom",
+          text: "Facebook",
           url: "/bob",
           icon: <FacebookIcon />,
         },
         {
-          text: "stuff",
+          text: "Dribble",
           url: "/jim",
           icon: <SportsBasketballIcon />,
         },
         {
-          text: "here",
+          text: "LinkedIn",
           url: "/john",
           icon: <LinkedInIcon />,
         },
