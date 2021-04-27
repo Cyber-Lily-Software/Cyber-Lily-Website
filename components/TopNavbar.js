@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Logo from "../components/Logo";
+import { useRouter } from "next/router";
 
 import clsx from "clsx";
 
@@ -7,8 +7,16 @@ import Button from "@material-ui/core/Button";
 
 import { useStyles } from "../styles/TopNavbarStyle";
 
+const routeMap = {
+  "/": "Home",
+  "/Services": "Services",
+  "/About": "About",
+};
+
 export default function TopNavbar(props) {
+  const router = useRouter();
   const styles = useStyles();
+
   const navigationItems = props?.navItems;
 
   return (
@@ -18,8 +26,13 @@ export default function TopNavbar(props) {
           return (
             <div className={clsx(styles.navItem, styles.servicesNavItem)} key={navItem.navText}>
               <Link key={navItem.navText} href={navItem.navUrl}>
-                <Button className={clsx(styles.navButton, styles.servicesNavButton)}>{navItem.navText}</Button>
+                <Button
+                  className={clsx(styles.navButton, styles.servicesNavButton, routeMap[router.route] === navItem.text ? styles.activeLinkText : "")}
+                >
+                  {navItem.navText}
+                </Button>
               </Link>
+              <div className={routeMap[router.route] === navItem.navText ? styles.servicesActiveLink : ""}></div>
               <ul className={styles.submenuList}>
                 {navItem.subNav.map((subNavItem) => (
                   <Link href={subNavItem.url}>
@@ -35,10 +48,13 @@ export default function TopNavbar(props) {
           );
         } else {
           return (
-            <div className={styles.navItem} key={navItem.navUrl}>
+            <div className={clsx(styles.navItem)} key={navItem.navUrl}>
               <Link key={navItem.navText} href={navItem.navUrl}>
-                <Button className={styles.navButton}>{navItem.navText}</Button>
+                <Button className={clsx(styles.navButton, routeMap[router.route] === navItem.navText ? styles.activeLinkText : "")}>
+                  {navItem.navText}
+                </Button>
               </Link>
+              <div className={routeMap[router.route] === navItem.navText ? styles.activeLink : ""}></div>
             </div>
           );
         }

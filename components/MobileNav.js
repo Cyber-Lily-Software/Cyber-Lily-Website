@@ -84,6 +84,11 @@ export default function MobileNav(props) {
                 );
               }
             })}
+            <div className={styles.drawerNavItem}>
+              <Link href="/contact">
+                <Button className={styles.drawerContactButton}>Get in touch</Button>
+              </Link>
+            </div>
           </div>
         </div>
       </Drawer>

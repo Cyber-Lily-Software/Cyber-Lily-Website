@@ -25,6 +25,26 @@ export const useStyles = makeStyles((theme) => ({
   logoDiv: {
     cursor: "pointer",
   },
+  activeLink: {
+    width: "50%",
+    height: "4px",
+    marginTop: -15,
+    marginLeft: "auto",
+    marginRight: "auto",
+    backgroundColor: "#ef530b",
+    fontWeight: 500,
+  },
+  servicesActiveLink: {
+    width: "60%",
+    height: "4px",
+    marginTop: -15,
+    marginLeft: "auto",
+    marginRight: "auto",
+    backgroundColor: "#ef530b",
+  },
+  activeLinkText: {
+    fontWeight: "500 !important",
+  },
   isScrolled: {
     [theme.breakpoints.up(769)]: {
       backgroundColor: "#ffffff",
@@ -36,6 +56,10 @@ export const useStyles = makeStyles((theme) => ({
 
       "& > div:nth-child(2) > div > div > button": {
         color: "#151534 !important",
+      },
+
+      "& > div:nth-child(2) > div > div > div": {
+        backgroundColor: "#f68320",
       },
     },
   },
@@ -110,6 +134,7 @@ export const useStyles = makeStyles((theme) => ({
     zIndex: 9999,
     listStyleType: "none",
     paddingLeft: 0,
+    marginLeft: "8px",
     width: 336,
     backgroundColor: "#ffffff",
     borderRadius: 8,
@@ -277,9 +302,11 @@ export const useStyles = makeStyles((theme) => ({
   drawerNavButton: {
     justifyContent: "start !important",
     paddingBottom: "1.5rem",
+    fontSize: "1.25rem",
   },
   serviceNavButton: {
     paddingBottom: "1.25rem",
+    fontSize: "1.25rem",
   },
   subMenuContainer: {
     marginTop: 0,
@@ -294,9 +321,11 @@ export const useStyles = makeStyles((theme) => ({
   },
   subMenuList: {
     marginTop: 0,
+    marginBottom: 0,
     listStyleType: "none",
     paddingLeft: 8,
     visibility: "hidden",
+    // display: "none",
     opacity: 0,
     height: 0,
     transition: "all 0.25s ease 0s, visibiltiy 0s linear 0.25s",
@@ -306,6 +335,7 @@ export const useStyles = makeStyles((theme) => ({
     listStyleType: "none",
     paddingLeft: 8,
     visibility: "visible",
+    // display: "block",
     opacity: 1,
     height: 160,
     transition: "all 0.25s ease 0s, visibiltiy 0s linear 0.25s",
@@ -320,5 +350,16 @@ export const useStyles = makeStyles((theme) => ({
     fontWeight: "normal",
     fontStyle: "normal",
     color: "#141433",
+    fontWeight: "400 !important",
+  },
+  drawerContactButton: {
+    textTransform: "capitalize",
+    fontWeight: 500,
+    lineHeight: "1.25rem",
+    textAlign: "center",
+    backgroundColor: "#EF530b",
+    color: "#ffffff",
+    padding: "0.75rem 1.5rem",
+    borderRadius: 4,
   },
 }));
