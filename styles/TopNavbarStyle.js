@@ -8,6 +8,7 @@ export const useStyles = makeStyles((theme) => ({
     justifyContent: "space-between",
     paddingLeft: "7.5rem",
     paddingRight: "7.5rem",
+    transition: "all 0.33s",
     [theme.breakpoints.up(769)]: {
       position: "sticky",
       top: 0,
@@ -19,6 +20,18 @@ export const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down(426)]: {
       paddingLeft: "1.25rem",
       paddingRight: "1.25rem",
+    },
+  },
+  isScrolled: {
+    backgroundColor: "#ffffff",
+    boxShadow: "0px 2px 4px rgba(67, 67, 92, 0.16)",
+
+    "& > div > div > div:nth-child(2) > div": {
+      color: "#151534 !important",
+    },
+
+    "& > div:nth-child(2) > div > div > button": {
+      color: "#151534 !important",
     },
   },
   logoImgContainer: {
@@ -147,7 +160,7 @@ export const useStyles = makeStyles((theme) => ({
     },
   },
   navButton: {
-    color: "#ffffff !important",
+    color: "#ffffff",
     textTransform: "capitalize",
     fontWeight: "normal",
     lineHeight: "1.5rem",

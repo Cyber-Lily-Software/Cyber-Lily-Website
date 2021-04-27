@@ -44,13 +44,13 @@ export default function Navigation() {
     console.log("Scroll event", window.scrollY);
 
     if (window.scrollY > 20) {
-      document.getElementById("topNavContainer").style.backgroundColor = "#ffffff";
-      document.getElementById("topNavContainer").style.color = "#151534";
-      document.getElementById("topNavbar").style.backgroundColor = "#ffffff";
-      console.log(document.getElementById("topNavContainer"));
+      let navbarContainer = document.querySelector("header");
+
+      navbarContainer.classList.add(styles.isScrolled);
     } else {
-      document.getElementById("topNavContainer").style.backgroundColor = "#151534";
-      document.getElementById("topNavbar").style.backgroundColor = "#151534";
+      let navbarContainer = document.querySelector("header");
+
+      navbarContainer.classList.remove(styles.isScrolled);
     }
   };
 
@@ -60,7 +60,7 @@ export default function Navigation() {
   });
 
   return (
-    <div className={styles.navbarContainer} id="topNavContainer">
+    <header className={styles.navbarContainer}>
       <div>
         <Logo />
       </div>
@@ -70,6 +70,6 @@ export default function Navigation() {
       <div className={styles.mobileTopNav} id="mobileTopNavbar">
         <MobileNav navItems={navigationItems} />
       </div>
-    </div>
+    </header>
   );
 }
