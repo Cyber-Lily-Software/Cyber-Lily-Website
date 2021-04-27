@@ -5,11 +5,16 @@ import Link from "next/link";
 import Button from "@material-ui/core/Button";
 import Drawer from "@material-ui/core/Drawer";
 import IconButton from "@material-ui/core/IconButton";
+
 import MenuIcon from "@material-ui/icons/Menu";
 import CloseIcon from "@material-ui/icons/Close";
 import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDown";
+import SportsBasketballIcon from "@material-ui/icons/SportsBasketball";
+import FacebookIcon from "@material-ui/icons/Facebook";
+import LinkedInIcon from "@material-ui/icons/LinkedIn";
 
 import { useStyles } from "../styles/TopNavbarStyle";
+import clsx from "clsx";
 
 export default function MobileNav(props) {
   const styles = useStyles();
@@ -88,6 +93,29 @@ export default function MobileNav(props) {
               <Link href="/contact">
                 <Button className={styles.drawerContactButton}>Get in touch</Button>
               </Link>
+            </div>
+            <div className={styles.drawerFooter}>
+              <div className={styles.drawerFooterIconContainer}>
+                <Link href="https://facebook.com" passHref={true}>
+                  <div className={clsx(styles.drawerFacebookIcon, styles.drawerFooterIcon)}>
+                    <img src="/icons/facebook.png" />
+                  </div>
+                </Link>
+              </div>
+              <div className={styles.drawerFooterIconContainer}>
+                <Link href="https://dribble.com" passHref={true}>
+                  <div className={clsx(styles.drawerDribbleIcon, styles.drawerFooterIcon)}>
+                    <img src="/icons/dribble.png" />
+                  </div>
+                </Link>
+              </div>
+              <div className={styles.drawerFooterIconContainer}>
+                <Link href="https://linkedin.com" passHref={true}>
+                  <div className={clsx(styles.drawerLinkedInIcon, styles.drawerFooterIcon)}>
+                    <img src="/icons/linkedin.png" />
+                  </div>
+                </Link>
+              </div>
             </div>
           </div>
         </div>

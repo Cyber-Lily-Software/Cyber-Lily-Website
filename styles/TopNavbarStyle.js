@@ -360,4 +360,32 @@ export const useStyles = makeStyles((theme) => ({
     padding: "0.75rem 1.5rem",
     borderRadius: 4,
   },
+  drawerFooter: {
+    paddingLeft: "0.5rem",
+    display: "flex",
+    position: "fixed",
+    bottom: 0,
+    marginBottom: "3.125rem",
+  },
+  drawerFooterIconContainer: {
+    width: 32,
+    height: 32,
+    borderRadius: "50%",
+    backgroundColor: "#e8e8eb",
+    marginRight: "0.75rem",
+  },
+  drawerFooterIcon: {
+    borderRadius: "50%",
+    width: 20,
+    height: 20,
+  },
+  drawerFacebookIcon: {
+    margin: "7px 11.37px 7px 11px",
+  },
+  drawerDribbleIcon: {
+    margin: "6px",
+  },
+  drawerLinkedInIcon: {
+    margin: "6px 6px 8px 8px",
+  },
 }));
