@@ -4,11 +4,14 @@ export const useStyles = makeStyles((theme) => ({
   navbarContainer: {
     width: "100%",
     backgroundColor: "#151534",
-    position: "sticky",
     display: "flex",
     justifyContent: "space-between",
     paddingLeft: "7.5rem",
     paddingRight: "7.5rem",
+    [theme.breakpoints.up(769)]: {
+      position: "sticky",
+      top: 0,
+    },
     [theme.breakpoints.down(769)]: {
       paddingLeft: "3.75rem",
       paddingRight: "3.75rem",
@@ -83,31 +86,65 @@ export const useStyles = makeStyles((theme) => ({
     paddingTop: "0.25rem",
   },
   submenuList: {
+    visibility: "hidden",
+    transitionDelay: "0.1s",
+    position: "absolute",
+    zIndex: 9999,
     listStyleType: "none",
-    // paddingLeft: "0.5rem",
     paddingLeft: 0,
+    width: 336,
+    backgroundColor: "#ffffff",
+    borderRadius: 8,
+    "&:hover": {
+      "&:nth-child(1)": {
+        borderBottom: "1px solid #e8e8eb",
+      },
+    },
   },
   submenuItem: {
-    paddingLeft: "0.5rem",
-    borderRadius: "0.5rem",
+    cursor: "pointer",
+    display: "block",
+    borderBottom: "1px solid #e8e8eb",
+    "&:nth-child(3)": {
+      borderBottom: "none",
+    },
     "&:hover": {
       backgroundColor: "#e8e8eb",
       fontWeight: 500,
+      "& $subNavButton": {
+        fontWeight: 500,
+      },
+      "&:nth-child(1)": {
+        borderRadius: "8px 8px 0px 0px",
+      },
+      "&:nth-child(3)": {
+        borderRadius: "0px 0px 8px 8px",
+      },
     },
   },
   subNavButton: {
+    padding: 0,
+    margin: "0.7rem",
     color: "#141433 !important",
     textTransform: "capitalize",
     fontWeight: 400,
     lineHeight: "1.5rem",
     "&:hover": {
-      fontWeight: 500,
+      backgroundColor: "#e8e8eb",
     },
   },
   submenuContainer: {
+    position: "relative",
     backgroundColor: "#ffffff",
     borderRadius: "0.5rem",
     boxShadow: "0px 4px 8px rgba(67, 67, 92, 0.16)",
+  },
+  servicesNavItem: {
+    "&:hover": {
+      "& $submenuList": {
+        visibility: "visible",
+      },
+    },
   },
   navButton: {
     color: "#ffffff !important",
@@ -126,6 +163,7 @@ export const useStyles = makeStyles((theme) => ({
     backgroundColor: "#ef530b !important",
     padding: "0.75rem 1.5rem",
     marginLeft: "0.75rem",
+    boxShadow: "0px 4px 8px rgba(252, 218, 188, 0.16)",
     [theme.breakpoints.down(769)]: {
       padding: "0.5rem 1.25rem",
       fontSize: "0.875rem",

@@ -1,6 +1,8 @@
 import Link from "next/link";
 import Logo from "../components/Logo";
 
+import clsx from "clsx";
+
 import Button from "@material-ui/core/Button";
 
 import { useStyles } from "../styles/TopNavbarStyle";
@@ -14,26 +16,26 @@ export default function TopNavbar(props) {
       {navigationItems.map((navItem) => {
         if (navItem.navText === "Services") {
           return (
-            <div className={styles.navItem}>
+            <div className={clsx(styles.navItem, styles.servicesNavItem)} key={navItem.navText}>
               <Link key={navItem.navText} href={navItem.navUrl}>
-                <Button className={styles.navButton}>{navItem.navText}</Button>
+                <Button className={clsx(styles.navButton, styles.servicesNavButton)}>{navItem.navText}</Button>
               </Link>
-              <div className={styles.submenuContainer}>
-                <ul className={styles.submenuList}>
-                  {navItem.subNav.map((subNavItem) => (
+              <ul className={styles.submenuList}>
+                {navItem.subNav.map((subNavItem) => (
+                  <Link href={subNavItem.url}>
                     <li key={subNavItem.navText} className={styles.submenuItem}>
-                      <Link href={subNavItem.url}>
-                        <Button className={styles.subNavButton}>{subNavItem.navText}</Button>
-                      </Link>
+                      <Button className={styles.subNavButton} disableRipple>
+                        {subNavItem.navText}
+                      </Button>
                     </li>
-                  ))}
-                </ul>
-              </div>
+                  </Link>
+                ))}
+              </ul>
             </div>
           );
         } else {
           return (
-            <div className={styles.navItem}>
+            <div className={styles.navItem} key={navItem.navUrl}>
               <Link key={navItem.navText} href={navItem.navUrl}>
                 <Button className={styles.navButton}>{navItem.navText}</Button>
               </Link>
