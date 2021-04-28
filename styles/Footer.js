@@ -169,8 +169,12 @@ const useStyles = makeStyles({
           marginTop: "0rem",
         },
       },
+      icon: {
+        cursor: "pointer",
+      },
       facebookIcon: {
         margin: "8px 11.0px 7px 11px",
+        
       },
       dribbleIcon: {
         margin: "6.70px",
