@@ -66,8 +66,8 @@ export default function TopNavbar() {
                               <h2 className={classes.headers} ><span className={classes.line1}>COMPANY</span></h2>
                               <div className={classes.footerLinks}>
                                 {companyNavItems.map((companyNavItem) => (
-                                  <p>
-                                    <Link href={companyNavItem.url} onClick={preventDefault} key={companyNavItem.text}>
+                                  <p className={classes.p}>
+                                    <Link href={companyNavItem.url} underline='hover' key={companyNavItem.text}>
                                         {companyNavItem.text}
                                     </Link>
                                   </p>
@@ -80,13 +80,15 @@ export default function TopNavbar() {
                         <div className={classes.footerColumns}>
                           <div className={classes.footerColumnTwo}>
                             <h2 className={classes.headers2} ><span className={classes.line2}>SERVICES</span></h2>
-                            {serviceNavItems.map((companyNavItem) => (
-                              <p>
-                                <Link href={companyNavItem.url} key={companyNavItem.text}>
-                                    {companyNavItem.text}
-                                </Link>
-                              </p>
-                            ))}
+                            <div className={classes.footerLinks}>
+                              {serviceNavItems.map((companyNavItem) => (
+                                <p className={classes.p}>
+                                  <Link href={companyNavItem.url} key={companyNavItem.text}>
+                                      {companyNavItem.text}
+                                  </Link>
+                                </p>
+                              ))}
+                            </div>
                           </div>
                         </div>
                     </Grid>
@@ -94,9 +96,11 @@ export default function TopNavbar() {
                         <div className={classes.footerColumns}>
                           <div className={classes.footerColumnTwo}>
                             <h2 className={classes.headers3} ><span className={classes.line3}>GET IN TOUCH</span></h2>
-                            {getInTouchNavItems.map((companyNavItem) => (
-                                <p>{companyNavItem.text}</p>
-                            ))}
+                            <div className={classes.footerLinks}>
+                              {getInTouchNavItems.map((companyNavItem) => (
+                                  <p className={classes.p}>{companyNavItem.text}</p>
+                              ))}
+                            </div>
                           </div>
                         </div>
                     </Grid>
@@ -111,11 +115,11 @@ export default function TopNavbar() {
                 <Grid item className={classes.bottomGridComp} xs={12} sm={6}>
                   <Grid container direction="row" >
                       <div item className={classes.drawerFooterIconContainer} xs={4} sm={4}>
-                          <Link href={"/facebook"} key={"Facebook"}>
-                            <div className={clsx(classes.icon, classes.facebookIcon)}>
-                              <img  src={"./fbicon.png"} />
-                            </div>
+                        <div className={clsx(classes.icon, classes.facebookIcon)}>
+                          <Link component='img' href={"/facebook"} key={"Facebook"} passHref={true}>
+                              <img href={"/facebook"} src={"./fbicon.png"} />
                           </Link>
+                        </div>
                       </div>
                       <div item className={classes.drawerFooterIconContainer} xs={4} sm={4}>
                           <Link href={"/dribble"} key={"dribble"}>
@@ -127,7 +131,7 @@ export default function TopNavbar() {
                       <div item className={classes.drawerFooterIconContainer} xs={4} sm={4}>
                           <Link href={"/linkedIn"} key={"LinkedIn"}>
                             <div className={clsx(classes.icon, classes.linkedInIcon)}>
-                              <img  src={"./linkedInIcon.png"} />
+                              <img component={Link} src={"./linkedInIcon.png"} />
                             </div>
                           </Link>
                       </div>

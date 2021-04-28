@@ -18,7 +18,9 @@ const useStyles = makeStyles({
     },
     columnContainer: {
         width: "100%",
-
+        [theme.breakpoints.up(770)]: {
+          marginBottom: "2.75rem",
+        },
     },
     footerColumns: {
         marginLeft: "7.625rem",
@@ -30,6 +32,7 @@ const useStyles = makeStyles({
           marginRight: "1.25rem",
           borderBottom: "0.0625rem solid #FFFFFF",
           maxHeight: "13.25rem",
+          paddingBottom: "1.5rem",
         },
         [theme.breakpoints.down(400)]: {
           marginLeft: "1.25rem",
@@ -181,6 +184,11 @@ const useStyles = makeStyles({
         borderRadius: "50%",
         backgroundColor: "#e8e8eb",
         marginRight: "1.25rem",
+      },
+      p: {
+        marginTop: "0.75rem",
+        marginBottom: "0",
+        padding: "0",
       },
 }); 
 
