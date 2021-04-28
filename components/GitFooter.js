@@ -9,10 +9,11 @@ export default function TopNavbar() {
 
   return (
     <div className={classes.mainContainer}>
+        <img className={classes.logo} src="./logomark.png" />
         <p className={classes.textBlock}>
             Reach out and let's grow your product together. 
         </p>
-        <Button variant="contained" disableElevation className={classes.contactButton}>Get in touch</Button>
+        <Button variant="contained" disableElevation className={classes.contactButton}>Get In Touch</Button>
     </div>      
   );
 }
