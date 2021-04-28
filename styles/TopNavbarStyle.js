@@ -54,8 +54,12 @@ export const useStyles = makeStyles((theme) => ({
         color: "#151534 !important",
       },
 
-      "& > div:nth-child(2) > div > div > button": {
+      "& > div:nth-child(2) > div > div > button > span": {
         color: "#151534 !important",
+      },
+
+      "& > div:nth-child(2) > div > div > button:hover": {
+        backgroundColor: "transparent",
       },
 
       "& > div:nth-child(2) > div > div > div": {
@@ -123,9 +127,23 @@ export const useStyles = makeStyles((theme) => ({
       paddingTop: "1.75rem",
       paddingBottom: "1.75rem",
     },
+    "& [class*='makeStyles-navContactButton']": {
+      [theme.breakpoints.down(600)]: {
+        display: "none",
+      },
+    },
+    "& [class*='makeStyles-iconButton']": {
+      [theme.breakpoints.down(769)]: {
+        paddingTop: 0,
+        paddingBottom: 0,
+      },
+    },
   },
   navItem: {
     paddingTop: "0.25rem",
+    "& .MuiButton-text": {
+      padding: "0.5rem 1rem",
+    },
   },
   submenuList: {
     visibility: "hidden",
@@ -134,7 +152,8 @@ export const useStyles = makeStyles((theme) => ({
     zIndex: 9999,
     listStyleType: "none",
     paddingLeft: 0,
-    marginLeft: "8px",
+    marginLeft: "0.5rem",
+    marginTop: "0.5rem",
     width: 336,
     backgroundColor: "#ffffff",
     borderRadius: 8,
@@ -164,9 +183,12 @@ export const useStyles = makeStyles((theme) => ({
         borderRadius: "0px 0px 8px 8px",
       },
     },
+    "& .MuiButton-text": {
+      padding: 12,
+    },
   },
   subNavButton: {
-    padding: 0,
+    padding: 12,
     margin: "0.7rem",
     color: "#141433 !important",
     textTransform: "capitalize",
@@ -188,29 +210,39 @@ export const useStyles = makeStyles((theme) => ({
         visibility: "visible",
       },
     },
+    "& .MuiButton-root": {
+      fontWeight: 400,
+      textTransform: "capitalize",
+    },
   },
   navButton: {
-    color: "#ffffff",
-    textTransform: "capitalize",
-    fontWeight: "normal",
-    lineHeight: "1.5rem",
-    fontStyle: "normal",
     textAlign: "center",
-    marginLeft: "0.75rem",
-    marginRight: "0.75rem",
+    "& > span": {
+      color: "#ffffff",
+      marginLeft: "0.75rem",
+      marginRight: "0.75rem",
+      textTransform: "capitalize",
+      fontWeight: "normal",
+      lineHeight: "1.5rem",
+      fontStyle: "normal",
+    },
   },
   navContactButton: {
-    textTransform: "capitalize !important",
-    color: "#ffffff !important",
     textAlign: "center",
+    padding: "0.75rem 1.5rem !important",
     backgroundColor: "#ef530b !important",
-    padding: "0.75rem 1.5rem",
-    marginLeft: "0.75rem",
     boxShadow: "0px 4px 8px rgba(252, 218, 188, 0.16)",
+    marginLeft: "0.75rem !important",
+    "& > span": {
+      textTransform: "capitalize",
+      color: "#ffffff",
+      [theme.breakpoints.down(769)]: {
+        fontSize: "0.875rem",
+        fontWeight: 500,
+      },
+    },
     [theme.breakpoints.down(769)]: {
       padding: "0.5rem 1.25rem",
-      fontSize: "0.875rem",
-      fontWeight: 500,
     },
     [theme.breakpoints.down(426)]: {
       display: "none",

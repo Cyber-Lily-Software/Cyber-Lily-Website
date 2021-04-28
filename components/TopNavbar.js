@@ -25,7 +25,7 @@ export default function TopNavbar(props) {
         if (navItem.navText === "Services") {
           return (
             <div className={clsx(styles.navItem, styles.servicesNavItem)} key={navItem.navText}>
-              <Link key={navItem.navText} href={navItem.navUrl}>
+              <Link href={navItem.navUrl}>
                 <Button
                   className={clsx(styles.navButton, styles.servicesNavButton, routeMap[router.route] === navItem.text ? styles.activeLinkText : "")}
                 >
@@ -35,8 +35,8 @@ export default function TopNavbar(props) {
               <div className={routeMap[router.route] === navItem.navText ? styles.servicesActiveLink : ""}></div>
               <ul className={styles.submenuList}>
                 {navItem.subNav.map((subNavItem) => (
-                  <Link href={subNavItem.url}>
-                    <li key={subNavItem.navText} className={styles.submenuItem}>
+                  <Link href={subNavItem.url} key={subNavItem.navText}>
+                    <li className={styles.submenuItem}>
                       <Button className={styles.subNavButton} disableRipple>
                         {subNavItem.navText}
                       </Button>
@@ -48,9 +48,9 @@ export default function TopNavbar(props) {
           );
         } else {
           return (
-            <div className={clsx(styles.navItem)} key={navItem.navUrl}>
-              <Link key={navItem.navText} href={navItem.navUrl}>
-                <Button className={clsx(styles.navButton, routeMap[router.route] === navItem.navText ? styles.activeLinkText : "")}>
+            <div className={clsx(styles.navItem)} key={navItem.navText}>
+              <Link href={navItem.navUrl}>
+                <Button className={clsx(styles.navButton, routeMap[router.route] === navItem.navText ? styles.activeLinkText : "")} disableRipple>
                   {navItem.navText}
                 </Button>
               </Link>
@@ -59,7 +59,7 @@ export default function TopNavbar(props) {
           );
         }
       })}
-      <Link href="/contact">
+      <Link href="/contact" className={styles.navDissapear}>
         <Button className={styles.navContactButton}>Get in touch</Button>
       </Link>
     </div>
