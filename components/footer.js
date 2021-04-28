@@ -2,8 +2,9 @@ import React from "react";
 import clsx from "clsx";
 import Link from "next/link";
 import Grid from "@material-ui/core/Grid";
+import Avatar from "@material-ui/core/Avatar";
 
-import {useStyles} from '../styles/Footer'
+import {useStyles} from '../styles/Footer';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import SportsBasketballIcon from '@material-ui/icons/SportsBasketball';
@@ -55,19 +56,19 @@ export default function TopNavbar() {
 
       const socialMediaItems = [
         {
-          text: "Facebook",
+          text: "facebookIcon",
           url: "/bob",
-          icon: <FacebookIcon />,
+          icon: "./fbicon.png",
         },
         {
-          text: "Dribble",
+          text: "dribbleIcon",
           url: "/jim",
-          icon: <SportsBasketballIcon />,
+          icon: "./dribicon.png",
         },
         {
-          text: "LinkedIn",
+          text: "linkedInIcon",
           url: "/john",
-          icon: <LinkedInIcon />,
+          icon: "./linkedInIcon.png",
         },
       ];
 
@@ -116,16 +117,34 @@ export default function TopNavbar() {
             </div>
         </div>
         <div className={classes.bottomStrip}>
-            <Grid container orientation="column">
+            <Grid container direction="row">
                 <Grid item className={classes.bottomGridGrid} xs={12} sm={6}>
                     <p weight={400}>&#169; 2021 Cyber Lily Software | Sitemap | Privacy Policy</p>
                 </Grid>
                 <Grid item className={classes.bottomGridComp} xs={12} sm={6}>
-                  {socialMediaItems.map((navItem) => (
-                      <Link href={navItem.url} key={navItem.text}>
-                          {navItem.icon}
-                      </Link>
-                      ))}
+                  <Grid container direction="row" >
+                      <div item className={classes.drawerFooterIconContainer} xs={4} sm={4}>
+                          <Link href={"/facebook"} key={"Facebook"}>
+                            <div className={clsx(classes.icon, classes.facebookIcon)}>
+                              <img  src={"./fbicon.png"} />
+                            </div>
+                          </Link>
+                      </div>
+                      <div item className={classes.drawerFooterIconContainer} xs={4} sm={4}>
+                          <Link href={"/dribble"} key={"dribble"}>
+                            <div className={clsx(classes.icon, classes.dribbleIcon)}>
+                              <img  src={"./dribicon.png"} />
+                            </div>
+                          </Link>
+                      </div>
+                      <div item className={classes.drawerFooterIconContainer} xs={4} sm={4}>
+                          <Link href={"/linkedIn"} key={"LinkedIn"}>
+                            <div className={clsx(classes.icon, classes.linkedInIcon)}>
+                              <img  src={"./linkedInIcon.png"} />
+                            </div>
+                          </Link>
+                      </div>
+                  </Grid>
                 </Grid>
             </Grid>
         </div>

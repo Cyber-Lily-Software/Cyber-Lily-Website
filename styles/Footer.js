@@ -120,22 +120,32 @@ const useStyles = makeStyles({
           paddingBottom: "1.875rem",
           maxHeight: "6.5rem",
           textAlign: "center",
+        },
+        [theme.breakpoints.down(760)]: {
+          marginRight: "1.25rem",
+          paddingBottom: "1.875rem",
+          maxHeight: "6.5rem",
+          textAlign: "center",
         }
       },
       bottomGridComp: {
-        fontSize: "2rem",
-        [theme.breakpoints.up(768)]: {
+        [theme.breakpoints.up(1025)]: {
+          paddingLeft: "36% !important",
+        },
+        [theme.breakpoints.up(1000)]: {
+          paddingLeft: "26% !important",
+        },
+        [theme.breakpoints.up(767)]: {
           textAlign: "right",
           marginTop: "1.1rem",
-          paddingRight: "6.25rem",
+          alignItems: "right",
+          marginRight: "0rem",
+          paddingLeft: "21%",
         },
         [theme.breakpoints.down(660)]: {
           textAlign: "center",
-          
-          marginBottom: "20rem",
-        },
-        [theme.breakpoints.down(400)]: {
-          fontSize: "1rem",
+          alignItems: "center",
+          paddingLeft: "31%",
         },
       },
       bottomGridGrid: {
@@ -152,8 +162,25 @@ const useStyles = makeStyles({
         },
         [theme.breakpoints.down(460)]: {
           alignItems: "center",
+          paddingLeft: "0rem !important",
           marginTop: "0rem",
         },
+      },
+      facebookIcon: {
+        margin: "8px 12.37px 7px 11px",
+      },
+      dribbleIcon: {
+        margin: "6.70px",
+      },
+      linkedInIcon: {
+        margin: "6px 6px 8px 8px",
+      },
+      drawerFooterIconContainer: {
+        width: 34,
+        height: 34,
+        borderRadius: "50%",
+        backgroundColor: "#e8e8eb",
+        marginRight: "1.25rem",
       },
 }); 
 
