@@ -9,13 +9,10 @@ import FacebookIcon from '@material-ui/icons/Facebook';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import SportsBasketballIcon from '@material-ui/icons/SportsBasketball';
 
-export default function TopNavbar() {
-    const classes = useStyles();
-
     const companyNavItems = [
         {
           text: "About",
-          url: "/about/",
+          url: "/about",
         },
         {
           text: "Work Process",
@@ -54,39 +51,47 @@ export default function TopNavbar() {
         },
       ];
 
+export default function TopNavbar() {
+  const classes = useStyles();
+  const preventDefault = (event) => event.preventDefault();
+
   return (
       <div className={classes.root}>
         <div className={classes.footerContainer}>
             <div className={classes.columnContainer}>
                 <Grid container orientation="column">
                     <Grid item xs={12} sm={12} md={4}>
-                        <div className={clsx(classes.footerColumns)}>
+                        <div className={classes.footerColumns}>
                             <div className={classes.footerColumnTwo}>
                               <h2 className={classes.headers} ><span className={classes.line1}>COMPANY</span></h2>
                               <div className={classes.footerLinks}>
                                 {companyNavItems.map((companyNavItem) => (
-                                <Link href={companyNavItem.url} key={companyNavItem.text}>
-                                    <p>{companyNavItem.text}</p>
-                                </Link>
+                                  <p>
+                                    <Link href={companyNavItem.url} onClick={preventDefault} key={companyNavItem.text}>
+                                        {companyNavItem.text}
+                                    </Link>
+                                  </p>
                                 ))}
                               </div>
                             </div>
                         </div>
                     </Grid>
                     <Grid item xs={12} sm={12} md={4}>
-                        <div className={clsx(classes.footerColumns)}>
+                        <div className={classes.footerColumns}>
                           <div className={classes.footerColumnTwo}>
                             <h2 className={classes.headers2} ><span className={classes.line2}>SERVICES</span></h2>
                             {serviceNavItems.map((companyNavItem) => (
-                            <Link href={companyNavItem.url} key={companyNavItem.text}>
-                                <p>{companyNavItem.text}</p>
-                            </Link>
+                              <p>
+                                <Link href={companyNavItem.url} key={companyNavItem.text}>
+                                    {companyNavItem.text}
+                                </Link>
+                              </p>
                             ))}
                           </div>
                         </div>
                     </Grid>
                     <Grid item xs={12} sm={12} md={4}>
-                        <div className={clsx(classes.footerColumns)}>
+                        <div className={classes.footerColumns}>
                           <div className={classes.footerColumnTwo}>
                             <h2 className={classes.headers3} ><span className={classes.line3}>GET IN TOUCH</span></h2>
                             {getInTouchNavItems.map((companyNavItem) => (

@@ -133,7 +133,7 @@ const useStyles = makeStyles({
           paddingLeft: "36% !important",
         },
         [theme.breakpoints.up(1000)]: {
-          paddingLeft: "26% !important",
+          paddingLeft: "26%",
         },
         [theme.breakpoints.up(767)]: {
           textAlign: "right",
