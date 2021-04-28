@@ -54,24 +54,6 @@ export default function TopNavbar() {
         },
       ];
 
-      const socialMediaItems = [
-        {
-          text: "facebookIcon",
-          url: "/bob",
-          icon: "./fbicon.png",
-        },
-        {
-          text: "dribbleIcon",
-          url: "/jim",
-          icon: "./dribicon.png",
-        },
-        {
-          text: "linkedInIcon",
-          url: "/john",
-          icon: "./linkedInIcon.png",
-        },
-      ];
-
   return (
       <div className={classes.root}>
         <div className={classes.footerContainer}>
