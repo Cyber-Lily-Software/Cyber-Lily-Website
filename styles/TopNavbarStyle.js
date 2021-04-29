@@ -32,7 +32,6 @@ export const useStyles = makeStyles((theme) => ({
     marginLeft: "auto",
     marginRight: "auto",
     backgroundColor: "#ef530b",
-    fontWeight: 500,
   },
   servicesActiveLink: {
     width: "60%",
@@ -43,7 +42,16 @@ export const useStyles = makeStyles((theme) => ({
     backgroundColor: "#ef530b",
   },
   activeLinkText: {
-    fontWeight: "500 !important",
+    [theme.breakpoints.up(769)]: {
+      "& > span": {
+        fontWeight: "500 !important",
+      },
+    },
+    [theme.breakpoints.down(768)]: {
+      "& > span": {
+        fontWeight: "bold !important",
+      },
+    },
   },
   isScrolled: {
     [theme.breakpoints.up(769)]: {
@@ -68,7 +76,7 @@ export const useStyles = makeStyles((theme) => ({
     },
   },
   logoImgContainer: {
-    [theme.breakpoints.down(426)]: {
+    [theme.breakpoints.down(769)]: {
       width: "37px",
       height: "32px",
     },
@@ -89,6 +97,8 @@ export const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down(426)]: {
       paddingLeft: "0.1875rem",
       paddingTop: "0.125rem",
+      marginTop: "auto",
+      marginBottom: "auto",
     },
   },
   logoMainHeading: {
@@ -320,6 +330,8 @@ export const useStyles = makeStyles((theme) => ({
   drawerLogoText: {
     paddingLeft: "0.1875rem",
     paddingTop: "0.15rem",
+    marginTop: "auto",
+    marginBottom: "auto",
   },
   closeDrawerIcon: {
     color: "#141433",
@@ -330,18 +342,39 @@ export const useStyles = makeStyles((theme) => ({
   },
   drawerNavItem: {
     justifySelf: "start",
+
+    "& .MuiButton-root": {
+      paddingBottom: "1.5rem",
+    },
+
+    "& .MuiButton-text": {
+      fontSize: "1.25rem",
+      fontWeight: "400",
+    },
+  },
+  drawerContactNav: {
+    "& .MuiButton-text": {
+      padding: "0.75rem 1.5rem",
+    },
+    "& .MuiButton-root": {
+      textTransform: "capitalize",
+      fontWeight: 500,
+      lineHeight: "1.25rem",
+      textAlign: "center",
+      backgroundColor: "#EF530b",
+      color: "#ffffff",
+      borderRadius: 4,
+    },
   },
   drawerNavButton: {
     justifyContent: "start !important",
-    paddingBottom: "1.5rem",
-    fontSize: "1.25rem",
   },
   serviceNavButton: {
     paddingBottom: "1.25rem",
     fontSize: "1.25rem",
   },
   subMenuContainer: {
-    marginTop: 0,
+    marginTop: "-0.25rem",
   },
   subMenuContainerOpen: {
     marginTop: 0,
@@ -363,6 +396,7 @@ export const useStyles = makeStyles((theme) => ({
   },
   subMenuListOpen: {
     marginTop: 0,
+    marginBottom: 0,
     listStyleType: "none",
     paddingLeft: 8,
     visibility: "visible",
@@ -371,26 +405,37 @@ export const useStyles = makeStyles((theme) => ({
     transition: "all 0.25s ease 0s, visibiltiy 0s linear 0.25s",
   },
   serviceNavItem: {
-    marginBottom: "1.25rem",
+    // marginBottom: "1.25rem",
+    "& .MuiButton-text": {
+      paddingLeft: 0,
+      paddingBottom: "0.75rem",
+    },
+    "& .MuiButton-root": {
+      textTransform: "capitalize",
+      lineHeight: "1.75rem",
+      fontSize: "1rem",
+      fontWeight: "normal",
+      fontStyle: "normal",
+      color: "#141433",
+      fontWeight: "400 !important",
+    },
   },
   serviceNavItemBtn: {
-    paddingLeft: 0,
-    textTransform: "capitalize",
-    lineHeight: "1.75rem",
-    fontWeight: "normal",
-    fontStyle: "normal",
-    color: "#141433",
-    fontWeight: "400 !important",
+    "& .MuiButton-text": {
+      paddingLeft: 0,
+    },
+    "& .MuiButton-root": {
+      textTransform: "capitalize",
+      lineHeight: "1.75rem",
+      fontWeight: "normal",
+      fontStyle: "normal",
+      color: "#141433",
+      fontWeight: "400 !important",
+    },
   },
-  drawerContactButton: {
-    textTransform: "capitalize",
-    fontWeight: 500,
-    lineHeight: "1.25rem",
-    textAlign: "center",
-    backgroundColor: "#EF530b",
-    color: "#ffffff",
-    padding: "0.75rem 1.5rem",
-    borderRadius: 4,
+  drawerLogoImgContainer: {
+    marginTop: "auto",
+    marginBottom: "auto",
   },
   drawerFooter: {
     paddingLeft: "0.5rem",
