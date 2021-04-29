@@ -47,7 +47,6 @@ const useStyles = makeStyles({
     },
     textBlock2: {
         width: "100%",
-        marginTop: "-1rem",
         marginLeft: "auto",
         marginRight: "auto",
         paddingTop: "0rem",
@@ -56,11 +55,13 @@ const useStyles = makeStyles({
             paddingLeft: "2%",
             paddingRight: "2%",
         },
-        [theme.breakpoints.down(769)]: {
+        [theme.breakpoints.up(760)]: {
+            marginTop: "-2rem",
             paddingLeft: "4%",
             paddingRight: "4%",
         },
         [theme.breakpoints.down(420)]: {
+            marginTop: "-1rem",
             fontWeight: "500",
             fontSize: "1.5rem",
         },
