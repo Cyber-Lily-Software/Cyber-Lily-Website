@@ -12,12 +12,8 @@ const useStyles = makeStyles({
     },
     logo: {
         paddingTop: "5.5rem",
-        [theme.breakpoints.down(420)]: {
-            marginLeft: "60% !important",
-        },
-        [theme.breakpoints.down(380)]: {
-            marginLeft: "80% !important",
-        },
+        marginLeft: "auto",
+        marginRight: "auto",
     },
     contactButton: {
         color: "#FFFFFF !important",
@@ -26,27 +22,17 @@ const useStyles = makeStyles({
         width: "9.563rem",
         height: "3rem",
         textTransform: "capitalize !important", 
-        [theme.breakpoints.down(760)]: {
-            marginLeft: "65%",
-        },
-        [theme.breakpoints.down(420)]: {
-            marginLeft: "60%",
-        },
-        [theme.breakpoints.down(380)]: {
-            marginLeft: "70%",
-        },
-        [theme.breakpoints.down(330)]: {
-            marginLeft: "80%",
-        },
+        marginLeft: "auto",
+        marginRight: "auto",
     },
     textBlock: {
-        width: "40.88rem",
+        width: "100%",
         marginTop: "0",
         marginLeft: "auto",
         marginRight: "auto",
         paddingTop: "0rem",
-        fontWeight: "700",
         [theme.breakpoints.up(770)]: {
+            fontWeight: "700",
             paddingLeft: "2%",
             paddingRight: "2%",
         },
@@ -54,6 +40,31 @@ const useStyles = makeStyles({
             paddingLeft: "4%",
             paddingRight: "4%",
         },
+        [theme.breakpoints.down(420)]: {
+            fontWeight: "500",
+            fontSize: "1.5rem",
+        },
+    },
+    textBlock2: {
+        width: "100%",
+        marginTop: "-1rem",
+        marginLeft: "auto",
+        marginRight: "auto",
+        paddingTop: "0rem",
+        [theme.breakpoints.up(770)]: {
+            fontWeight: "700",
+            paddingLeft: "2%",
+            paddingRight: "2%",
+        },
+        [theme.breakpoints.down(769)]: {
+            paddingLeft: "4%",
+            paddingRight: "4%",
+        },
+        [theme.breakpoints.down(420)]: {
+            fontWeight: "500",
+            fontSize: "1.5rem",
+        },
+        
     },
 }); 
 
