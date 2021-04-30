@@ -8,17 +8,18 @@ export const flowChartClasses = makeStyles((theme) => ({
     marginRight: "auto",
     width: "calc(100% - 128px)",
     maxWidth: 1312,
+    position: "relative",
+    // display: "flex",
   },
   flowChartBackground: {
     position: "absolute",
-    width: "200vw",
+    width: "150vw",
     height: "384px",
     backgroundColor: "#F9F9FA",
     left: "-50vw",
-    zIndex: 0,
+    zIndex: -1,
   },
   flowChartDiagram: {
-    position: "relative",
     marginLeft: "auto",
     marginRight: "auto",
   },
@@ -41,5 +42,48 @@ export const flowChartClasses = makeStyles((theme) => ({
     to: {
       strokeDashoffset: 0,
     },
+  },
+  flowChartNodes: {
+    display: "flex",
+    zIndex: 100,
+  },
+  flowChartNode: {
+    height: 78,
+    width: 78,
+    borderRadius: "50%",
+    backgroundColor: "#FFFFFF",
+    border: "2px solid #141433",
+    boxSizing: "border-box",
+    position: "absolute",
+    display: "flex",
+    top: 35,
+  },
+  chatNode: {},
+  designNode: {
+    left: 225,
+  },
+  approvalNode: {
+    left: 435,
+  },
+  partnerNode: {
+    left: 635,
+  },
+  requestNode: {
+    top: 235,
+    left: 435,
+  },
+  developNode: {
+    left: 835,
+  },
+  testNode: {
+    left: 1035,
+  },
+  deployNode: {
+    left: 1235,
+  },
+  flowChartIcon: {
+    margin: "auto",
+    width: 32,
+    height: 32,
   },
 }));

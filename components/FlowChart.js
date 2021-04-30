@@ -1,5 +1,7 @@
 import { React } from "react";
 
+import clsx from "clsx";
+
 import { flowChartClasses } from "../styles/FlowChartStyles";
 
 export default function FlowChart() {
@@ -8,6 +10,48 @@ export default function FlowChart() {
   return (
     <div className={styles.flowChart}>
       <div className={styles.flowChartBackground} />
+      <div className={styles.flowChartNodes}>
+        <div className={clsx(styles.flowChartNode, styles.chatNode)}>
+          <div className={styles.flowChartIcon}>
+            <img src="/flow_chart_icons/thread.png" />
+          </div>
+        </div>
+        <div className={clsx(styles.flowChartNode, styles.designNode)}>
+          <div className={styles.flowChartIcon}>
+            <img src="/flow_chart_icons/pen.png" />
+          </div>
+        </div>
+        <div className={clsx(styles.flowChartNode, styles.approvalNode)}>
+          <div className={styles.flowChartIcon}>
+            <img src="/flow_chart_icons/check_circle.png" />
+          </div>
+        </div>
+        <div className={clsx(styles.flowChartNode, styles.partnerNode)}>
+          <div className={styles.flowChartIcon}>
+            <img src="/flow_chart_icons/face_happy.png" />
+          </div>
+        </div>
+        <div className={clsx(styles.flowChartNode, styles.requestNode)}>
+          <div className={styles.flowChartIcon}>
+            <img src="/flow_chart_icons/refresh.png" />
+          </div>
+        </div>
+        <div className={clsx(styles.flowChartNode, styles.developNode)}>
+          <div className={styles.flowChartIcon}>
+            <img src="/flow_chart_icons/code.png" />
+          </div>
+        </div>
+        <div className={clsx(styles.flowChartNode, styles.testNode)}>
+          <div className={styles.flowChartIcon}>
+            <img src="/flow_chart_icons/clipboard_check.png" />
+          </div>
+        </div>
+        <div className={clsx(styles.flowChartNode, styles.deployNode)}>
+          <div className={styles.flowChartIcon}>
+            <img src="/flow_chart_icons/rocket.png" />
+          </div>
+        </div>
+      </div>
       <div className={styles.flowChartDiagram}>
         <svg
           className={styles.flowChartDiagramSvg}
