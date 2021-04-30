@@ -1,6 +1,10 @@
 import { makeStyles } from "@material-ui/core/styles";
 
 export const flowChartClasses = makeStyles((theme) => ({
+  background: {
+    width: "100%",
+    backgroundColor: "#e8e8eb",
+  },
   flowChart: {
     margin: 0,
     width: "100%",
@@ -189,7 +193,7 @@ export const flowChartClasses = makeStyles((theme) => ({
     display: "none",
   },
   deployTooltip: {
-    // display: "none",
+    display: "none",
   },
   flowChartIcon: {
     margin: "auto",
