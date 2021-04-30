@@ -7,7 +7,8 @@ export const flowChartClasses = makeStyles((theme) => ({
     marginLeft: "auto",
     marginRight: "auto",
     width: "calc(100% - 128px)",
-    maxWidth: 1440,
+    maxWidth: 1380,
+    minHeight: 400,
     position: "relative",
     // display: "flex",
   },
@@ -20,8 +21,13 @@ export const flowChartClasses = makeStyles((theme) => ({
     zIndex: -1,
   },
   flowChartDiagram: {
-    marginLeft: "auto",
-    marginRight: "auto",
+    // marginLeft: "auto",
+    // marginRight: "auto",
+  },
+  flowChartDiagramSvg: {
+    minWidth: 900,
+    overflow: "visible",
+    paddingRight: 45,
   },
   flowChartDottedLine: {
     strokeDasharray: 4,
@@ -42,21 +48,6 @@ export const flowChartClasses = makeStyles((theme) => ({
     to: {
       strokeDashoffset: 0,
     },
-  },
-  flowChartNodes: {
-    display: "flex",
-    zIndex: 100,
-  },
-  flowChartNode: {
-    height: 78,
-    width: 78,
-    borderRadius: "50%",
-    backgroundColor: "#FFFFFF",
-    border: "2px solid #141433",
-    boxSizing: "border-box",
-    position: "absolute",
-    display: "flex",
-    top: 35,
   },
   flowChartNodeGroup: {
     "&:hover": {
@@ -154,5 +145,25 @@ export const flowChartClasses = makeStyles((theme) => ({
     margin: "auto",
     width: 32,
     height: 32,
+  },
+  pulseNode: {
+    fill: "black",
+    fillOpacity: 0,
+    // transformOrigin: "50% 50%",
+    animationDuration: "2s",
+    animationName: "$pulse",
+    animationIterationCount: "infinite",
+  },
+  "@keyframes pulse": {
+    from: {
+      strokeWidth: 3,
+      strokeOpacity: 1,
+      transform: "scale(0.3)",
+    },
+    to: {
+      strokeWidth: 0,
+      strokeOpacity: 0,
+      transform: "scale(1.5)",
+    },
   },
 }));

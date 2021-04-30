@@ -9,14 +9,14 @@ export default function FlowChart() {
 
   return (
     <div className={styles.flowChart}>
-      <div className={styles.flowChartBackground} />
+      {/* <div className={styles.flowChartBackground} /> */}
       <div className={styles.flowChartDiagram}>
         <svg
           className={styles.flowChartDiagramSvg}
           xmlns="http://www.w3.org/2000/svg"
           xmlnsXlink="http://wwww.w3.org/1999/xlink"
           fill="none"
-          viewBox="0 0 1080 295"
+          viewBox="0 0 1035 295"
         >
           <g className={styles.flowChartEdgeGroup} data-line-group="1" id="flowChart-2_edge-1_2">
             <path
@@ -33,7 +33,7 @@ export default function FlowChart() {
               strokeLinejoin="round"
               strokeMiterlimit="16"
               d="M 44,57L 204,57"
-              strokeWidth="100"
+              strokeWidth="3"
               stroke="#240405"
             />
           </g>
@@ -172,6 +172,7 @@ export default function FlowChart() {
           </g>
           <g className={clsx(styles.flowChartNodeGroup, styles.chatNode)} data-line-group="1" id="flowChart_chat_bubble_node">
             <circle cx="44" cy="57" r="30" stroke="black" fill="#ffffff" strokeWidth="1" />
+            {/* <circle cx="44" cy="57" r="33" className={styles.pulseNode} /> */}
             <svg width="25" height="25" x="32" y="45" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
                 fill-rule="evenodd"
