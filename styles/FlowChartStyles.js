@@ -89,7 +89,7 @@ export const flowChartClasses = makeStyles((theme) => ({
         fill: "#fef3e9",
         stroke: "#f68320",
       },
-      "& > svg > path": {
+      "& > svg > path.svgSmile": {
         stroke: "#f68320",
       },
       "& > svg > path.svgSmileEyes": {

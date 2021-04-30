@@ -222,7 +222,6 @@ export default function FlowChart() {
           </g>
           <g className={clsx(styles.flowChartNodeGroup, styles.partnerNode)} data-line-group="1" id="flowChart_happy_face_node">
             <circle cx="524" cy="57" r="30" stroke="black" fill="#ffffff" strokeWidth="1" />
-            <image xlinkHref="/flow_chart_icons/face_happy.png" x="512" y="45" width="25" height="25" />
             <svg width="25" height="25" x="512" y="45" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M16 28.1905C22.7327 28.1905 28.1905 22.7327 28.1905 16C28.1905 9.26743 22.7327 3.80957 16 3.80957C9.26743 3.80957 3.80957 9.26743 3.80957 16C3.80957 22.7327 9.26743 28.1905 16 28.1905Z"
@@ -230,6 +229,7 @@ export default function FlowChart() {
                 stroke-width="2"
                 stroke-linecap="round"
                 stroke-linejoin="round"
+                className="svgSmile"
               />
               <path
                 d="M12.1904 13.7142C13.032 13.7142 13.7142 13.032 13.7142 12.1904C13.7142 11.3489 13.032 10.6666 12.1904 10.6666C11.3489 10.6666 10.6666 11.3489 10.6666 12.1904C10.6666 13.032 11.3489 13.7142 12.1904 13.7142Z"
@@ -247,6 +247,7 @@ export default function FlowChart() {
                 stroke-width="2"
                 stroke-linecap="round"
                 stroke-linejoin="round"
+                className="svgSmile"
               />
             </svg>
           </g>
@@ -338,6 +339,39 @@ export default function FlowChart() {
               />
             </svg>
           </g>
+          {/* <g className={clsx(styles.flowChartTooltip, styles.chatTooltip)} data-line-group="1" id="flowChart_chat_tooltip">
+            <svg width="287" height="163" viewBox="0 0 287 163" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g filter="url(#filter0_d)">
+                <path
+                  d="M8 19C8 14.5817 11.5817 11 16 11H271C275.418 11 279 14.5817 279 19V143C279 147.418 275.418 151 271 151H16C11.5817 151 8 147.418 8 143V19Z"
+                  fill="white"
+                />
+                <path
+                  d="M22.138 9.13175L24.3077 5.6869C25.0922 4.4414 26.9078 4.4414 27.6923 5.6869L29.862 9.13176C30.5944 10.2946 31.8724 11 33.2466 11L35 11L35 12L32.6946 12L19.3054 12L17 12L17 11L18.7534 11C20.1276 11 21.4056 10.2946 22.138 9.13175Z"
+                  fill="white"
+                />
+              </g>
+              <defs>
+                <filter
+                  id="filter0_d"
+                  x="0"
+                  y="0.752808"
+                  width="287"
+                  height="162.247"
+                  filterUnits="userSpaceOnUse"
+                  color-interpolation-filters="sRGB"
+                >
+                  <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                  <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
+                  <feOffset dy="4" />
+                  <feGaussianBlur stdDeviation="4" />
+                  <feColorMatrix type="matrix" values="0 0 0 0 0.262745 0 0 0 0 0.262745 0 0 0 0 0.360784 0 0 0 0.16 0" />
+                  <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow" />
+                  <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape" />
+                </filter>
+              </defs>
+            </svg>
+          </g> */}
         </svg>
       </div>
     </div>
