@@ -8,7 +8,7 @@ export const flowChartClasses = makeStyles((theme) => ({
     marginRight: "auto",
     width: "calc(100% - 128px)",
     maxWidth: 1380,
-    minHeight: 400,
+    minHeight: 450,
     position: "relative",
     // display: "flex",
   },
@@ -59,6 +59,9 @@ export const flowChartClasses = makeStyles((theme) => ({
       "& > circle": {
         fill: "#E8E8eb",
       },
+      "& > $chatTooltip": {
+        display: "block",
+      },
     },
   },
   designNode: {
@@ -70,6 +73,9 @@ export const flowChartClasses = makeStyles((theme) => ({
       "& > svg > path": {
         stroke: "#FDB314",
       },
+      "& > $designTooltip": {
+        display: "block",
+      },
     },
   },
   approvalNode: {
@@ -80,6 +86,9 @@ export const flowChartClasses = makeStyles((theme) => ({
       },
       "& > svg > path": {
         stroke: "#008222",
+      },
+      "& > $approvalTooltip": {
+        display: "block",
       },
     },
   },
@@ -95,6 +104,9 @@ export const flowChartClasses = makeStyles((theme) => ({
       "& > svg > path.svgSmileEyes": {
         fill: "#f68320",
       },
+      "& > $partnerTooltip": {
+        display: "block",
+      },
     },
   },
   requestNode: {
@@ -105,6 +117,9 @@ export const flowChartClasses = makeStyles((theme) => ({
       },
       "& > svg > path": {
         stroke: "#cf1a21",
+      },
+      "& > $requestTooltip": {
+        display: "block",
       },
     },
   },
@@ -117,6 +132,9 @@ export const flowChartClasses = makeStyles((theme) => ({
       "& > svg > path": {
         stroke: "#cf1a21",
       },
+      "& > $developTooltip": {
+        display: "block",
+      },
     },
   },
   testNode: {
@@ -127,6 +145,9 @@ export const flowChartClasses = makeStyles((theme) => ({
       },
       "& > svg > path": {
         stroke: "#723680",
+      },
+      "& > $testTooltip": {
+        display: "block",
       },
     },
   },
@@ -139,13 +160,41 @@ export const flowChartClasses = makeStyles((theme) => ({
       "& > svg > path": {
         stroke: "#008222",
       },
+      "& > $deployTooltip": {
+        display: "block",
+      },
     },
+  },
+  chatTooltip: {
+    display: "none",
+  },
+  designTooltip: {
+    display: "none",
+  },
+  approvalTooltip: {
+    display: "none",
+  },
+  partnerTooltip: {
+    display: "none",
+  },
+  requestTooltip: {
+    display: "none",
+  },
+  developTooltip: {
+    display: "none",
+  },
+  testTooltip: {
+    display: "none",
+  },
+  deployTooltip: {
+    // display: "none",
   },
   flowChartIcon: {
     margin: "auto",
     width: 32,
     height: 32,
   },
+
   pulseNode: {
     fill: "black",
     fillOpacity: 0,

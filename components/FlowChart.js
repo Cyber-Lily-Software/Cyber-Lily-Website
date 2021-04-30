@@ -16,7 +16,7 @@ export default function FlowChart() {
           xmlns="http://www.w3.org/2000/svg"
           xmlnsXlink="http://wwww.w3.org/1999/xlink"
           fill="none"
-          viewBox="0 0 1035 295"
+          viewBox="0 0 1035 375"
         >
           <g className={styles.flowChartEdgeGroup} data-line-group="1" id="flowChart-2_edge-1_2">
             <path
@@ -191,6 +191,35 @@ export default function FlowChart() {
                 stroke-linejoin="round"
               />
             </svg>
+            <g className={clsx(styles.flowChartTooltip, styles.chatTooltip)} data-line-group="1" id="flowChart_chat_tooltip">
+              <svg width="287" height="163" x="15" y="85" viewBox="0 0 287 163" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g filter="url(#filter0_d)">
+                  <path
+                    d="M8 19C8 14.5817 11.5817 11 16 11H271C275.418 11 279 14.5817 279 19V143C279 147.418 275.418 151 271 151H16C11.5817 151 8 147.418 8 143V19Z"
+                    fill="white"
+                  />
+                </g>
+                <defs>
+                  <filter
+                    id="filter0_d"
+                    x="0"
+                    y="0.752808"
+                    width="287"
+                    height="162.247"
+                    filterUnits="userSpaceOnUse"
+                    color-interpolation-filters="sRGB"
+                  >
+                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
+                    <feOffset dy="4" />
+                    <feGaussianBlur stdDeviation="4" />
+                    <feColorMatrix type="matrix" values="0 0 0 0 0.262745 0 0 0 0 0.262745 0 0 0 0 0.360784 0 0 0 0.16 0" />
+                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow" />
+                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape" />
+                  </filter>
+                </defs>
+              </svg>
+            </g>
           </g>
           <g className={clsx(styles.flowChartNodeGroup, styles.designNode)} data-line-group="1" id="flowChart_pen_node">
             <circle cx="204" cy="57" r="30" stroke="black" fill="#ffffff" strokeWidth="1" />
@@ -206,19 +235,35 @@ export default function FlowChart() {
               />
               <path d="M23.619 9.90479L25.1428 11.4286" stroke="#141433" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
-          </g>
-          <g className={clsx(styles.flowChartNodeGroup, styles.approvalNode)} data-line-group="1" id="flowChart_circle_check_node">
-            <circle cx="364" cy="57" r="30" stroke="black" fill="#ffffff" strokeWidth="1" />
-            <svg width="25" height="25" x="352" y="45" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M16.1905 28.1905C22.9231 28.1905 28.381 22.7327 28.381 16C28.381 9.26743 22.9231 3.80957 16.1905 3.80957C9.45786 3.80957 4 9.26743 4 16C4 22.7327 9.45786 28.1905 16.1905 28.1905Z"
-                stroke="#141433"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path d="M10.6666 16.5714L13.7142 19.619L21.3333 12" stroke="#141433" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
+            <g className={clsx(styles.flowChartTooltip, styles.designTooltip)} data-line-group="1" id="flowChart_design_tooltip">
+              <svg width="287" height="135" x="45" y="85" viewBox="0 0 287 135" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g filter="url(#filter0_d)">
+                  <path
+                    d="M8 19C8 14.5817 11.5817 11 16 11H271C275.418 11 279 14.5817 279 19V115C279 119.418 275.418 123 271 123H16C11.5817 123 8 119.418 8 115V19Z"
+                    fill="white"
+                  />
+                </g>
+                <defs>
+                  <filter
+                    id="filter0_d"
+                    x="0"
+                    y="0.752808"
+                    width="287"
+                    height="134.247"
+                    filterUnits="userSpaceOnUse"
+                    color-interpolation-filters="sRGB"
+                  >
+                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
+                    <feOffset dy="4" />
+                    <feGaussianBlur stdDeviation="4" />
+                    <feColorMatrix type="matrix" values="0 0 0 0 0.262745 0 0 0 0 0.262745 0 0 0 0 0.360784 0 0 0 0.16 0" />
+                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow" />
+                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape" />
+                  </filter>
+                </defs>
+              </svg>
+            </g>
           </g>
           <g className={clsx(styles.flowChartNodeGroup, styles.partnerNode)} data-line-group="1" id="flowChart_happy_face_node">
             <circle cx="524" cy="57" r="30" stroke="black" fill="#ffffff" strokeWidth="1" />
@@ -250,6 +295,35 @@ export default function FlowChart() {
                 className="svgSmile"
               />
             </svg>
+            <g className={clsx(styles.flowChartTooltip, styles.partnerTooltip)} data-line-group="1" id="flowChart_partner_tooltip">
+              <svg width="287" height="135" x="392" y="87" viewBox="0 0 287 135" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g filter="url(#filter0_d)">
+                  <path
+                    d="M8 19C8 14.5817 11.5817 11 16 11H271C275.418 11 279 14.5817 279 19V115C279 119.418 275.418 123 271 123H16C11.5817 123 8 119.418 8 115V19Z"
+                    fill="white"
+                  />
+                </g>
+                <defs>
+                  <filter
+                    id="filter0_d"
+                    x="0"
+                    y="0.752686"
+                    width="287"
+                    height="134.247"
+                    filterUnits="userSpaceOnUse"
+                    color-interpolation-filters="sRGB"
+                  >
+                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
+                    <feOffset dy="4" />
+                    <feGaussianBlur stdDeviation="4" />
+                    <feColorMatrix type="matrix" values="0 0 0 0 0.262745 0 0 0 0 0.262745 0 0 0 0 0.360784 0 0 0 0.16 0" />
+                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow" />
+                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape" />
+                  </filter>
+                </defs>
+              </svg>
+            </g>
           </g>
           <g className={clsx(styles.flowChartNodeGroup, styles.requestNode)} data-line-group="1" id="flowChart_refresh_node">
             <circle cx="364" cy="217" r="30" stroke="black" fill="#ffffff" strokeWidth="1" />
@@ -262,6 +336,36 @@ export default function FlowChart() {
                 stroke-linejoin="round"
               />
             </svg>
+            <g className={clsx(styles.flowChartTooltip, styles.requestTooltip)} data-line-group="1" id="flowChart_request_tooltip">
+              <svg width="295" height="156" x="392" y="150" viewBox="0 0 295 156" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g filter="url(#filter0_d)">
+                  <rect x="16" y="4" width="271" height="140" rx="8" fill="white" />
+                  <path
+                    d="M14.1319 70.138L10.687 72.3077C9.44152 73.0922 9.44152 74.9078 10.687 75.6923L14.1319 77.862C15.2947 78.5944 16.0001 79.8724 16.0001 81.2466L16.0001 83L17.0001 83L17.0001 80.6946L17.0001 67.3054L17.0001 65L16.0001 65L16.0001 66.7534C16.0001 68.1276 15.2947 69.4056 14.1319 70.138Z"
+                    fill="white"
+                  />
+                </g>
+                <defs>
+                  <filter
+                    id="filter0_d"
+                    x="0.00012207"
+                    y="0"
+                    width="295"
+                    height="156"
+                    filterUnits="userSpaceOnUse"
+                    color-interpolation-filters="sRGB"
+                  >
+                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
+                    <feOffset dy="4" />
+                    <feGaussianBlur stdDeviation="4" />
+                    <feColorMatrix type="matrix" values="0 0 0 0 0.262745 0 0 0 0 0.262745 0 0 0 0 0.360784 0 0 0 0.16 0" />
+                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow" />
+                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape" />
+                  </filter>
+                </defs>
+              </svg>
+            </g>
           </g>
           <g className={clsx(styles.flowChartNodeGroup, styles.developNode)} data-line-group="1" id="flowChart_code_node">
             <circle cx="684" cy="57" r="30" stroke="black" fill="#ffffff" strokeWidth="1" />
@@ -282,6 +386,77 @@ export default function FlowChart() {
                 stroke-linejoin="round"
               />
             </svg>
+            <g className={clsx(styles.flowChartTooltip, styles.developTooltip)} data-line-group="1" id="flowChart_develop_tooltip">
+              <svg width="287" height="163" x="554" y="90" viewBox="0 0 287 163" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g filter="url(#filter0_d)">
+                  <path
+                    d="M8 19C8 14.5817 11.5817 11 16 11H271C275.418 11 279 14.5817 279 19V143C279 147.418 275.418 151 271 151H16C11.5817 151 8 147.418 8 143V19Z"
+                    fill="white"
+                  />
+                </g>
+                <defs>
+                  <filter
+                    id="filter0_d"
+                    x="0"
+                    y="0.752686"
+                    width="287"
+                    height="162.247"
+                    filterUnits="userSpaceOnUse"
+                    color-interpolation-filters="sRGB"
+                  >
+                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
+                    <feOffset dy="4" />
+                    <feGaussianBlur stdDeviation="4" />
+                    <feColorMatrix type="matrix" values="0 0 0 0 0.262745 0 0 0 0 0.262745 0 0 0 0 0.360784 0 0 0 0.16 0" />
+                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow" />
+                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape" />
+                  </filter>
+                </defs>
+              </svg>
+            </g>
+          </g>
+          <g className={clsx(styles.flowChartNodeGroup, styles.approvalNode)} data-line-group="1" id="flowChart_circle_check_node">
+            <circle cx="364" cy="57" r="30" stroke="black" fill="#ffffff" strokeWidth="1" />
+            <svg width="25" height="25" x="352" y="45" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M16.1905 28.1905C22.9231 28.1905 28.381 22.7327 28.381 16C28.381 9.26743 22.9231 3.80957 16.1905 3.80957C9.45786 3.80957 4 9.26743 4 16C4 22.7327 9.45786 28.1905 16.1905 28.1905Z"
+                stroke="#141433"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path d="M10.6666 16.5714L13.7142 19.619L21.3333 12" stroke="#141433" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <g className={clsx(styles.flowChartTooltip, styles.approvalTooltip)} data-line-group="1" id="flowChart_approval_tooltip">
+              <svg width="287" height="163" x="222" y="87" viewBox="0 0 287 163" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g filter="url(#filter0_d)">
+                  <path
+                    d="M8 19C8 14.5817 11.5817 11 16 11H271C275.418 11 279 14.5817 279 19V143C279 147.418 275.418 151 271 151H16C11.5817 151 8 147.418 8 143V19Z"
+                    fill="white"
+                  />
+                </g>
+                <defs>
+                  <filter
+                    id="filter0_d"
+                    x="0"
+                    y="0.752686"
+                    width="287"
+                    height="162.247"
+                    filterUnits="userSpaceOnUse"
+                    color-interpolation-filters="sRGB"
+                  >
+                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
+                    <feOffset dy="4" />
+                    <feGaussianBlur stdDeviation="4" />
+                    <feColorMatrix type="matrix" values="0 0 0 0 0.262745 0 0 0 0 0.262745 0 0 0 0 0.360784 0 0 0 0.16 0" />
+                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow" />
+                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape" />
+                  </filter>
+                </defs>
+              </svg>
+            </g>
           </g>
           <g className={clsx(styles.flowChartNodeGroup, styles.testNode)} data-line-group="1" id="flowChart_checkboard_node">
             <circle cx="844" cy="57" r="30" stroke="black" fill="#ffffff" strokeWidth="1" />
@@ -310,6 +485,35 @@ export default function FlowChart() {
                 stroke-linejoin="round"
               />
             </svg>
+            <g className={clsx(styles.flowChartTooltip, styles.testTooltip)} data-line-group="1" id="flowChart_test_tooltip">
+              <svg width="287" height="191" x="724" y="90" viewBox="0 0 287 191" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g filter="url(#filter0_d)">
+                  <path
+                    d="M8 19C8 14.5817 11.5817 11 16 11H271C275.418 11 279 14.5817 279 19V171C279 175.418 275.418 179 271 179H16C11.5817 179 8 175.418 8 171V19Z"
+                    fill="white"
+                  />
+                </g>
+                <defs>
+                  <filter
+                    id="filter0_d"
+                    x="0"
+                    y="0.752686"
+                    width="287"
+                    height="190.247"
+                    filterUnits="userSpaceOnUse"
+                    color-interpolation-filters="sRGB"
+                  >
+                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
+                    <feOffset dy="4" />
+                    <feGaussianBlur stdDeviation="4" />
+                    <feColorMatrix type="matrix" values="0 0 0 0 0.262745 0 0 0 0 0.262745 0 0 0 0 0.360784 0 0 0 0.16 0" />
+                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow" />
+                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape" />
+                  </filter>
+                </defs>
+              </svg>
+            </g>
           </g>
           <g className={clsx(styles.flowChartNodeGroup, styles.deployNode)} data-line-group="1" id="flowChart_rocket_node">
             <circle cx="1004" cy="57" r="30" stroke="black" fill="#ffffff" strokeWidth="1" />
@@ -338,40 +542,36 @@ export default function FlowChart() {
                 stroke-linejoin="round"
               />
             </svg>
+            <g className={clsx(styles.flowChartTooltip, styles.deployTooltip)} data-line-group="1" id="flowChart_deploy_tooltip">
+              <svg width="287" height="219" x="755" y="90" viewBox="0 0 287 219" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g filter="url(#filter0_d)">
+                  <path
+                    d="M8 19C8 14.5817 11.5817 11 16 11H271C275.418 11 279 14.5817 279 19V199C279 203.418 275.418 207 271 207H16C11.5817 207 8 203.418 8 199V19Z"
+                    fill="white"
+                  />
+                </g>
+                <defs>
+                  <filter
+                    id="filter0_d"
+                    x="0"
+                    y="0.75293"
+                    width="287"
+                    height="218.247"
+                    filterUnits="userSpaceOnUse"
+                    color-interpolation-filters="sRGB"
+                  >
+                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
+                    <feOffset dy="4" />
+                    <feGaussianBlur stdDeviation="4" />
+                    <feColorMatrix type="matrix" values="0 0 0 0 0.262745 0 0 0 0 0.262745 0 0 0 0 0.360784 0 0 0 0.16 0" />
+                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow" />
+                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape" />
+                  </filter>
+                </defs>
+              </svg>
+            </g>
           </g>
-          {/* <g className={clsx(styles.flowChartTooltip, styles.chatTooltip)} data-line-group="1" id="flowChart_chat_tooltip">
-            <svg width="287" height="163" viewBox="0 0 287 163" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <g filter="url(#filter0_d)">
-                <path
-                  d="M8 19C8 14.5817 11.5817 11 16 11H271C275.418 11 279 14.5817 279 19V143C279 147.418 275.418 151 271 151H16C11.5817 151 8 147.418 8 143V19Z"
-                  fill="white"
-                />
-                <path
-                  d="M22.138 9.13175L24.3077 5.6869C25.0922 4.4414 26.9078 4.4414 27.6923 5.6869L29.862 9.13176C30.5944 10.2946 31.8724 11 33.2466 11L35 11L35 12L32.6946 12L19.3054 12L17 12L17 11L18.7534 11C20.1276 11 21.4056 10.2946 22.138 9.13175Z"
-                  fill="white"
-                />
-              </g>
-              <defs>
-                <filter
-                  id="filter0_d"
-                  x="0"
-                  y="0.752808"
-                  width="287"
-                  height="162.247"
-                  filterUnits="userSpaceOnUse"
-                  color-interpolation-filters="sRGB"
-                >
-                  <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                  <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
-                  <feOffset dy="4" />
-                  <feGaussianBlur stdDeviation="4" />
-                  <feColorMatrix type="matrix" values="0 0 0 0 0.262745 0 0 0 0 0.262745 0 0 0 0 0.360784 0 0 0 0.16 0" />
-                  <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow" />
-                  <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape" />
-                </filter>
-              </defs>
-            </svg>
-          </g> */}
         </svg>
       </div>
     </div>
