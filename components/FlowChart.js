@@ -10,7 +10,7 @@ export default function FlowChart() {
   return (
     <div className={styles.flowChart}>
       <div className={styles.flowChartBackground} />
-      <div className={styles.flowChartNodes}>
+      {/* <div className={styles.flowChartNodes}>
         <div className={clsx(styles.flowChartNode, styles.chatNode)}>
           <div className={styles.flowChartIcon}>
             <img src="/flow_chart_icons/thread.png" />
@@ -51,16 +51,16 @@ export default function FlowChart() {
             <img src="/flow_chart_icons/rocket.png" />
           </div>
         </div>
-      </div>
+      </div> */}
       <div className={styles.flowChartDiagram}>
         <svg
           className={styles.flowChartDiagramSvg}
           xmlns="http://www.w3.org/2000/svg"
           xmlnsXlink="http://wwww.w3.org/1999/xlink"
           fill="none"
-          viewBox="0 0 1020 295"
+          viewBox="0 0 1080 295"
         >
-          <g className={styles.flowChartEdgeGroup} dataLineGroup="1" id="flowChart-2_edge-1_2">
+          <g className={styles.flowChartEdgeGroup} data-line-group="1" id="flowChart-2_edge-1_2">
             <path
               className={styles.flowChartDottedLine}
               stroke="#141433"
@@ -212,6 +212,38 @@ export default function FlowChart() {
                 strokeWidth="3"
                 d="M844, 57L 1004, 57"
               />
+            </g>
+            <g className={styles.flowChartNodeGroup} data-line-group="1" id="flowChart_node_1">
+              <circle cx="44" cy="57" r="30" stroke="black" fill="#ffffff" strokeWidth="1" />
+              <image xlinkHref="/flow_chart_icons/thread.png" x="32" y="45" width="25" height="25" />
+            </g>
+            <g className={styles.flowChartNodeGroup} data-line-group="1" id="flowChart_node_2">
+              <circle cx="204" cy="57" r="30" stroke="black" fill="#ffffff" strokeWidth="1" />
+              <image xlinkHref="/flow_chart_icons/pen.png" x="192" y="45" width="25" height="25" />
+            </g>
+            <g className={styles.flowChartNodeGroup} data-line-group="1" id="flowChart_node_3">
+              <circle cx="364" cy="57" r="30" stroke="black" fill="#ffffff" strokeWidth="1" />
+              <image xlinkHref="/flow_chart_icons/check_circle.png" x="352" y="45" width="25" height="25" />
+            </g>
+            <g className={styles.flowChartNodeGroup} data-line-group="1" id="flowChart_node_4">
+              <circle cx="524" cy="57" r="30" stroke="black" fill="#ffffff" strokeWidth="1" />
+              <image xlinkHref="/flow_chart_icons/check_circle.png" x="512" y="45" width="25" height="25" />
+            </g>
+            <g>
+              <circle cx="364" cy="217" r="30" stroke="black" fill="#ffffff" strokeWidth="1" />
+              <image xlinkHref="/flow_chart_icons/refresh.png" x="352" y="205" width="25" height="25" />
+            </g>
+            <g>
+              <circle cx="684" cy="57" r="30" stroke="black" fill="#ffffff" strokeWidth="1" />
+              <image xlinkHref="/flow_chart_icons/code.png" x="672" y="45" width="25" height="25" />
+            </g>
+            <g>
+              <circle cx="844" cy="57" r="30" stroke="black" fill="#ffffff" strokeWidth="1" />
+              <image xlinkHref="/flow_chart_icons/clipboard_check.png" x="832" y="45" width="25" height="25" />
+            </g>
+            <g>
+              <circle cx="1004" cy="57" r="30" stroke="black" fill="#ffffff" strokeWidth="1" />
+              <image xlinkHref="/flow_chart_icons/rocket.png" x="992" y="45" width="25" height="25" />
             </g>
           </g>
         </svg>
