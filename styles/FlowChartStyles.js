@@ -11,6 +11,7 @@ export const flowChartClasses = makeStyles((theme) => ({
     minHeight: 450,
     position: "relative",
     // display: "flex",
+    backgroundColor: "#e8e8eb",
   },
   flowChartBackground: {
     position: "absolute",
@@ -27,7 +28,8 @@ export const flowChartClasses = makeStyles((theme) => ({
   flowChartDiagramSvg: {
     minWidth: 900,
     overflow: "visible",
-    paddingRight: 45,
+    marginRight: 45,
+    backgroundColor: "#e8e8eb",
   },
   flowChartDottedLine: {
     strokeDasharray: 4,
