@@ -58,28 +58,97 @@ export const flowChartClasses = makeStyles((theme) => ({
     display: "flex",
     top: 35,
   },
-  chatNode: {},
+  flowChartNodeGroup: {
+    "&:hover": {
+      cursor: "pointer",
+    },
+  },
+  chatNode: {
+    "&:hover": {
+      "& > circle": {
+        fill: "#E8E8eb",
+      },
+    },
+  },
   designNode: {
-    left: 225,
+    "&:hover": {
+      "& > circle": {
+        fill: "#FFF7E8",
+        stroke: "#FDB314",
+      },
+      "& > svg > path": {
+        stroke: "#FDB314",
+      },
+    },
   },
   approvalNode: {
-    left: 435,
+    "&:hover": {
+      "& > circle": {
+        fill: "#E6F3E9",
+        stroke: "#008222",
+      },
+      "& > svg > path": {
+        stroke: "#008222",
+      },
+    },
   },
   partnerNode: {
-    left: 635,
+    "&:hover": {
+      "& > circle": {
+        fill: "#fef3e9",
+        stroke: "#f68320",
+      },
+      "& > svg > path": {
+        stroke: "#f68320",
+      },
+      "& > svg > path.svgSmileEyes": {
+        fill: "#f68320",
+      },
+    },
   },
   requestNode: {
-    top: 235,
-    left: 435,
+    "&:hover": {
+      "& > circle": {
+        fill: "#fae8e9",
+        stroke: "#cf1a21",
+      },
+      "& > svg > path": {
+        stroke: "#cf1a21",
+      },
+    },
   },
   developNode: {
-    left: 835,
+    "&:hover": {
+      "& > circle": {
+        fill: "#fae8e9",
+        stroke: "#cf1a21",
+      },
+      "& > svg > path": {
+        stroke: "#cf1a21",
+      },
+    },
   },
   testNode: {
-    left: 1035,
+    "&:hover": {
+      "& > circle": {
+        fill: "#f1ebf2",
+        stroke: "#723680",
+      },
+      "& > svg > path": {
+        stroke: "#723680",
+      },
+    },
   },
   deployNode: {
-    left: 1235,
+    "&:hover": {
+      "& > circle": {
+        fill: "#e6f3e9",
+        stroke: "#008222",
+      },
+      "& > svg > path": {
+        stroke: "#008222",
+      },
+    },
   },
   flowChartIcon: {
     margin: "auto",
