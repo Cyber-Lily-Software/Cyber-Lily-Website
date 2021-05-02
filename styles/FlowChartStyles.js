@@ -200,27 +200,6 @@ export const flowChartClasses = makeStyles((theme) => ({
     width: 32,
     height: 32,
   },
-
-  pulseNode: {
-    fill: "black",
-    fillOpacity: 0,
-    // transformOrigin: "50% 50%",
-    animationDuration: "2s",
-    animationName: "$pulse",
-    animationIterationCount: "infinite",
-  },
-  "@keyframes pulse": {
-    from: {
-      strokeWidth: 3,
-      strokeOpacity: 1,
-      transform: "scale(0.3)",
-    },
-    to: {
-      strokeWidth: 0,
-      strokeOpacity: 0,
-      transform: "scale(1.5)",
-    },
-  },
   toolTipText: {
     fontFamily: "Roboto",
     fontSize: "1rem",

@@ -173,8 +173,7 @@ export default function FlowChart() {
               />
             </g>
             <g className={clsx(styles.flowChartNodeGroup, styles.chatNode)} data-line-group="1" id="flowChart_chat_bubble_node">
-              <circle cx="44" cy="57" r="30" stroke="black" fill="#ffffff" strokeWidth="1" />
-              {/* <circle cx="44" cy="57" r="33" className={styles.pulseNode} /> */}
+              <circle cx="44" cy="57" r="30" stroke="black" fill="#ffffff" strokeWidth="1" className={styles.pulseNode} />
               <svg width="25" height="25" x="32" y="45" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                   fill-rule="evenodd"
