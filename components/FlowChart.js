@@ -3,6 +3,7 @@ import { React } from "react";
 import clsx from "clsx";
 
 import { flowChartClasses } from "../styles/FlowChartStyles";
+import { CallMissedSharp } from "@material-ui/icons";
 
 export default function FlowChart() {
   const styles = flowChartClasses();
@@ -238,38 +239,6 @@ export default function FlowChart() {
                     </tspan>
                   </text>
                 </svg>
-
-                {/* <svg width="287" height="163" x="15" y="90" viewBox="0 0 287 163" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <g filter="url(#filter_chat)">
-                    <path
-                      d="M8 19C8 14.5817 11.5817 11 16 11H271C275.418 11 279 14.5817 279 19V143C279 147.418 275.418 151 271 151H16C11.5817 151 8 147.418 8 143V19Z"
-                      fill="white"
-                    />
-                    <path
-                      d="M22.138 9.13175L24.3077 5.6869C25.0922 4.4414 26.9078 4.4414 27.6923 5.6869L29.862 9.13176C30.5944 10.2946 31.8724 11 33.2466 11L35 11L35 12L32.6946 12L19.3054 12L17 12L17 11L18.7534 11C20.1276 11 21.4056 10.2946 22.138 9.13175Z"
-                      fill="white"
-                    />
-                  </g>
-                  <defs>
-                    <filter
-                      id="filter_chat"
-                      x="0"
-                      y="0.752808"
-                      width="287"
-                      height="162.247"
-                      filterUnits="userSpaceOnUse"
-                      color-interpolation-filters="sRGB"
-                    >
-                      <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
-                      <feOffset dy="4" />
-                      <feGaussianBlur stdDeviation="4" />
-                      <feColorMatrix type="matrix" values="0 0 0 0 0.262745 0 0 0 0 0.262745 0 0 0 0 0.360784 0 0 0 0.16 0" />
-                      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow" />
-                      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape" />
-                    </filter>
-                  </defs>
-                </svg> */}
               </g>
             </g>
             <g className={clsx(styles.flowChartNodeGroup, styles.requestNode)} data-line-group="1" id="flowChart_refresh_node">
@@ -285,11 +254,11 @@ export default function FlowChart() {
               </svg>
 
               <g className={clsx(styles.flowChartTooltip, styles.requestTooltip)} data-line-group="1" id="flowChart_request_tooltip">
-                <svg width="295" height="156" x="392" y="140" viewBox="0 0 295 156" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg width="295" height="144" x="392" y="148" viewBox="0 0 295 144" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g filter="url(#filter_request)">
-                    <rect x="16" y="4" width="271" height="140" rx="8" fill="white" />
+                    <rect x="16" y="4" width="271" height="128" rx="8" fill="white" />
                     <path
-                      d="M14.1319 70.138L10.687 72.3077C9.44152 73.0922 9.44152 74.9078 10.687 75.6923L14.1319 77.862C15.2947 78.5944 16.0001 79.8724 16.0001 81.2466L16.0001 83L17.0001 83L17.0001 80.6946L17.0001 67.3054L17.0001 65L16.0001 65L16.0001 66.7534C16.0001 68.1276 15.2947 69.4056 14.1319 70.138Z"
+                      d="M14.1319 64.138L10.687 66.3077C9.44152 67.0922 9.44152 68.9078 10.687 69.6923L14.1319 71.862C15.2947 72.5944 16.0001 73.8724 16.0001 75.2466L16.0001 77L17.0001 77L17.0001 74.6946L17.0001 61.3054L17.0001 59L16.0001 59L16.0001 60.7534C16.0001 62.1276 15.2947 63.4056 14.1319 64.138Z"
                       fill="white"
                     />
                   </g>
@@ -299,7 +268,7 @@ export default function FlowChart() {
                       x="0.00012207"
                       y="0"
                       width="295"
-                      height="156"
+                      height="144"
                       filterUnits="userSpaceOnUse"
                       color-interpolation-filters="sRGB"
                     >
@@ -316,15 +285,16 @@ export default function FlowChart() {
                     <tspan fontWeight="bold" fill="#141433">
                       Request Changes
                     </tspan>
-                  </text>
-                  <text x="27" y="64" className={styles.toolTipText}>
-                    <tspan fill="#141433">Reviews are where we get your</tspan>
-                  </text>
-                  <text x="27" y="92" className={styles.toolTipText}>
-                    <tspan fill="#141433">feedback on the designs. You can</tspan>
-                  </text>
-                  <text x="27" y="120" className={styles.toolTipText}>
-                    <tspan fill="#141433">request changes at this point.</tspan>
+
+                    <tspan x="27" y="64" className={styles.toolTipText}>
+                      Reviews are where we get your
+                    </tspan>
+                    <tspan x="27" y="88" className={styles.toolTipText}>
+                      feedback on the designs. You can
+                    </tspan>
+                    <tspan x="27" y="112" className={styles.toolTipText}>
+                      request changes at this point.
+                    </tspan>
                   </text>
                 </svg>
               </g>
@@ -344,10 +314,10 @@ export default function FlowChart() {
                 <path d="M23.619 9.90479L25.1428 11.4286" stroke="#141433" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
               </svg>
               <g className={clsx(styles.flowChartTooltip, styles.designTooltip)} data-line-group="1" id="flowChart_design_tooltip">
-                <svg width="287" height="135" x="60" y="90" viewBox="0 0 287 135" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg width="287" height="127" x="60" y="90" viewBox="0 0 287 127" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g filter="url(#filter_design)">
                     <path
-                      d="M8 19C8 14.5817 11.5817 11 16 11H271C275.418 11 279 14.5817 279 19V115C279 119.418 275.418 123 271 123H16C11.5817 123 8 119.418 8 115V19Z"
+                      d="M8 19C8 14.5817 11.5817 11 16 11H271C275.418 11 279 14.5817 279 19V107C279 111.418 275.418 115 271 115H16C11.5817 115 8 111.418 8 107V19Z"
                       fill="white"
                     />
                     <path
@@ -361,7 +331,7 @@ export default function FlowChart() {
                       x="0"
                       y="0.752808"
                       width="287"
-                      height="134.247"
+                      height="126.247"
                       filterUnits="userSpaceOnUse"
                       color-interpolation-filters="sRGB"
                     >
@@ -378,12 +348,12 @@ export default function FlowChart() {
                     <tspan fontWeight="bold" fill="#141433">
                       Design
                     </tspan>
-                  </text>
-                  <text x="22" y="68" className={styles.toolTipText}>
-                    <tspan fill="#141433">Once the quote has been accepted</tspan>
-                  </text>
-                  <text x="22" y="96" className={styles.toolTipText}>
-                    <tspan fill="#141433">the design process will begin</tspan>
+                    <tspan x="22" y="70" className={styles.toolTipText}>
+                      Once the quote has been accepted
+                    </tspan>
+                    <tspan x="22" y="94" className={styles.toolTipText}>
+                      the design process will begin
+                    </tspan>
                   </text>
                 </svg>
               </g>
@@ -419,10 +389,10 @@ export default function FlowChart() {
                 />
               </svg>
               <g className={clsx(styles.flowChartTooltip, styles.partnerTooltip)} data-line-group="1" id="flowChart_partner_tooltip">
-                <svg width="287" height="135" x="380" y="87" viewBox="0 0 287 135" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg width="287" height="127" x="380" y="87" viewBox="0 0 287 127" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g filter="url(#filter_partner)">
                     <path
-                      d="M8 19C8 14.5817 11.5817 11 16 11H271C275.418 11 279 14.5817 279 19V115C279 119.418 275.418 123 271 123H16C11.5817 123 8 119.418 8 115V19Z"
+                      d="M8 19C8 14.5817 11.5817 11 16 11H271C275.418 11 279 14.5817 279 19V107C279 111.418 275.418 115 271 115H16C11.5817 115 8 111.418 8 107V19Z"
                       fill="white"
                     />
                     <path
@@ -436,7 +406,7 @@ export default function FlowChart() {
                       x="0"
                       y="0.752686"
                       width="287"
-                      height="134.247"
+                      height="126.247"
                       filterUnits="userSpaceOnUse"
                       color-interpolation-filters="sRGB"
                     >
@@ -453,12 +423,12 @@ export default function FlowChart() {
                     <tspan fontWeight="bold" fill="#141433">
                       Our partner
                     </tspan>
-                  </text>
-                  <text x="22" y="68" className={styles.toolTipText}>
-                    <tspan fill="#141433">That's you! We'll keep you up to</tspan>
-                  </text>
-                  <text x="22" y="96" className={styles.toolTipText}>
-                    <tspan fill="#141433">date at all times.</tspan>
+                    <tspan x="22" y="70" className={styles.toolTipText}>
+                      That's you! We'll keep you up to
+                    </tspan>
+                    <tspan x="22" y="94" className={styles.toolTipText}>
+                      date at all times.
+                    </tspan>
                   </text>
                 </svg>
               </g>
@@ -483,10 +453,10 @@ export default function FlowChart() {
                 />
               </svg>
               <g className={clsx(styles.flowChartTooltip, styles.developTooltip)} data-line-group="1" id="flowChart_develop_tooltip">
-                <svg width="287" height="163" x="540" y="90" viewBox="0 0 287 163" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg width="287" height="151" x="540" y="90" viewBox="0 0 287 151" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g filter="url(#filter_develop)">
                     <path
-                      d="M8 19C8 14.5817 11.5817 11 16 11H271C275.418 11 279 14.5817 279 19V143C279 147.418 275.418 151 271 151H16C11.5817 151 8 147.418 8 143V19Z"
+                      d="M8 19C8 14.5817 11.5817 11 16 11H271C275.418 11 279 14.5817 279 19V131C279 135.418 275.418 139 271 139H16C11.5817 139 8 135.418 8 131V19Z"
                       fill="white"
                     />
                     <path
@@ -500,7 +470,7 @@ export default function FlowChart() {
                       x="0"
                       y="0.752686"
                       width="287"
-                      height="162.247"
+                      height="150.247"
                       filterUnits="userSpaceOnUse"
                       color-interpolation-filters="sRGB"
                     >
@@ -517,15 +487,16 @@ export default function FlowChart() {
                     <tspan fontWeight="bold" fill="#141433">
                       Develop
                     </tspan>
-                  </text>
-                  <text x="22" y="68" className={styles.toolTipText}>
-                    <tspan fill="#141433">Once the designs have been</tspan>
-                  </text>
-                  <text x="22" y="96" className={styles.toolTipText}>
-                    <tspan fill="#141433">approved, we will start the</tspan>
-                  </text>
-                  <text x="22" y="124" className={styles.toolTipText}>
-                    <tspan fill="#141433">development on your project.</tspan>
+
+                    <tspan x="22" y="70" className={styles.toolTipText}>
+                      Once the designs have been
+                    </tspan>
+                    <tspan x="22" y="94" className={styles.toolTipText}>
+                      approved, we will start the
+                    </tspan>
+                    <tspan x="22" y="118" className={styles.toolTipText}>
+                      development on your project.
+                    </tspan>
                   </text>
                 </svg>
               </g>
@@ -549,10 +520,10 @@ export default function FlowChart() {
                 />
               </svg>
               <g className={clsx(styles.flowChartTooltip, styles.approvalTooltip)} data-line-group="1" id="flowChart_approval_tooltip">
-                <svg width="287" height="163" x="220" y="90" viewBox="0 0 287 163" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg width="287" height="151" x="220" y="90" viewBox="0 0 287 151" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g filter="url(#filter_approval)">
                     <path
-                      d="M8 19C8 14.5817 11.5817 11 16 11H271C275.418 11 279 14.5817 279 19V143C279 147.418 275.418 151 271 151H16C11.5817 151 8 147.418 8 143V19Z"
+                      d="M8 19C8 14.5817 11.5817 11 16 11H271C275.418 11 279 14.5817 279 19V131C279 135.418 275.418 139 271 139H16C11.5817 139 8 135.418 8 131V19Z"
                       fill="white"
                     />
                     <path
@@ -566,7 +537,7 @@ export default function FlowChart() {
                       x="0"
                       y="0.752686"
                       width="287"
-                      height="162.247"
+                      height="150.247"
                       filterUnits="userSpaceOnUse"
                       color-interpolation-filters="sRGB"
                     >
@@ -583,15 +554,15 @@ export default function FlowChart() {
                     <tspan fontWeight="bold" fill="#141433">
                       Approval
                     </tspan>
-                  </text>
-                  <text x="22" y="68" className={styles.toolTipText}>
-                    <tspan fill="#141433">The designs will be sent to you to</tspan>
-                  </text>
-                  <text x="22" y="96" className={styles.toolTipText}>
-                    <tspan fill="#141433">review at every stage before</tspan>
-                  </text>
-                  <text x="22" y="124" className={styles.toolTipText}>
-                    <tspan fill="#141433">moving forward.</tspan>
+                    <tspan x="22" y="70" className={styles.toolTipText}>
+                      The designs will be sent to you to
+                    </tspan>
+                    <tspan x="22" y="94" className={styles.toolTipText}>
+                      review at every stage before
+                    </tspan>
+                    <tspan x="22" y="118" className={styles.toolTipText}>
+                      moving forward.
+                    </tspan>
                   </text>
                 </svg>
               </g>
@@ -624,10 +595,10 @@ export default function FlowChart() {
                 />
               </svg>
               <g className={clsx(styles.flowChartTooltip, styles.testTooltip)} data-line-group="1" id="flowChart_test_tooltip">
-                <svg width="287" height="191" x="700" y="90" viewBox="0 0 287 191" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg width="287" height="175" x="700" y="90" viewBox="0 0 287 175" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g filter="url(#filter_test)">
                     <path
-                      d="M8 19C8 14.5817 11.5817 11 16 11H271C275.418 11 279 14.5817 279 19V171C279 175.418 275.418 179 271 179H16C11.5817 179 8 175.418 8 171V19Z"
+                      d="M8 19C8 14.5817 11.5817 11 16 11H271C275.418 11 279 14.5817 279 19V155C279 159.418 275.418 163 271 163H16C11.5817 163 8 159.418 8 155V19Z"
                       fill="white"
                     />
                     <path
@@ -641,7 +612,7 @@ export default function FlowChart() {
                       x="0"
                       y="0.752686"
                       width="287"
-                      height="190.247"
+                      height="174.247"
                       filterUnits="userSpaceOnUse"
                       color-interpolation-filters="sRGB"
                     >
@@ -658,18 +629,18 @@ export default function FlowChart() {
                     <tspan fontWeight="bold" fill="#141433">
                       Test
                     </tspan>
-                  </text>
-                  <text x="22" y="68" className={styles.toolTipText}>
-                    <tspan fill="#141433">After the development process is</tspan>
-                  </text>
-                  <text x="22" y="96" className={styles.toolTipText}>
-                    <tspan fill="#141433">done, we will test everything to</tspan>
-                  </text>
-                  <text x="22" y="124" className={styles.toolTipText}>
-                    <tspan fill="#141433">ensure that it is perfect and ready</tspan>
-                  </text>
-                  <text x="22" y="152" className={styles.toolTipText}>
-                    <tspan fill="#141433">for deployment.</tspan>
+                    <tspan x="22" y="70" className={styles.toolTipText}>
+                      After the development process is
+                    </tspan>
+                    <tspan x="22" y="94" className={styles.toolTipText}>
+                      done, we will test everything to
+                    </tspan>
+                    <tspan x="22" y="118" className={styles.toolTipText}>
+                      ensure that it is perfect and ready
+                    </tspan>
+                    <tspan x="22" y="142" className={styles.toolTipText}>
+                      for deployment.
+                    </tspan>
                   </text>
                 </svg>
               </g>
@@ -702,10 +673,10 @@ export default function FlowChart() {
                 />
               </svg>
               <g className={clsx(styles.flowChartTooltip, styles.deployTooltip)} data-line-group="1" id="flowChart_deploy_tooltip">
-                <svg width="287" height="219" x="743" y="90" viewBox="0 0 287 219" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg width="287" height="199" x="743" y="90" viewBox="0 0 287 199" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g filter="url(#filter_deploy)">
                     <path
-                      d="M8 19C8 14.5817 11.5817 11 16 11H271C275.418 11 279 14.5817 279 19V199C279 203.418 275.418 207 271 207H16C11.5817 207 8 203.418 8 199V19Z"
+                      d="M8 19C8 14.5817 11.5817 11 16 11H271C275.418 11 279 14.5817 279 19V179C279 183.418 275.418 187 271 187H16C11.5817 187 8 183.418 8 179V19Z"
                       fill="white"
                     />
                     <path
@@ -719,7 +690,7 @@ export default function FlowChart() {
                       x="0"
                       y="0.75293"
                       width="287"
-                      height="218.247"
+                      height="198.247"
                       filterUnits="userSpaceOnUse"
                       color-interpolation-filters="sRGB"
                     >
@@ -736,21 +707,21 @@ export default function FlowChart() {
                     <tspan fontWeight="bold" fill="#141433">
                       Deploy
                     </tspan>
-                  </text>
-                  <text x="22" y="68" className={styles.toolTipText}>
-                    <tspan fill="#141433">Once everything has been</tspan>
-                  </text>
-                  <text x="22" y="96" className={styles.toolTipText}>
-                    <tspan fill="#141433">accepted by you, we can either</tspan>
-                  </text>
-                  <text x="22" y="124" className={styles.toolTipText}>
-                    <tspan fill="#141433">deploy your product for you or we</tspan>
-                  </text>
-                  <text x="22" y="152" className={styles.toolTipText}>
-                    <tspan fill="#141433">hand over all the required source</tspan>
-                  </text>
-                  <text x="22" y="180" className={styles.toolTipText}>
-                    <tspan fill="#141433">files to host it yourself.</tspan>
+                    <tspan x="22" y="70" className={styles.toolTipText}>
+                      Once everything has been
+                    </tspan>
+                    <tspan x="22" y="94" className={styles.toolTipText}>
+                      accepted by you, we can either
+                    </tspan>
+                    <tspan x="22" y="118" className={styles.toolTipText}>
+                      deploy your product for you or we
+                    </tspan>
+                    <tspan x="22" y="142" className={styles.toolTipText}>
+                      hand over all the required source
+                    </tspan>
+                    <tspan x="22" y="166" className={styles.toolTipText}>
+                      files to host it yourself.
+                    </tspan>
                   </text>
                 </svg>
               </g>

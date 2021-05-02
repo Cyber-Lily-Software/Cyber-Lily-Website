@@ -225,5 +225,7 @@ export const flowChartClasses = makeStyles((theme) => ({
     fontFamily: "Roboto",
     fontSize: "1rem",
     lineHeight: "1.75rem",
+    color: "#43435C",
+    fill: "#43435C",
   },
 }));
