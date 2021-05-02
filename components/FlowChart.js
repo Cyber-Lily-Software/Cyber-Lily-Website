@@ -193,10 +193,14 @@ export default function FlowChart() {
                 />
               </svg>
               <g className={clsx(styles.flowChartTooltip, styles.chatTooltip)} data-line-group="1" id="flowChart_chat_tooltip">
-                <svg width="287" height="163" x="15" y="85" viewBox="0 0 287 163" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg width="287" height="163" x="15" y="90" viewBox="0 0 287 163" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g filter="url(#filter_chat)">
                     <path
                       d="M8 19C8 14.5817 11.5817 11 16 11H271C275.418 11 279 14.5817 279 19V143C279 147.418 275.418 151 271 151H16C11.5817 151 8 147.418 8 143V19Z"
+                      fill="white"
+                    />
+                    <path
+                      d="M22.138 9.13175L24.3077 5.6869C25.0922 4.4414 26.9078 4.4414 27.6923 5.6869L29.862 9.13176C30.5944 10.2946 31.8724 11 33.2466 11L35 11L35 12L32.6946 12L19.3054 12L17 12L17 11L18.7534 11C20.1276 11 21.4056 10.2946 22.138 9.13175Z"
                       fill="white"
                     />
                   </g>
@@ -237,10 +241,14 @@ export default function FlowChart() {
                 <path d="M23.619 9.90479L25.1428 11.4286" stroke="#141433" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
               </svg>
               <g className={clsx(styles.flowChartTooltip, styles.designTooltip)} data-line-group="1" id="flowChart_design_tooltip">
-                <svg width="287" height="135" x="45" y="85" viewBox="0 0 287 135" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg width="287" height="135" x="60" y="90" viewBox="0 0 287 135" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g filter="url(#filter_design)">
                     <path
                       d="M8 19C8 14.5817 11.5817 11 16 11H271C275.418 11 279 14.5817 279 19V115C279 119.418 275.418 123 271 123H16C11.5817 123 8 119.418 8 115V19Z"
+                      fill="white"
+                    />
+                    <path
+                      d="M139.638 9.13175L141.808 5.6869C142.592 4.4414 144.408 4.4414 145.192 5.6869L147.362 9.13176C148.094 10.2946 149.372 11 150.747 11L152.5 11L152.5 12L150.195 12L136.805 12L134.5 12L134.5 11L136.253 11C137.628 11 138.906 10.2946 139.638 9.13175Z"
                       fill="white"
                     />
                   </g>
@@ -297,10 +305,14 @@ export default function FlowChart() {
                 />
               </svg>
               <g className={clsx(styles.flowChartTooltip, styles.partnerTooltip)} data-line-group="1" id="flowChart_partner_tooltip">
-                <svg width="287" height="135" x="392" y="87" viewBox="0 0 287 135" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg width="287" height="135" x="380" y="87" viewBox="0 0 287 135" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g filter="url(#filter_partner)">
                     <path
                       d="M8 19C8 14.5817 11.5817 11 16 11H271C275.418 11 279 14.5817 279 19V115C279 119.418 275.418 123 271 123H16C11.5817 123 8 119.418 8 115V19Z"
+                      fill="white"
+                    />
+                    <path
+                      d="M139.638 9.13175L141.808 5.6869C142.592 4.4414 144.408 4.4414 145.192 5.6869L147.362 9.13176C148.094 10.2946 149.372 11 150.747 11L152.5 11L152.5 12L150.195 12L136.805 12L134.5 12L134.5 11L136.253 11C137.628 11 138.906 10.2946 139.638 9.13175Z"
                       fill="white"
                     />
                   </g>
@@ -339,9 +351,13 @@ export default function FlowChart() {
               </svg>
 
               <g className={clsx(styles.flowChartTooltip, styles.requestTooltip)} data-line-group="1" id="flowChart_request_tooltip">
-                <svg width="295" height="156" x="392" y="150" viewBox="0 0 295 156" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg width="295" height="156" x="392" y="140" viewBox="0 0 295 156" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g filter="url(#filter_request)">
                     <rect x="16" y="4" width="271" height="140" rx="8" fill="white" />
+                    <path
+                      d="M14.1319 70.138L10.687 72.3077C9.44152 73.0922 9.44152 74.9078 10.687 75.6923L14.1319 77.862C15.2947 78.5944 16.0001 79.8724 16.0001 81.2466L16.0001 83L17.0001 83L17.0001 80.6946L17.0001 67.3054L17.0001 65L16.0001 65L16.0001 66.7534C16.0001 68.1276 15.2947 69.4056 14.1319 70.138Z"
+                      fill="white"
+                    />
                   </g>
                   <defs>
                     <filter
@@ -385,10 +401,14 @@ export default function FlowChart() {
                 />
               </svg>
               <g className={clsx(styles.flowChartTooltip, styles.developTooltip)} data-line-group="1" id="flowChart_develop_tooltip">
-                <svg width="287" height="163" x="554" y="90" viewBox="0 0 287 163" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg width="287" height="163" x="540" y="90" viewBox="0 0 287 163" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g filter="url(#filter_develop)">
                     <path
                       d="M8 19C8 14.5817 11.5817 11 16 11H271C275.418 11 279 14.5817 279 19V143C279 147.418 275.418 151 271 151H16C11.5817 151 8 147.418 8 143V19Z"
+                      fill="white"
+                    />
+                    <path
+                      d="M139.638 9.13175L141.808 5.6869C142.592 4.4414 144.408 4.4414 145.192 5.6869L147.362 9.13176C148.094 10.2946 149.372 11 150.747 11L152.5 11L152.5 12L150.195 12L136.805 12L134.5 12L134.5 11L136.253 11C137.628 11 138.906 10.2946 139.638 9.13175Z"
                       fill="white"
                     />
                   </g>
@@ -433,10 +453,14 @@ export default function FlowChart() {
                 />
               </svg>
               <g className={clsx(styles.flowChartTooltip, styles.approvalTooltip)} data-line-group="1" id="flowChart_approval_tooltip">
-                <svg width="287" height="163" x="222" y="87" viewBox="0 0 287 163" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg width="287" height="163" x="220" y="90" viewBox="0 0 287 163" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g filter="url(#filter_approval)">
                     <path
                       d="M8 19C8 14.5817 11.5817 11 16 11H271C275.418 11 279 14.5817 279 19V143C279 147.418 275.418 151 271 151H16C11.5817 151 8 147.418 8 143V19Z"
+                      fill="white"
+                    />
+                    <path
+                      d="M139.638 9.13175L141.808 5.6869C142.592 4.4414 144.408 4.4414 145.192 5.6869L147.362 9.13176C148.094 10.2946 149.372 11 150.747 11L152.5 11L152.5 12L150.195 12L136.805 12L134.5 12L134.5 11L136.253 11C137.628 11 138.906 10.2946 139.638 9.13175Z"
                       fill="white"
                     />
                   </g>
@@ -490,10 +514,14 @@ export default function FlowChart() {
                 />
               </svg>
               <g className={clsx(styles.flowChartTooltip, styles.testTooltip)} data-line-group="1" id="flowChart_test_tooltip">
-                <svg width="287" height="191" x="724" y="90" viewBox="0 0 287 191" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg width="287" height="191" x="700" y="90" viewBox="0 0 287 191" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g filter="url(#filter_test)">
                     <path
                       d="M8 19C8 14.5817 11.5817 11 16 11H271C275.418 11 279 14.5817 279 19V171C279 175.418 275.418 179 271 179H16C11.5817 179 8 175.418 8 171V19Z"
+                      fill="white"
+                    />
+                    <path
+                      d="M139.638 9.13175L141.808 5.6869C142.592 4.4414 144.408 4.4414 145.192 5.6869L147.362 9.13176C148.094 10.2946 149.372 11 150.747 11L152.5 11L152.5 12L150.195 12L136.805 12L134.5 12L134.5 11L136.253 11C137.628 11 138.906 10.2946 139.638 9.13175Z"
                       fill="white"
                     />
                   </g>
@@ -548,10 +576,14 @@ export default function FlowChart() {
               </svg>
 
               <g className={clsx(styles.flowChartTooltip, styles.deployTooltip)} data-line-group="1" id="flowChart_deploy_tooltip">
-                <svg width="287" height="219" x="755" y="90" viewBox="0 0 287 219" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg width="287" height="219" x="743" y="90" viewBox="0 0 287 219" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g filter="url(#filter_deploy)">
                     <path
                       d="M8 19C8 14.5817 11.5817 11 16 11H271C275.418 11 279 14.5817 279 19V199C279 203.418 275.418 207 271 207H16C11.5817 207 8 203.418 8 199V19Z"
+                      fill="white"
+                    />
+                    <path
+                      d="M257.138 9.13175L259.308 5.6869C260.092 4.4414 261.908 4.4414 262.692 5.6869L264.862 9.13176C265.594 10.2946 266.872 11 268.247 11L270 11L270 12L267.695 12L254.305 12L252 12L252 11L253.753 11C255.128 11 256.406 10.2946 257.138 9.13175Z"
                       fill="white"
                     />
                   </g>

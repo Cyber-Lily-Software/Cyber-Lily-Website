@@ -32,7 +32,7 @@ export const flowChartClasses = makeStyles((theme) => ({
   flowChartDiagramSvg: {
     minWidth: 900,
     overflow: "visible",
-    marginRight: 45,
+    paddingRight: 45,
     backgroundColor: "#e8e8eb",
   },
   flowChartDottedLine: {
