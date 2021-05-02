@@ -227,15 +227,15 @@ export default function FlowChart() {
                     <tspan fontWeight="bold" fill="#141433">
                       Chat & Quote
                     </tspan>
-                  </text>
-                  <text x="22" y="68" className={styles.toolTipText}>
-                    <tspan fill="#141433">Get in touch to chat about your</tspan>
-                  </text>
-                  <text x="22" y="96" className={styles.toolTipText}>
-                    <tspan fill="#141433">project. We'll get a quote to you</tspan>
-                  </text>
-                  <text x="22" y="124" className={styles.toolTipText}>
-                    <tspan fill="#141433">shortly after.</tspan>
+                    <tspan x="22" y="80" fill="#43435C">
+                      Get in touch to chat about your
+                    </tspan>
+                    <tspan x="22" y="104" fill="#43435C">
+                      project. We'll get a quote to you
+                    </tspan>
+                    <tspan x="22" y="128" fill="#43435C">
+                      shortly after.
+                    </tspan>
                   </text>
                 </svg>
               </g>
