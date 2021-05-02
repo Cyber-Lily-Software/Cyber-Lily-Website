@@ -221,4 +221,9 @@ export const flowChartClasses = makeStyles((theme) => ({
       transform: "scale(1.5)",
     },
   },
+  toolTipText: {
+    fontFamily: "Roboto",
+    fontSize: "1rem",
+    lineHeight: "1.75rem",
+  },
 }));

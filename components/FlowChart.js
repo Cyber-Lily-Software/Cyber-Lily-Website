@@ -223,6 +223,77 @@ export default function FlowChart() {
                       <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape" />
                     </filter>
                   </defs>
+                  <text x="22" y="42">
+                    <tspan fontWeight="bold" fill="#141433">
+                      Chat & Quote
+                    </tspan>
+                  </text>
+                  <text x="22" y="68" className={styles.toolTipText}>
+                    <tspan fill="#141433">Get in touch to chat about your</tspan>
+                  </text>
+                  <text x="22" y="96" className={styles.toolTipText}>
+                    <tspan fill="#141433">project. We'll get a quote to you</tspan>
+                  </text>
+                  <text x="22" y="124" className={styles.toolTipText}>
+                    <tspan fill="#141433">shortly after.</tspan>
+                  </text>
+                </svg>
+              </g>
+            </g>
+            <g className={clsx(styles.flowChartNodeGroup, styles.requestNode)} data-line-group="1" id="flowChart_refresh_node">
+              <circle cx="364" cy="217" r="30" stroke="black" fill="#ffffff" strokeWidth="1" />
+              <svg width="25" height="25" x="352" y="205" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M4.11923 19.1268C5.19615 23.22 8.46388 26.6012 12.8449 27.7751C19.3481 29.5176 26.0326 25.6584 27.7751 19.1551M4.11923 19.1268L10.0067 20.7044M4.11923 19.1268L2.54163 25.0144M27.8808 12.8732C26.71 8.95221 23.3978 5.36174 19.1551 4.22492C12.6519 2.4824 5.96744 6.34169 4.22491 12.8449M27.8808 12.8732L21.9932 11.2956M27.8808 12.8732L29.4583 6.98566"
+                  stroke="#141433"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+
+              <g className={clsx(styles.flowChartTooltip, styles.requestTooltip)} data-line-group="1" id="flowChart_request_tooltip">
+                <svg width="295" height="156" x="392" y="140" viewBox="0 0 295 156" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g filter="url(#filter_request)">
+                    <rect x="16" y="4" width="271" height="140" rx="8" fill="white" />
+                    <path
+                      d="M14.1319 70.138L10.687 72.3077C9.44152 73.0922 9.44152 74.9078 10.687 75.6923L14.1319 77.862C15.2947 78.5944 16.0001 79.8724 16.0001 81.2466L16.0001 83L17.0001 83L17.0001 80.6946L17.0001 67.3054L17.0001 65L16.0001 65L16.0001 66.7534C16.0001 68.1276 15.2947 69.4056 14.1319 70.138Z"
+                      fill="white"
+                    />
+                  </g>
+                  <defs>
+                    <filter
+                      id="filter_request"
+                      x="0.00012207"
+                      y="0"
+                      width="295"
+                      height="156"
+                      filterUnits="userSpaceOnUse"
+                      color-interpolation-filters="sRGB"
+                    >
+                      <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
+                      <feOffset dy="4" />
+                      <feGaussianBlur stdDeviation="4" />
+                      <feColorMatrix type="matrix" values="0 0 0 0 0.262745 0 0 0 0 0.262745 0 0 0 0 0.360784 0 0 0 0.16 0" />
+                      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow" />
+                      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape" />
+                    </filter>
+                  </defs>
+                  <text x="27" y="36">
+                    <tspan fontWeight="bold" fill="#141433">
+                      Request Changes
+                    </tspan>
+                  </text>
+                  <text x="27" y="64" className={styles.toolTipText}>
+                    <tspan fill="#141433">Reviews are where we get your</tspan>
+                  </text>
+                  <text x="27" y="92" className={styles.toolTipText}>
+                    <tspan fill="#141433">feedback on the designs. You can</tspan>
+                  </text>
+                  <text x="27" y="120" className={styles.toolTipText}>
+                    <tspan fill="#141433">request changes at this point.</tspan>
+                  </text>
                 </svg>
               </g>
             </g>
@@ -271,6 +342,17 @@ export default function FlowChart() {
                       <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape" />
                     </filter>
                   </defs>
+                  <text x="22" y="42">
+                    <tspan fontWeight="bold" fill="#141433">
+                      Design
+                    </tspan>
+                  </text>
+                  <text x="22" y="68" className={styles.toolTipText}>
+                    <tspan fill="#141433">Once the quote has been accepted</tspan>
+                  </text>
+                  <text x="22" y="96" className={styles.toolTipText}>
+                    <tspan fill="#141433">the design process will begin</tspan>
+                  </text>
                 </svg>
               </g>
             </g>
@@ -335,49 +417,17 @@ export default function FlowChart() {
                       <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape" />
                     </filter>
                   </defs>
-                </svg>
-              </g>
-            </g>
-            <g className={clsx(styles.flowChartNodeGroup, styles.requestNode)} data-line-group="1" id="flowChart_refresh_node">
-              <circle cx="364" cy="217" r="30" stroke="black" fill="#ffffff" strokeWidth="1" />
-              <svg width="25" height="25" x="352" y="205" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M4.11923 19.1268C5.19615 23.22 8.46388 26.6012 12.8449 27.7751C19.3481 29.5176 26.0326 25.6584 27.7751 19.1551M4.11923 19.1268L10.0067 20.7044M4.11923 19.1268L2.54163 25.0144M27.8808 12.8732C26.71 8.95221 23.3978 5.36174 19.1551 4.22492C12.6519 2.4824 5.96744 6.34169 4.22491 12.8449M27.8808 12.8732L21.9932 11.2956M27.8808 12.8732L29.4583 6.98566"
-                  stroke="#141433"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-
-              <g className={clsx(styles.flowChartTooltip, styles.requestTooltip)} data-line-group="1" id="flowChart_request_tooltip">
-                <svg width="295" height="156" x="392" y="140" viewBox="0 0 295 156" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <g filter="url(#filter_request)">
-                    <rect x="16" y="4" width="271" height="140" rx="8" fill="white" />
-                    <path
-                      d="M14.1319 70.138L10.687 72.3077C9.44152 73.0922 9.44152 74.9078 10.687 75.6923L14.1319 77.862C15.2947 78.5944 16.0001 79.8724 16.0001 81.2466L16.0001 83L17.0001 83L17.0001 80.6946L17.0001 67.3054L17.0001 65L16.0001 65L16.0001 66.7534C16.0001 68.1276 15.2947 69.4056 14.1319 70.138Z"
-                      fill="white"
-                    />
-                  </g>
-                  <defs>
-                    <filter
-                      id="filter_request"
-                      x="0.00012207"
-                      y="0"
-                      width="295"
-                      height="156"
-                      filterUnits="userSpaceOnUse"
-                      color-interpolation-filters="sRGB"
-                    >
-                      <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
-                      <feOffset dy="4" />
-                      <feGaussianBlur stdDeviation="4" />
-                      <feColorMatrix type="matrix" values="0 0 0 0 0.262745 0 0 0 0 0.262745 0 0 0 0 0.360784 0 0 0 0.16 0" />
-                      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow" />
-                      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape" />
-                    </filter>
-                  </defs>
+                  <text x="22" y="42">
+                    <tspan fontWeight="bold" fill="#141433">
+                      Our partner
+                    </tspan>
+                  </text>
+                  <text x="22" y="68" className={styles.toolTipText}>
+                    <tspan fill="#141433">That's you! We'll keep you up to</tspan>
+                  </text>
+                  <text x="22" y="96" className={styles.toolTipText}>
+                    <tspan fill="#141433">date at all times.</tspan>
+                  </text>
                 </svg>
               </g>
             </g>
@@ -431,6 +481,20 @@ export default function FlowChart() {
                       <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape" />
                     </filter>
                   </defs>
+                  <text x="22" y="42">
+                    <tspan fontWeight="bold" fill="#141433">
+                      Develop
+                    </tspan>
+                  </text>
+                  <text x="22" y="68" className={styles.toolTipText}>
+                    <tspan fill="#141433">Once the designs have been</tspan>
+                  </text>
+                  <text x="22" y="96" className={styles.toolTipText}>
+                    <tspan fill="#141433">approved, we will start the</tspan>
+                  </text>
+                  <text x="22" y="124" className={styles.toolTipText}>
+                    <tspan fill="#141433">development on your project.</tspan>
+                  </text>
                 </svg>
               </g>
             </g>
@@ -483,6 +547,20 @@ export default function FlowChart() {
                       <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape" />
                     </filter>
                   </defs>
+                  <text x="22" y="42">
+                    <tspan fontWeight="bold" fill="#141433">
+                      Approval
+                    </tspan>
+                  </text>
+                  <text x="22" y="68" className={styles.toolTipText}>
+                    <tspan fill="#141433">The designs will be sent to you to</tspan>
+                  </text>
+                  <text x="22" y="96" className={styles.toolTipText}>
+                    <tspan fill="#141433">review at every stage before</tspan>
+                  </text>
+                  <text x="22" y="124" className={styles.toolTipText}>
+                    <tspan fill="#141433">moving forward.</tspan>
+                  </text>
                 </svg>
               </g>
             </g>
@@ -544,6 +622,23 @@ export default function FlowChart() {
                       <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape" />
                     </filter>
                   </defs>
+                  <text x="22" y="42">
+                    <tspan fontWeight="bold" fill="#141433">
+                      Test
+                    </tspan>
+                  </text>
+                  <text x="22" y="68" className={styles.toolTipText}>
+                    <tspan fill="#141433">After the development process is</tspan>
+                  </text>
+                  <text x="22" y="96" className={styles.toolTipText}>
+                    <tspan fill="#141433">done, we will test everything to</tspan>
+                  </text>
+                  <text x="22" y="124" className={styles.toolTipText}>
+                    <tspan fill="#141433">ensure that it is perfect and ready</tspan>
+                  </text>
+                  <text x="22" y="152" className={styles.toolTipText}>
+                    <tspan fill="#141433">for deployment.</tspan>
+                  </text>
                 </svg>
               </g>
             </g>
@@ -574,7 +669,6 @@ export default function FlowChart() {
                   stroke-linejoin="round"
                 />
               </svg>
-
               <g className={clsx(styles.flowChartTooltip, styles.deployTooltip)} data-line-group="1" id="flowChart_deploy_tooltip">
                 <svg width="287" height="219" x="743" y="90" viewBox="0 0 287 219" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g filter="url(#filter_deploy)">
@@ -606,6 +700,26 @@ export default function FlowChart() {
                       <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape" />
                     </filter>
                   </defs>
+                  <text x="22" y="42">
+                    <tspan fontWeight="bold" fill="#141433">
+                      Deploy
+                    </tspan>
+                  </text>
+                  <text x="22" y="68" className={styles.toolTipText}>
+                    <tspan fill="#141433">Once everything has been</tspan>
+                  </text>
+                  <text x="22" y="96" className={styles.toolTipText}>
+                    <tspan fill="#141433">accepted by you, we can either</tspan>
+                  </text>
+                  <text x="22" y="124" className={styles.toolTipText}>
+                    <tspan fill="#141433">deploy your product for you or we</tspan>
+                  </text>
+                  <text x="22" y="152" className={styles.toolTipText}>
+                    <tspan fill="#141433">hand over all the required source</tspan>
+                  </text>
+                  <text x="22" y="180" className={styles.toolTipText}>
+                    <tspan fill="#141433">files to host it yourself.</tspan>
+                  </text>
                 </svg>
               </g>
             </g>
