@@ -389,7 +389,7 @@ export default function FlowChart() {
                 />
               </svg>
               <g className={clsx(styles.flowChartTooltip, styles.partnerTooltip)} data-line-group="1" id="flowChart_partner_tooltip">
-                <svg width="287" height="127" x="380" y="87" viewBox="0 0 287 127" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg width="287" height="127" x="380" y="90" viewBox="0 0 287 127" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g filter="url(#filter_partner)">
                     <path
                       d="M8 19C8 14.5817 11.5817 11 16 11H271C275.418 11 279 14.5817 279 19V107C279 111.418 275.418 115 271 115H16C11.5817 115 8 111.418 8 107V19Z"
