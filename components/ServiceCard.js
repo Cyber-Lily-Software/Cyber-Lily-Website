@@ -95,11 +95,15 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center",
     marginTop: "30%",
     position: "static",
+    [theme.breakpoints.down(769)]: {
+      marginTop: "10%",
+    },
     [theme.breakpoints.down(1025)]: {
       marginTop: "3.5rem !important",
     },
-    [theme.breakpoints.down(769)]: {
-      marginTop: "10%",
+    [theme.breakpoints.up(1026)]: {
+      width: "41%",
+      marginTop: "3.5rem !important",
     },
   },
 }));

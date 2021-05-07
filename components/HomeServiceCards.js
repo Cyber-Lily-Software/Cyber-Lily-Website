@@ -17,6 +17,10 @@ const useStyles = makeStyles((theme) => ({
       marginRight: "0% !important",
       maxWidth: "100%",
     },
+    [theme.breakpoints.up(1026)]: {
+      paddingLeft: "0.5rem",
+      paddingRight: "0.5rem",
+    },
   },
   serviceItem: {
     flex: "50%",
@@ -24,24 +28,23 @@ const useStyles = makeStyles((theme) => ({
     paddingRight: "1rem",
     width: "33%",
     paddingBottom: "1rem",
-    
+    marginLeft: "auto",
+    marginRight: "auto",
+
     [theme.breakpoints.down(420)]: {
       minWidth: "100% !important",
     },
     [theme.breakpoints.down(769)]: {
-      flex: "100% !important",
+      flex: "50% !important",
       minWidth: "50%",
     },
     [theme.breakpoints.down(1025)]: {
       align: "center",
     },
-    [theme.breakpoints.down(1610)]: {
-      maxWidth: "50%",
-      marginLeft: "auto",
-      marginRight: "auto",
-    },
-    [theme.breakpoints.up(1680)]: {
-      flex: "25%",
+    [theme.breakpoints.up(1026)]: {
+      maxWidth: "33%",
+      paddingLeft: "1rem",
+      paddingRight: "1rem",
     },
   },
 }));
