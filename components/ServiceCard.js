@@ -58,6 +58,8 @@ const useStyles = makeStyles((theme) => ({
     marginTop: "2.125rem",
   },
   avatar: {
+    alignContent: "center",
+    padding: "1rem%",
     backgroundColor: "#E8E8EB",
   },
   front: {
@@ -73,7 +75,7 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: "1rem",
     paddingRight: "2rem",
     paddingLeft: "2rem",
-    textAlign: "center",
+    textAlign: "left",
     fontWeight: 400,
     fontSize: "1rem",
     lineHeight: "1.5rem",
@@ -127,7 +129,7 @@ export default function ServiceCard(props) {
         </div>
         <div className={classes.back}>
           <div className={classes.topText}>
-            <Avatar>
+            <Avatar className={classes.avatar}>
               <picture>
                 <source media="(min-width: 374px)" srcSet={props.serviceIcon1} />
                 <source media="(min-width: 1025px)" srcSet={props.serviceIcon2} />
@@ -135,7 +137,6 @@ export default function ServiceCard(props) {
                 <img src={props.serviceIcon1} />
               </picture>
             </Avatar>
-            {/* <Avatar media={"min-width: 2560px, min-width: 1025px"} srcSet={props.serviceIcon1, props.serviceIcon2} className={classes.avatar}/> */}
           </div>
           <div className={classes.descText}>
             <p>{props.shortDesc}</p>
