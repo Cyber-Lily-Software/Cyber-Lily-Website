@@ -1,17 +1,136 @@
-import { useStyles } from "../styles/ServiceCard";
+import Button from '@material-ui/core/Button';
+
+import useMediaQuery from "@material-ui/core/useMediaQuery";
+import Avatar from '@material-ui/core/Avatar';
+import { shadows } from '@material-ui/system';
+
+import clsx from "clsx";
+
+import { makeStyles, useTheme } from "@material-ui/core/styles";
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    textAlign: "center !important",
+    marginLeft: "auto",
+    marginRight: "auto",
+    perspective: "40rem",
+    boxShadow: "0px 4px 8px rgba(67, 67, 92, 0.16)",
+    borderRadius: "12px",
+    transformStyle: "preserve-3d",
+    transition: "0.8s transform",
+    "&:hover": {
+      cursor: "pointer",
+      transform: "rotateY(180deg)",
+      zIndex: 1000,
+    },
+    [theme.breakpoints.down(1025)]: {
+      maxHeight: "22.5rem",
+      maxWidth: "19.5rem",
+      "&:focus": {
+        transformStyle: "preserve-3d",
+        transform: "rotateY(180deg)",
+      },
+    },
+  },
+  innerCard: {
+    display: "flex",
+    textAlign: "center",
+    
+  },
+  image: {
+    display: "flex",
+    flexDirection: "column",
+    paddingLeft: "32px",
+    paddingTop: "32px",
+    paddingRight: "32px",
+  },
+  bottomText: {
+    color: "black",
+    fontSize: "1.5rem",
+    fontWeight: 500,
+    textAlign: "center",
+    maxWidth: "20rem",
+    marginLeft: "auto",
+    marginRight: "auto",
+    marginBottom: "1rem",
+
+  },
+  topText: {
+    marginLeft: "2rem",
+    marginTop: "2.125rem",
+  },
+  avatar: {
+    backgroundColor: "#E8E8EB",
+  },
+  front: {
+    minWidth: "100%",
+    backfaceVisibility: "hidden",
+  },
+  back: {
+    minWidth: "100%",
+    backfaceVisibility: "hidden",
+    transform: "rotateY(180deg) translate(100%, 0)",
+  },
+  descText: {
+    marginBottom: "1rem",
+    paddingRight: "2rem",
+    paddingLeft: "2rem",
+    textAlign: "center",
+    fontWeight: 400,
+    fontSize: "1rem",
+    lineHeight: "1.5rem",
+    minHeight: "9rem",
+    maxHeight: "9rem",
+  },
+  serviceButton: {
+    color: "#FFFFFF !important",
+    backgroundColor: "#EF530B !important",
+    radius: "0.25rem",
+    width: "39.8%",
+    height: "3rem",
+    textTransform: "capitalize !important", 
+    marginLeft: "auto",
+    marginRight: "auto",
+    marginBottom: "2.25rem !important",
+    textAlign: "center",
+    marginTop: "30%",
+    position: "static",
+    [theme.breakpoints.down(1025)]: {
+      marginTop: "3.5rem !important",
+    },
+    [theme.breakpoints.down(769)]: {
+      marginTop: "10%",
+    },
+  },
+}));
 
 export default function ServiceCard(props) {
-  const styles = useStyles();
+  const classes = useStyles();
+  const theme = useTheme();
+
+  const mobileBreakpoint = useMediaQuery(theme.breakpoints.down(4000));
 
   return (
-    <div className={styles.cardRoot}>
-      <div className={styles.cardFront}>
-        <div className={styles.cardFrontImage}>
-          <img src="/sample1.png" />
+    <div className={classes.root}>
+      <div className={classes.innerCard}>
+        <div className={classes.front}>
+          <div className={classes.image}>
+            <img src={props.serviceImage} />
+          </div>
+          <div className={classes.bottomText}>
+            <p>{props.serviceName}</p>
+          </div>
         </div>
-        <div className={styles.cardFrontHeader}>{props.cardHeader}</div>
+        <div className={classes.back}>
+          <div className={classes.topText}>
+            <Avatar src={props.serviceIcon} className={classes.avatar}/>
+          </div>
+          <div className={classes.descText}>
+            <p>{props.shortDesc}</p>
+          </div>
+          <Button variant="contained" href={props.serviceUrl} disableElevation className={classes.serviceButton}>Tell me more</Button>
+        </div>
       </div>
-      <div className={styles.cardBack}></div>
     </div>
   );
 }

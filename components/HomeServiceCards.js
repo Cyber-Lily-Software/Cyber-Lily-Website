@@ -1,0 +1,109 @@
+import Link from "next/link";
+
+import ServiceCard from "../components/ServiceCard";
+
+import useMediaQuery from "@material-ui/core/useMediaQuery";
+import { makeStyles, useTheme } from "@material-ui/core/styles";
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    display: "flex",
+    flexWrap: "wrap",
+    alignItems: "center",
+    marginLeft: "10%",
+    marginRight: "10%",
+    [theme.breakpoints.down(769)]: {
+      marginLeft: "0% !important",
+      marginRight: "0% !important",
+      maxWidth: "100%",
+    },
+  },
+  serviceItem: {
+    flex: "50%",
+    paddingLeft: "1rem",
+    paddingRight: "1rem",
+    width: "33%",
+    paddingBottom: "1rem",
+    
+    [theme.breakpoints.down(420)]: {
+      minWidth: "100% !important",
+    },
+    [theme.breakpoints.down(769)]: {
+      flex: "100% !important",
+      minWidth: "50%",
+    },
+    [theme.breakpoints.down(1025)]: {
+      align: "center",
+    },
+    [theme.breakpoints.down(1610)]: {
+      maxWidth: "50%",
+      marginLeft: "auto",
+      marginRight: "auto",
+    },
+    [theme.breakpoints.up(1680)]: {
+      flex: "25%",
+    },
+  },
+}));
+
+const services = [
+  {
+    serviceName: "Website Design & Development",
+    imgUrl: "./Frame.png",
+    serviceUrl: "/services/consolidated-load",
+    serviceIcon: "./globe.png",
+    shortDesc:
+      "We design and develop custom websites from scratch, tailored specifically to your business’s needs. We pride ourselves on never using any templates for the design of our websites. We organize hosting for your websites through Amazon Web Services.",
+  },
+  {
+    serviceName: "Web Application Design & Development",
+    imgUrl: "./Frame.png",
+    serviceUrl: "/services/full-load",
+    serviceIcon: "./iphone_portrait.png",
+    shortDesc:
+      "We design and develop scalable, enterprise grade web applications that suit your user’s and business’s needs. We organize hosting for your web applications through Amazon Web Services. Whatever solution works best for your needs, we will find.",
+  },
+  {
+    serviceName: "Custom Software Development",
+    imgUrl: "./Frame.png",
+    serviceUrl: "/services/clearing",
+    serviceIcon: "./code.png",
+    shortDesc:
+      "Our team of developers and designers can build custom software, tailored to your business’s needs. Our solutions are built specific to your user’s and business’s needs.",
+  },
+];
+
+export default function HomeServiceCards(props) {
+  const classes = useStyles();
+  const theme = useTheme();
+
+  const mobileBreakpoint = useMediaQuery(theme.breakpoints.down(1025));
+
+  return (
+    <div className={classes.root}>
+      {services.map((service) => {
+        if (mobileBreakpoint) {
+          return (
+            <div className={classes.serviceItem}>
+              <ServiceCard
+                serviceName={service.serviceName}
+                serviceImage={service.imgUrl}
+                serviceIcon={service.serviceIcon}
+                shortDesc={service.shortDesc}
+                serviceUrl={service.serviceUrl}
+              />
+            </div>
+          );
+        } else {
+          return (
+            <Link href={service.serviceUrl} key={service.serviceName}>
+              <div className={classes.serviceItem}>
+                <ServiceCard serviceName={service.serviceName} serviceImage={service.imgUrl} serviceIcon={service.serviceIcon} shortDesc={service.shortDesc} />
+              </div>
+            </Link>
+          );
+        }
+      })}
+    </div>
+  );
+}
