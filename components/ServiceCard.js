@@ -127,7 +127,15 @@ export default function ServiceCard(props) {
         </div>
         <div className={classes.back}>
           <div className={classes.topText}>
-            <Avatar src={props.serviceIcon} className={classes.avatar}/>
+          <Avatar>
+            <picture>
+            <source media="(min-width: 374px)" srcSet={props.serviceIcon1} />
+            <source media="(min-width: 1025px)" srcSet={props.serviceIcon2} />
+            <source media="(min-width: 2560px)" srcSet={props.serviceIcon3} />
+            <img />
+            </picture>
+          </Avatar>
+            {/* <Avatar media={"min-width: 2560px, min-width: 1025px"} srcSet={props.serviceIcon1, props.serviceIcon2} className={classes.avatar}/> */}
           </div>
           <div className={classes.descText}>
             <p>{props.shortDesc}</p>

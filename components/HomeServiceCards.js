@@ -54,7 +54,9 @@ const services = [
     serviceName: "Website Design & Development",
     imgUrl: "./Frame.png",
     serviceUrl: "/services/consolidated-load",
-    serviceIcon: "./globe.png",
+    serviceIcon1: "./globe.png",
+    serviceIcon2: "./globe@2x.png",
+    serviceIcon3: "./globe@3x.png",
     shortDesc:
       "We design and develop custom websites from scratch, tailored specifically to your business’s needs. We pride ourselves on never using any templates for the design of our websites. We organize hosting for your websites through Amazon Web Services.",
   },
@@ -62,7 +64,9 @@ const services = [
     serviceName: "Web Application Design & Development",
     imgUrl: "./Frame.png",
     serviceUrl: "/services/full-load",
-    serviceIcon: "./iphone_portrait.png",
+    serviceIcon1: "./iphone_portrait.png",
+    serviceIcon2: "./iphone_portrait@2x.png",
+    serviceIcon3: "././iphone_portrait@3x.png",
     shortDesc:
       "We design and develop scalable, enterprise grade web applications that suit your user’s and business’s needs. We organize hosting for your web applications through Amazon Web Services. Whatever solution works best for your needs, we will find.",
   },
@@ -70,7 +74,9 @@ const services = [
     serviceName: "Custom Software Development",
     imgUrl: "./Frame.png",
     serviceUrl: "/services/clearing",
-    serviceIcon: "./code.png",
+    serviceIcon1: "./code.png",
+    serviceIcon2: "./code@2x.png",
+    serviceIcon3: "./code@3x.png",
     shortDesc:
       "Our team of developers and designers can build custom software, tailored to your business’s needs. Our solutions are built specific to your user’s and business’s needs.",
   },
@@ -101,7 +107,7 @@ export default function HomeServiceCards(props) {
           return (
             <Link href={service.serviceUrl} key={service.serviceName}>
               <div className={classes.serviceItem}>
-                <ServiceCard serviceName={service.serviceName} serviceImage={service.imgUrl} serviceIcon={service.serviceIcon} shortDesc={service.shortDesc} />
+                <ServiceCard serviceName={service.serviceName} serviceImage={service.imgUrl} serviceIcon1={service.serviceIcon1} serviceIcon2={service.serviceIcon2} serviceIcon3={service.serviceIcon3} shortDesc={service.shortDesc} />
               </div>
             </Link>
           );
