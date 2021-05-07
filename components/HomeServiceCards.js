@@ -100,6 +100,9 @@ export default function HomeServiceCards(props) {
                 serviceIcon={service.serviceIcon}
                 shortDesc={service.shortDesc}
                 serviceUrl={service.serviceUrl}
+                serviceIcon1={service.serviceIcon1}
+                serviceIcon2={service.serviceIcon2}
+                serviceIcon3={service.serviceIcon3}
               />
             </div>
           );
@@ -107,7 +110,14 @@ export default function HomeServiceCards(props) {
           return (
             <Link href={service.serviceUrl} key={service.serviceName}>
               <div className={classes.serviceItem}>
-                <ServiceCard serviceName={service.serviceName} serviceImage={service.imgUrl} serviceIcon1={service.serviceIcon1} serviceIcon2={service.serviceIcon2} serviceIcon3={service.serviceIcon3} shortDesc={service.shortDesc} />
+                <ServiceCard
+                  serviceName={service.serviceName}
+                  serviceImage={service.imgUrl}
+                  serviceIcon1={service.serviceIcon1}
+                  serviceIcon2={service.serviceIcon2}
+                  serviceIcon3={service.serviceIcon3}
+                  shortDesc={service.shortDesc}
+                />
               </div>
             </Link>
           );

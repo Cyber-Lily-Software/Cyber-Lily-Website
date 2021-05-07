@@ -1,8 +1,8 @@
-import Button from '@material-ui/core/Button';
+import Button from "@material-ui/core/Button";
 
 import useMediaQuery from "@material-ui/core/useMediaQuery";
-import Avatar from '@material-ui/core/Avatar';
-import { shadows } from '@material-ui/system';
+import Avatar from "@material-ui/core/Avatar";
+import { shadows } from "@material-ui/system";
 
 import clsx from "clsx";
 
@@ -35,7 +35,6 @@ const useStyles = makeStyles((theme) => ({
   innerCard: {
     display: "flex",
     textAlign: "center",
-    
   },
   image: {
     display: "flex",
@@ -53,7 +52,6 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: "auto",
     marginRight: "auto",
     marginBottom: "1rem",
-
   },
   topText: {
     marginLeft: "2rem",
@@ -88,7 +86,7 @@ const useStyles = makeStyles((theme) => ({
     radius: "0.25rem",
     width: "39.8%",
     height: "3rem",
-    textTransform: "capitalize !important", 
+    textTransform: "capitalize !important",
     marginLeft: "auto",
     marginRight: "auto",
     marginBottom: "2.25rem !important",
@@ -114,6 +112,8 @@ export default function ServiceCard(props) {
 
   const mobileBreakpoint = useMediaQuery(theme.breakpoints.down(4000));
 
+  console.log(props);
+
   return (
     <div className={classes.root}>
       <div className={classes.innerCard}>
@@ -127,20 +127,22 @@ export default function ServiceCard(props) {
         </div>
         <div className={classes.back}>
           <div className={classes.topText}>
-          <Avatar>
-            <picture>
-            <source media="(min-width: 374px)" srcSet={props.serviceIcon1} />
-            <source media="(min-width: 1025px)" srcSet={props.serviceIcon2} />
-            <source media="(min-width: 2560px)" srcSet={props.serviceIcon3} />
-            <img />
-            </picture>
-          </Avatar>
+            <Avatar>
+              <picture>
+                <source media="(min-width: 374px)" srcSet={props.serviceIcon1} />
+                <source media="(min-width: 1025px)" srcSet={props.serviceIcon2} />
+                <source media="(min-width: 2560px)" srcSet={props.serviceIcon3} />
+                <img src={props.serviceIcon1} />
+              </picture>
+            </Avatar>
             {/* <Avatar media={"min-width: 2560px, min-width: 1025px"} srcSet={props.serviceIcon1, props.serviceIcon2} className={classes.avatar}/> */}
           </div>
           <div className={classes.descText}>
             <p>{props.shortDesc}</p>
           </div>
-          <Button variant="contained" href={props.serviceUrl} disableElevation className={classes.serviceButton}>Tell me more</Button>
+          <Button variant="contained" href={props.serviceUrl} disableElevation className={classes.serviceButton}>
+            Tell me more
+          </Button>
         </div>
       </div>
     </div>
