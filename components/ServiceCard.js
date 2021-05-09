@@ -59,7 +59,8 @@ const useStyles = makeStyles((theme) => ({
   },
   avatar: {
     alignContent: "center",
-    padding: "1rem%",
+    textAlign: "center",
+    alignItems: "center",
     backgroundColor: "#E8E8EB",
   },
   front: {
