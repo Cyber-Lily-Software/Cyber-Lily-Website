@@ -31,6 +31,7 @@ const useStyles = makeStyles((theme) => ({
       },
       innerCard: {
         display: "flex",
+        marginTop: "2.5rem",
         transformStyle: "preserve-3d",
         transition: "0.8s transform",
         [theme.breakpoints.down(415)]: {
@@ -46,11 +47,17 @@ const useStyles = makeStyles((theme) => ({
         width: "26.75rem",
         border: "1px solid #141433",
         borderRadius: "0.5rem",
+        marginBottom: "1.25rem",
+      },
+      formFieldLabel: {
+        margin: 0,
+        padding: 0,
       },
       selector: {
           marginTop: "0.25rem",
           display: "flex",
           justifyContent: "space-between",
+          marginBottom: "1.25rem",
       },
       radioBorder: {
         border: "1px solid #141433",
@@ -70,7 +77,9 @@ const useStyles = makeStyles((theme) => ({
         height: "2.75rem",
       },
       checkbox: {
+        marginTop: -15,
         minWidth: "100%",
+        marginBottom: "1.5rem",
       },
       buttonDiv: {
         textAlign: "center",
@@ -86,6 +95,7 @@ const useStyles = makeStyles((theme) => ({
       },
       selectorDiv: {
         display: "none",
+        marginBottom: "1.25rem",
       },
       formControl: {
         width: "100%",
@@ -101,8 +111,6 @@ const useStyles = makeStyles((theme) => ({
     const [value, setValue] = React.useState('query');
 
   
-    console.log(state)
-
     const handleChange = (event) => {
       const name = event.target.name;
       setState({
@@ -121,14 +129,14 @@ const useStyles = makeStyles((theme) => ({
         <form id="root" className={classes.root} noValidate autoComplete="off">
             <div className={classes.innerCard}>
                 <div className={classes.front}>
-                    <p>Full Name</p>
-                    <TextField id="outlined-basic" label="e.g. John Doe" variant="outlined" className={classes.textField}/>
-                    <p>Email address</p>
-                    <TextField id="outlined-basic" label="e.g. johndoe@gmail.com" variant="outlined" className={classes.textField}/>
-                    <p>How can we help you?</p>
+                    <p className={classes.formFieldLabel}>Full Name</p>
+                    <TextField id="outlined-basic" placeholder="e.g. John Doe" variant="outlined" className={classes.textField} aria-describedby="outlined-weight-helper-text" />
+                    <p className={classes.formFieldLabel}>Email address</p>
+                    <TextField id="outlined-basic" placeholder="e.g. johndoe@gmail.com" variant="outlined" className={classes.textField}/>
+                    <p className={classes.formFieldLabel}>How can we help you?</p>
                     <div className={classes.selector}>
                       <FormControl component="fieldset">
-                        <RadioGroup row aria-label="gender" name="gender1" value={value} onChange={handleGroupChange}>
+                        <RadioGroup row aria-label="choice" name="gender1" value={value} onChange={handleGroupChange}>
                           <FormControlLabel 
                             className={classes.radioBorder} 
                             id="query"
@@ -154,14 +162,14 @@ const useStyles = makeStyles((theme) => ({
                       </FormControl>
                     </div>
                     <div id={"selectorDiv"} className={classes.selectorDiv}>
-                      <p>What is your estimated budget?</p>
+                      <p className={classes.formFieldLabel}>What is your estimated budget?</p>
                       <FormControl variant="outlined" className={classes.formControl}>
-                        <InputLabel htmlFor="outlined-budget-native-simple">Select budget range</InputLabel>
+                        <InputLabel disableAnimation={true} shrink={false} htmlFor="outlined-budget-native-simple">Select budget range</InputLabel>
                         <Select
                           native
                           value={state.age}
                           onChange={handleChange}
-                          label="Age"
+                          placeholder="Age"
                           id='budgetSelect'
                           inputProps={{
                             name: 'budget',
@@ -175,13 +183,13 @@ const useStyles = makeStyles((theme) => ({
                         </Select>
                       </FormControl>
                     </div>
-                    <p>Tell us more</p>
+                    <p className={classes.formFieldLabel}>Tell us more</p>
                     <TextField
                         id="outlined-multiline-static"
                         className={classes.textField}
                         multiline
                         rows={4}
-                        defaultValue="Default Value"
+                        placeholder="Message"
                         variant="outlined"
                     />
                     <FormControlLabel
@@ -197,7 +205,8 @@ const useStyles = makeStyles((theme) => ({
                         </Button>
                     </div>
                     <div className={classes.bottomText}>
-                        <p>Rest assured, we'll never share sensible information provided to us about your project publicly.</p>
+                        <p className={classes.formFieldLabel}>Rest assured, we'll never share sensible information provided to </p>
+                        <p className={classes.formFieldLabel}> us about your project publicly.</p>
                     </div>
                 </div>
         </div>
