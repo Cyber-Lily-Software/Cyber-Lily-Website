@@ -21,7 +21,8 @@ const useStyles = makeStyles((theme) => ({
     root: {
         margin: theme.spacing(1),
         width: '33.38rem',
-        height: "43rem",
+        height: "39rem",
+        maxHeight: "45rem",
         background: "#FFFFFF",
         boxShadow: "0px 8px 24px rgba(77, 77, 77, 0.2)",
         borderRadius: "12px",
@@ -58,20 +59,24 @@ const useStyles = makeStyles((theme) => ({
           display: "flex",
           justifyContent: "space-between",
           marginBottom: "1.25rem",
+          padding: 0,
       },
       radioBorder1: {
         border: "1px solid #141433",
         borderRadius: "0.5rem",
         marginLeft: "0.1rem",
-        marginRight: '1.0rem',
+        marginRight: '2rem',
         width: "12.59rem",
       },
       radioBorder2: {
         border: "1px solid #141433",
         borderRadius: "0.5rem",
-        marginLeft: "1.1rem",
+        marginLeft: "0.1rem",
+        marginRight: '0rem !important',
         paddingRight: '0rem !important',
         width: "12.59rem",
+        '& .MuiFormControlLabel-root': {
+        },
       },
       sendButton: {
         color: "#FFFFFF !important",
@@ -224,7 +229,7 @@ const useStyles = makeStyles((theme) => ({
                             className={classes.radioBorder2}
                             id="quote"
                             value="quote"
-                            control={<Radio iconStyle={{fill: '#EF530B'}} />}
+                            control={<Radio iconStyle={{fill: '#EF530B'}}  />}
                             label="I want a quote" 
                             onChange={event => {
                               document.getElementById('selectorDiv').style.display = 'block';
