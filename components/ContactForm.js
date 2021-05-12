@@ -9,12 +9,13 @@ import FormControl from '@material-ui/core/FormControl';
 import InputLabel from '@material-ui/core/InputLabel';
 import Select from '@material-ui/core/Select';
 import RadioGroup from '@material-ui/core/RadioGroup';
+import FormHelperText from '@material-ui/core/FormHelperText';
 
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 
 import clsx from "clsx";
 
-import { makeStyles, useTheme } from "@material-ui/core/styles";
+import { makeStyles, useTheme, withStyles} from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -44,14 +45,13 @@ const useStyles = makeStyles((theme) => ({
         backfaceVisibility: "hidden",
       },
       textField: {
-        width: "26.75rem",
-        border: "1px solid #141433",
+        width: "100%",
         borderRadius: "0.5rem",
         marginBottom: "1.25rem",
       },
       formFieldLabel: {
         margin: 0,
-        padding: 0,
+        paddingBottom: "0.25rem",
       },
       selector: {
           marginTop: "0.25rem",
@@ -59,10 +59,18 @@ const useStyles = makeStyles((theme) => ({
           justifyContent: "space-between",
           marginBottom: "1.25rem",
       },
-      radioBorder: {
+      radioBorder1: {
         border: "1px solid #141433",
         borderRadius: "0.5rem",
         marginLeft: "0.1rem",
+        marginRight: '1.0rem',
+        width: "12.59rem",
+      },
+      radioBorder2: {
+        border: "1px solid #141433",
+        borderRadius: "0.5rem",
+        marginLeft: "1.1rem",
+        paddingRight: '0rem !important',
         width: "12.59rem",
       },
       sendButton: {
@@ -84,14 +92,23 @@ const useStyles = makeStyles((theme) => ({
       buttonDiv: {
         textAlign: "center",
       },
-      bottomText: {
+      bottomText1: {
         marginTop: "1.75rem",
         fontWeight: "400",
         fontSize: "0.75rem",
         lineHeight: "1.75rem",
         textAlign: "center",
-        marginLeft: "2rem",
-        marginRight: "2rem",
+        marginLeft: "auto",
+        marginRight: "auto",
+      },
+      bottomText2: {
+        fontWeight: "400",
+        marginTop: '-1.5rem',
+        fontSize: "0.75rem",
+        lineHeight: "1.75rem",
+        textAlign: "center",
+        marginLeft: "auto",
+        marginRight: "auto",
       },
       selectorDiv: {
         display: "none",
@@ -100,7 +117,62 @@ const useStyles = makeStyles((theme) => ({
       formControl: {
         width: "100%",
       },
+      select: {
+        width: "100%",
+        borderRadius: '0.5rem',
+        '& .MuiOutlinedInput-root': {
+          '& fieldset': {
+          },
+        },
+        '&:hover fieldset': {
+          borderColor: '#EF530B !important',
+        },
+        '&.Mui-focused fieldset': {
+          borderColor: '#EF530B !important',
+        },
+      },
+      icon: {
+          fill: "#EF530B",
+      },
     }));
+
+    const CssTextField = withStyles({
+      root: {
+        '& label.Mui-focused': {
+          color: 'black',
+        },
+        '& .MuiOutlinedInput-root': {
+          '& fieldset': {
+            borderColor: 'black',
+          },
+          '&:hover fieldset': {
+            borderColor: '#EF530B',
+          },
+          '&.Mui-focused fieldset': {
+            borderColor: '#EF530B',
+          },
+        },
+      },
+    })(TextField);
+
+    const CssSelect = withStyles({
+      root: {
+        '& label.Mui-focused': {
+          color: 'black',
+        },
+        '& .MuiOutlinedInput-root': {
+          '& fieldset': {
+            borderColor: 'black',
+          },
+          '&:hover fieldset': {
+            borderColor: '#EF530B',
+          },
+          '&.Mui-focused fieldset': {
+            borderColor: '#EF530B',
+          },
+        },
+      },
+    })(Select);
 
     
     export default function ContactForm() {
@@ -130,18 +202,18 @@ const useStyles = makeStyles((theme) => ({
             <div className={classes.innerCard}>
                 <div className={classes.front}>
                     <p className={classes.formFieldLabel}>Full Name</p>
-                    <TextField id="outlined-basic" placeholder="e.g. John Doe" variant="outlined" className={classes.textField} aria-describedby="outlined-weight-helper-text" />
+                    <CssTextField id="outlined-basic" border= "1px solid #141433" placeholder="e.g. John Doe" variant="outlined" className={classes.textField} aria-describedby="outlined-weight-helper-text" />
                     <p className={classes.formFieldLabel}>Email address</p>
-                    <TextField id="outlined-basic" placeholder="e.g. johndoe@gmail.com" variant="outlined" className={classes.textField}/>
+                    <CssTextField id="outlined-basic" placeholder="e.g. johndoe@gmail.com" variant="outlined" className={classes.textField}/>
                     <p className={classes.formFieldLabel}>How can we help you?</p>
                     <div className={classes.selector}>
-                      <FormControl component="fieldset">
+                      <FormControl component="fieldset" >
                         <RadioGroup row aria-label="choice" name="gender1" value={value} onChange={handleGroupChange}>
                           <FormControlLabel 
-                            className={classes.radioBorder} 
+                            className={classes.radioBorder1} 
                             id="query"
                             value="query" 
-                            control={<Radio color="primary" />} 
+                            control={<Radio iconStyle={{fill: '#EF530B'}} />} 
                             label="I have a query" 
                             onChange={event => {
                               document.getElementById('selectorDiv').style.display = 'none';
@@ -149,10 +221,10 @@ const useStyles = makeStyles((theme) => ({
                             }}
                           />
                           <FormControlLabel 
-                            className={classes.radioBorder}
+                            className={classes.radioBorder2}
                             id="quote"
                             value="quote"
-                            control={<Radio color="primary" />}
+                            control={<Radio iconStyle={{fill: '#EF530B'}} />}
                             label="I want a quote" 
                             onChange={event => {
                               document.getElementById('selectorDiv').style.display = 'block';
@@ -163,28 +235,31 @@ const useStyles = makeStyles((theme) => ({
                     </div>
                     <div id={"selectorDiv"} className={classes.selectorDiv}>
                       <p className={classes.formFieldLabel}>What is your estimated budget?</p>
-                      <FormControl variant="outlined" className={classes.formControl}>
-                        <InputLabel disableAnimation={true} shrink={false} htmlFor="outlined-budget-native-simple">Select budget range</InputLabel>
-                        <Select
-                          native
+                      <FormControl variant="outlined" borderColor='white' className={classes.formControl}>
+                        <CssSelect
+                          native={true}
                           value={state.age}
                           onChange={handleChange}
-                          placeholder="Age"
                           id='budgetSelect'
+                          className={classes.select}
                           inputProps={{
-                            name: 'budget',
-                            id: 'outlined-budget-native-simple',
-                          }}
+                            classes: {
+                                icon: classes.icon,
+                                input: classes.select,
+                            },
+                        }}
+                        MenuProps={{
+
+                        }}
                         >
-                          <option aria-label="None" value="" />
-                          <option value={10}>Ten</option>
+                          <option aria-label="Select budget range" value="none">Select budget range</option>
                           <option value={20}>Twenty</option>
                           <option value={30}>Thirty</option>
-                        </Select>
+                        </CssSelect>
                       </FormControl>
                     </div>
                     <p className={classes.formFieldLabel}>Tell us more</p>
-                    <TextField
+                    <CssTextField
                         id="outlined-multiline-static"
                         className={classes.textField}
                         multiline
@@ -194,7 +269,7 @@ const useStyles = makeStyles((theme) => ({
                     />
                     <FormControlLabel
                         value="end"
-                        control={<Checkbox color="primary" />}
+                        control={<Checkbox iconStyle={{fill: '#EF530B'}} />}
                         label="Send me a non-disclosure agreement."
                         labelPlacement="end"
                         className={classes.checkbox}
@@ -204,9 +279,9 @@ const useStyles = makeStyles((theme) => ({
                             Send
                         </Button>
                     </div>
-                    <div className={classes.bottomText}>
-                        <p className={classes.formFieldLabel}>Rest assured, we'll never share sensible information provided to </p>
-                        <p className={classes.formFieldLabel}> us about your project publicly.</p>
+                    <div>
+                        <p className={classes.bottomText1} >Rest assured, we'll never share sensible information provided to </p>
+                        <p className={classes.bottomText2}> us about your project publicly.</p>
                     </div>
                 </div>
         </div>
