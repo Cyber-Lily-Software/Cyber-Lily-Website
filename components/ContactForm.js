@@ -207,7 +207,7 @@ const useStyles = makeStyles((theme) => ({
             <div className={classes.innerCard}>
                 <div className={classes.front}>
                     <p className={classes.formFieldLabel}>Full Name</p>
-                    <CssTextField id="outlined-basic" border= "1px solid #141433" placeholder="e.g. John Doe" variant="outlined" className={classes.textField} aria-describedby="outlined-weight-helper-text" />
+                    <CssTextField id="outlined-basic" border= "1px solid #141433" placeholder="e.g. John Doe" variant="outlined" className={classes.textField} aria-describedby="outlined-weight-helper-text" required={true}/>
                     <p className={classes.formFieldLabel}>Email address</p>
                     <CssTextField id="outlined-basic" placeholder="e.g. johndoe@gmail.com" variant="outlined" className={classes.textField}/>
                     <p className={classes.formFieldLabel}>How can we help you?</p>
