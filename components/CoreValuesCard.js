@@ -28,7 +28,6 @@ const useStyles = makeStyles((theme) => ({
                 marginRight: "-4rem",
                 marginLeft: "2.5rem",
             }
-            
         },
         avatar2: {
             backgroundColor: "#F1EBF2",

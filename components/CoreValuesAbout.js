@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexWrap: "wrap",
     alignItems: "center",
-    backgroundColor: "#F9F9FA",
+    backgroundColor: "#FFFFFF",
     paddingLeft: "7.5rem",
     [theme.breakpoints.down(1025)]: {
       paddingLeft: "1rem",
