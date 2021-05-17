@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "#FFFFFF",
     paddingLeft: "7.5rem",
     [theme.breakpoints.down(1025)]: {
-      paddingLeft: "1rem",
+      paddingLeft: "0rem",
       textAlign: "center !important",
       alignContent: "center !important",
       marginLeft: "auto",
