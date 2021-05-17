@@ -8,6 +8,7 @@ const useStyles = makeStyles((theme) => ({
     root: {
         width: "100% !important",
         backgroundColor: "#F9F9FA",
+        paddingTop: "5rem !important",
     },
     innerCard: {
         marginLeft: "8rem",
@@ -39,8 +40,8 @@ const useStyles = makeStyles((theme) => ({
         fontSize: "2.5rem",
         lineHeight: "1.5rem",
         paddingBottom: "1.25rem",
-        marginTop: "5rem !important",
         textAlign: "left",
+        marginTop: "0rem",
         [theme.breakpoints.down(1025)]: {
           textAlign: "center",
         },
