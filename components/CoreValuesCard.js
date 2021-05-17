@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
             [theme.breakpoints.down(1025)]: {
                 position: "relative",
                 marginRight: "-4rem",
-                marginLeft: "2.5rem",
+                marginLeft: "3.5rem",
             }
         },
         avatar2: {
@@ -38,8 +38,8 @@ const useStyles = makeStyles((theme) => ({
                 marginLeft: "2.5rem",
             },
             [theme.breakpoints.down(420)]: {
-                marginRight: "-3.5rem",
-                marginLeft: "1rem",
+                marginRight: "-3.0rem",
+                marginLeft: "2rem",
             },
         },
         avatar3: {
@@ -58,7 +58,7 @@ const useStyles = makeStyles((theme) => ({
             [theme.breakpoints.down(420)]: {
                 position: "relative",
                 marginRight: "0rem",
-                marginLeft: "-1.5rem",
+                marginLeft: "-0.5rem",
             }
         },
         descText: {
@@ -71,6 +71,8 @@ const useStyles = makeStyles((theme) => ({
             [theme.breakpoints.down(1025)]: {
                 marginTop: "-2.5rem",
                 textAlign: "center",
+                marginLeft: "auto",
+                marginRight: "auto",
             },
         },
         title: {

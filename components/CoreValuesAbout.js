@@ -20,6 +20,9 @@ const useStyles = makeStyles((theme) => ({
       marginLeft: "auto",
       marginRight: "auto",
     },
+    [theme.breakpoints.down(769)]: {
+      paddingLeft: "0rem",
+    },
   },
   valueItem: {
     width: "33%",
