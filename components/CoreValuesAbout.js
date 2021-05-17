@@ -30,13 +30,12 @@ const useStyles = makeStyles((theme) => ({
       alignContent: "center",
       marginLeft: "auto",
       marginRight: "auto",
-      paddingLeft: "7%",
-    },
-    [theme.breakpoints.down(769)]: {
-      paddingLeft: "4%",
+      paddingLeft: "10.63rem",
+      paddingRight: "10.63rem",
     },
     [theme.breakpoints.down(420)]: {
-      paddingLeft: "0%",
+      paddingLeft: "1.25rem",
+      paddingRight: "1.25rem",
     }
   },
   topText: {

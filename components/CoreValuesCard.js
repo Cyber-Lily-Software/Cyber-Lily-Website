@@ -38,7 +38,10 @@ const useStyles = makeStyles((theme) => ({
                 marginRight: "-3.5rem",
                 marginLeft: "2.5rem",
             },
-            
+            [theme.breakpoints.down(420)]: {
+                marginRight: "-3.5rem",
+                marginLeft: "1rem",
+            },
         },
         avatar3: {
             backgroundColor: "#FEF3E9",
@@ -50,13 +53,13 @@ const useStyles = makeStyles((theme) => ({
             },
             [theme.breakpoints.down(769)]: {
                 position: "relative",
-                marginRight: "-3.5rem",
-                marginLeft: "2.5rem",
+                marginRight: "-1.5rem",
+                marginLeft: "0.5rem",
             },
             [theme.breakpoints.down(420)]: {
                 position: "relative",
-                marginRight: "-0.5rem",
-                marginLeft: "0rem",
+                marginRight: "0rem",
+                marginLeft: "-1.5rem",
             }
         },
         descText: {
