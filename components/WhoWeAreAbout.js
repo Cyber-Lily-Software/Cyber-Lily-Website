@@ -8,6 +8,7 @@ import { makeStyles, useTheme } from "@material-ui/core/styles";
 const useStyles = makeStyles((theme) => ({
     root: {
         width: "100%",
+        backgroundColor: "#FFFFFF",
         paddingTop: "5rem",
         paddingLeft: "7.5rem",
         display: "flex",
