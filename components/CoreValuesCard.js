@@ -25,6 +25,16 @@ const useStyles = makeStyles((theme) => ({
             position: "absolute",
             [theme.breakpoints.down(1025)]: {
                 position: "relative",
+                marginRight: "-13.5rem",
+                marginLeft: "13rem",
+            },
+            [theme.breakpoints.down(769)]: {
+                position: "relative",
+                marginRight: "-6.5rem",
+                marginLeft: "6rem",
+            },
+            [theme.breakpoints.down(420)]: {
+                position: "relative",
                 marginRight: "-4rem",
                 marginLeft: "3.5rem",
             }
@@ -34,8 +44,13 @@ const useStyles = makeStyles((theme) => ({
             position: "absolute",
             [theme.breakpoints.down(1025)]: {
                 position: "relative",
-                marginRight: "-3.5rem",
-                marginLeft: "2.5rem",
+                marginRight: "-13rem",
+                marginLeft: "12rem",
+            },
+            [theme.breakpoints.down(769)]: {
+                position: "relative",
+                marginRight: "-5.5rem",
+                marginLeft: "5rem",
             },
             [theme.breakpoints.down(420)]: {
                 marginRight: "-3.0rem",
@@ -47,18 +62,18 @@ const useStyles = makeStyles((theme) => ({
             position: "absolute",
             [theme.breakpoints.down(1025)]: {
                 position: "relative",
-                marginRight: "-3rem",
-                marginLeft: "2.5rem",
+                marginRight: "-9rem",
+                marginLeft: "8.5rem",
             },
             [theme.breakpoints.down(769)]: {
                 position: "relative",
-                marginRight: "-1.5rem",
-                marginLeft: "0.5rem",
+                marginRight: "-2rem",
+                marginLeft: "1rem",
             },
             [theme.breakpoints.down(420)]: {
                 position: "relative",
-                marginRight: "0rem",
-                marginLeft: "-0.5rem",
+                marginRight: "0.5rem",
+                marginLeft: "-1rem",
             }
         },
         descText: {

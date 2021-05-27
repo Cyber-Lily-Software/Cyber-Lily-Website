@@ -72,7 +72,7 @@ const values = [
     valueIcon2: "./shield-verified@2x.png",
     valueIcon3: "./shield-verified@3x.png",
     shortDesc:
-      "We design and develop custom websites from scratch, tailored specifically to your business’s needs. We pride ourselves on never using any templates for the design of our websites. We organize hosting for your websites through Amazon Web Services.",
+      "We believe in transparency and are honest about our capabilities as we value our reputation. We will not take on a job unless we are absolutely certain we can satisfy our client’s needs and exceed their expectations.",
   },
   {
     valueName: "Motivation",
@@ -81,7 +81,7 @@ const values = [
     valueIcon2: "./graph_increase@2x.png",
     valueIcon3: "./graph_increase@3x.png",
     shortDesc:
-      "We design and develop custom websites from scratch, tailored specifically to your business’s needs. We pride ourselves on never using any templates for the design of our websites. We organize hosting for your websites through Amazon Web Services.",
+      "Our motivation comes from our clients. We are as excited to bring your vision to life as we would be if it were our own. With our main goal in mind, we bring your vision to life for the sole purpose of improving your business. We take pride in our enjoyment of each and every project we take on.",
   },
   {
     valueName: "Creative Openness",
@@ -90,7 +90,7 @@ const values = [
     valueIcon2: "./lightbulb-big@2x.png",
     valueIcon3: "./lightbulb-big@3x.png",
     shortDesc:
-      "We design and develop custom websites from scratch, tailored specifically to your business’s needs. We pride ourselves on never using any templates for the design of our websites. We organize hosting for your websites through Amazon Web Services.",
+      "We believe that a free flow of ideas in the world increases the probability of execution. Collaboration both within our organization and between our team and your business is essential to us and the project’s success.",
   },
 ];
 
