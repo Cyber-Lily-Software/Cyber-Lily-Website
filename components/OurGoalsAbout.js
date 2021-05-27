@@ -6,13 +6,14 @@ import { makeStyles, useTheme } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        width: "100% !important",
+        minWidth: "100% !important",
         backgroundColor: "#F9F9FA",
         paddingTop: "5rem !important",
     },
     innerCard: {
         marginLeft: "8rem",
-        width: "100% !important",
+        maxWidth: "100% !important",
+        paddingBottom: "6.875rem",
         [theme.breakpoints.down(1025)]: {
             textAlign: "center",
             marginLeft: "0rem",
@@ -83,24 +84,62 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.down(1025)]: {
         }
     },
-    cardTitle: {
+    cardTitle2: {
         position: "absolute",
         fontWeight: 700,
         lineHeight: "3rem",
         fontSize: "2.25rem",
         [theme.breakpoints.down(1025)]: {
-            width: "100%",
+            marginLeft: "20%",
+        },
+        [theme.breakpoints.down(769)]: {
+            marginLeft: "25%",
         },
         [theme.breakpoints.down(420)]: {
             paddingBottom: "10rem !important",
             marginTop: "0rem",
+            fontWeight: 500,
+            marginLeft: "5%",
+            marginBottom: "0rem !important",
+        },
+        [theme.breakpoints.down(380)]: {
+            paddingBottom: "10rem !important",
+            marginTop: "0rem",
+            fontWeight: 500,
+            marginLeft: "1%",
+            marginBottom: "0rem !important",
+        },
+    },
+    cardTitle1: {
+        position: "absolute",
+        fontWeight: 700,
+        lineHeight: "3rem",
+        fontSize: "2.25rem",
+        [theme.breakpoints.down(1025)]: {
+            marginLeft: "24%",
+        },
+        [theme.breakpoints.down(769)]: {
+            marginLeft: "29%",
+        },
+        [theme.breakpoints.down(420)]: {
+            paddingBottom: "10rem !important",
+            marginTop: "0rem",
+            fontWeight: 500,
+            marginLeft: "15%",
+            marginBottom: "0rem !important",
+        },
+        [theme.breakpoints.down(380)]: {
+            paddingBottom: "10rem !important",
+            marginTop: "0rem",
+            fontWeight: 500,
+            marginLeft: "10%",
         },
     },
     cardText: {
         fontWeight: 400,
         fontSize: "1rem",
         lineHeight: "1.5rem",
-        width: "49.5rem",
+        maxWidth: "49.5rem",
         position: "relative",
         marginTop: "6rem !important",
         [theme.breakpoints.down(1025)]: {
@@ -116,7 +155,7 @@ const useStyles = makeStyles((theme) => ({
         fontWeight: 400,
         fontSize: "1rem",
         lineHeight: "1.5rem",
-        width: "49.5rem",
+        maxWidth: "49.5rem",
         position: "relative",
         marginTop: "6rem !important",
         [theme.breakpoints.down(1025)]: {
@@ -127,9 +166,6 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.down(420)]: {
             marginTop: "3rem !important",
         },
-        [theme.breakpoints.down(380)]: {
-            marginTop: "6rem !important",
-        }
     },
     tellMeMoreButton: {
         color: "#EF530B !important",
@@ -161,7 +197,7 @@ export default function OurGoalsAbout() {
                     <div className={classes.card1}>
                         <img className={classes.cardImage} src={"./Frame.png"}/>
                         <div className={classes.card1Text}>
-                            <h3 className={classes.cardTitle}>Web Development</h3>
+                            <h3 className={classes.cardTitle1}>Web Development</h3>
                             <p className={classes.cardText}>Should we develop a website for you,
                             we do so with the intent of creating a product that is not only functional but beautiful too 
                             for the purpose of organically growing your business.
@@ -177,7 +213,7 @@ export default function OurGoalsAbout() {
                     <div className={classes.card2}>
                         <img src={"./Frame.png"}/>
                         <div className={classes.card1Text}>
-                            <h3 className={classes.cardTitle}>Software Development</h3>
+                            <h3 className={classes.cardTitle2}>Software Development</h3>
                             <p className={classes.cardText2}>
                             Should we develop custom software for you, we do so with the intent of using the software as an opportunity
                             to improve the ease of running your business as much as we possibly can. We do this through the development
