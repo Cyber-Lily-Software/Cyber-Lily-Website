@@ -94,7 +94,6 @@ const useStyles = makeStyles((theme) => ({
     marginRight: "auto",
     marginBottom: "2.25rem !important",
     textAlign: "center",
-    marginTop: "30%",
     position: "static",
     [theme.breakpoints.down(769)]: {
       marginTop: "10%",
@@ -103,8 +102,8 @@ const useStyles = makeStyles((theme) => ({
       marginTop: "3.5rem !important",
     },
     [theme.breakpoints.up(1026)]: {
-      width: "41%",
-      marginTop: "3.5rem !important",
+      width: "30%",
+      marginTop: "6.5rem !important",
     },
   },
 }));
