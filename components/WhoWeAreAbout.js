@@ -73,6 +73,7 @@ const useStyles = makeStyles((theme) => ({
     },
     imageLabel1: {
         marginLeft: "2.875rem",
+        marginTop: "0.5rem",
         fontWeight: 700,
         
         [theme.breakpoints.down(1025)]: {
@@ -80,7 +81,7 @@ const useStyles = makeStyles((theme) => ({
         },
         [theme.breakpoints.down(420)]: {
             marginLeft: "-14rem",
-            marginTop: "-37.5rem",
+            marginTop: "-37rem",
         }
     },
     imageLabel2: {
