@@ -81,8 +81,7 @@ const useStyles = makeStyles((theme) => ({
         },
     },
     cardImage:{
-        [theme.breakpoints.down(1025)]: {
-        }
+        width: "20rem",
     },
     cardTitle2: {
         position: "absolute",
@@ -211,7 +210,7 @@ export default function OurGoalsAbout() {
                         </div>
                     </div>
                     <div className={classes.card2}>
-                        <img src={"./Frame.png"}/>
+                        <img src={"./Frame 2.png"} className={classes.cardImage}/>
                         <div className={classes.card1Text}>
                             <h3 className={classes.cardTitle2}>Software Development</h3>
                             <p className={classes.cardText2}>
