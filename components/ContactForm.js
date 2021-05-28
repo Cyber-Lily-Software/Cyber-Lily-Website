@@ -179,6 +179,25 @@ const useStyles = makeStyles((theme) => ({
       },
     })(Select);
 
+    const OrangeRadio = withStyles({
+      root: {
+        color: '#EF530B',
+        '&$checked': {
+          color: '#EF530B',
+        },
+      },
+      checked: {},
+    })((props) => <Radio color="default" {...props} />);
+
+    const OrangeCheckbox = withStyles({
+      root: {
+        color: '#EF530B',
+        '&$checked': {
+          color: '#EF530B',
+        },
+      },
+      checked: {},
+    })((props) => <Checkbox color="default" {...props} />);
     
     export default function ContactForm() {
     const classes = useStyles();
@@ -186,7 +205,6 @@ const useStyles = makeStyles((theme) => ({
 
     const [state, setState] = useState(0);
     const [value, setValue] = React.useState('query');
-
   
     const handleChange = (event) => {
       const name = event.target.name;
@@ -218,7 +236,7 @@ const useStyles = makeStyles((theme) => ({
                             className={classes.radioBorder1} 
                             id="query"
                             value="query" 
-                            control={<Radio iconStyle={{fill: '#EF530B'}} />} 
+                            control={<OrangeRadio inputProps={{ 'aria-label': 'query' }}/>} 
                             label="I have a query" 
                             onChange={event => {
                               document.getElementById('selectorDiv').style.display = 'none';
@@ -229,7 +247,7 @@ const useStyles = makeStyles((theme) => ({
                             className={classes.radioBorder2}
                             id="quote"
                             value="quote"
-                            control={<Radio iconStyle={{fill: '#EF530B'}}  />}
+                            control={<OrangeRadio inputProps={{ 'aria-label': 'quote' }} />}
                             label="I want a quote" 
                             onChange={event => {
                               document.getElementById('selectorDiv').style.display = 'block';
@@ -240,7 +258,7 @@ const useStyles = makeStyles((theme) => ({
                     </div>
                     <div id={"selectorDiv"} className={classes.selectorDiv}>
                       <p className={classes.formFieldLabel}>What is your estimated budget?</p>
-                      <FormControl variant="outlined" borderColor='white' className={classes.formControl}>
+                      <FormControl variant="outlined" className={classes.formControl}>
                         <CssSelect
                           native={true}
                           value={state.age}
@@ -250,16 +268,24 @@ const useStyles = makeStyles((theme) => ({
                           inputProps={{
                             classes: {
                                 icon: classes.icon,
-                                input: classes.select,
                             },
                         }}
                         MenuProps={{
 
                         }}
                         >
-                          <option aria-label="Select budget range" value="none">Select budget range</option>
-                          <option value={20}>Twenty</option>
-                          <option value={30}>Thirty</option>
+                          <option aria-label="Select budget range USD" value="none">Select budget range USD</option>
+                          <option value={500}>500-1000</option>
+                          <option value={1000}>1000-1500</option>
+                          <option value={1500}>1500-3000</option>
+                          <option value={3000}>3000-4000</option>
+                          <option value={1500}>4000-5000</option>
+                          <option value={1500}>5000-6000</option>
+                          <option value={1500}>6000-7000</option>
+                          <option value={1500}>7000-8000</option>
+                          <option value={1500}>8000-9000</option>
+                          <option value={1500}>9000-10000</option>
+                          <option value={1500}>10000-whatever it takes</option>
                         </CssSelect>
                       </FormControl>
                     </div>
@@ -274,7 +300,7 @@ const useStyles = makeStyles((theme) => ({
                     />
                     <FormControlLabel
                         value="end"
-                        control={<Checkbox iconStyle={{fill: '#EF530B'}} />}
+                        control={<OrangeCheckbox inputProps={{ 'aria-label': 'query' }}/>}
                         label="Send me a non-disclosure agreement."
                         labelPlacement="end"
                         className={classes.checkbox}
