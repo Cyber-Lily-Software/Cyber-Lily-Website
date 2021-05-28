@@ -56,6 +56,11 @@ const useStyles = makeStyles((theme) => ({
         marginLeft: "2.875rem",
         marginRight: "1.875rem",
         borderRadius: "0.5rem",
+        [theme.breakpoints.down(1630)]: {
+            width: "15.63rem",
+            marginLeft: "3rem",
+            marginRight: "1rem",
+        },
         [theme.breakpoints.down(1025)]: {
             width: "17.63rem",
             marginLeft: "0.6rem",
@@ -69,6 +74,7 @@ const useStyles = makeStyles((theme) => ({
     imageLabel1: {
         marginLeft: "2.875rem",
         fontWeight: 700,
+        
         [theme.breakpoints.down(1025)]: {
             marginLeft: "-31rem",
         },
@@ -81,6 +87,9 @@ const useStyles = makeStyles((theme) => ({
         marginLeft: "25.3rem",
         marginTop: "-3rem",
         fontWeight: 700,
+        [theme.breakpoints.down(1630)]: {
+            marginLeft: "22.7rem",
+        },
         [theme.breakpoints.down(1025)]: {
             marginLeft: "9rem",
         },
@@ -102,6 +111,9 @@ const useStyles = makeStyles((theme) => ({
     imageLabel_22: {
         marginLeft: "25.3rem",
         fontWeight: 400,
+        [theme.breakpoints.down(1630)]: {
+            marginLeft: "22.7rem",
+        },
         [theme.breakpoints.down(1025)]: {
             marginLeft: "6.5rem",
         },
@@ -122,6 +134,7 @@ const useStyles = makeStyles((theme) => ({
             width: "38.56rem",
             marginLeft: "auto",
             marginRight: "auto",
+            marginTop: " 2.563rem",
         },
         [theme.breakpoints.down(420)]: {
             width: "100%",
@@ -136,6 +149,9 @@ const useStyles = makeStyles((theme) => ({
         marginTop: "-2.5rem",
         backgroundColor: "#E8E8EB",
         padding: "0.6rem",
+        [theme.breakpoints.down(1630)]: {
+            marginLeft: "16rem",
+        },
         [theme.breakpoints.down(1025)]: {
             marginLeft: "15.5rem",
         },
@@ -151,6 +167,10 @@ const useStyles = makeStyles((theme) => ({
         marginTop: "-2.5rem",
         backgroundColor: "#E8E8EB",
         padding: "0.6rem",
+        [theme.breakpoints.down(1630)]: {
+            marginLeft: "35.5rem",
+            marginRight: "2rem",
+        },
         [theme.breakpoints.down(1025)]: {
             marginLeft: "35rem",
         },
