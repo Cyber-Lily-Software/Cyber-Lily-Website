@@ -22,6 +22,39 @@ const useStyles = makeStyles((theme) => ({
       paddingRight: "0.5rem",
     },
   },
+  Title: {
+    width: '100%',
+    textAlign: 'center',
+  },
+  smallTitle: {
+    marginTop: '-2rem',
+    fontWeight: 400,
+    fontSize: '1rem',
+    lineHeight: '1.5rem',
+    color: '#43435C',
+  },
+  topTitle: {
+    alignItems: "center",
+    textAlign: 'center',
+    fontWeight: 700,
+    fontSize: "2.5rem",
+    lineHeight: "2.5rem",
+    maxWidth: '30rem',
+    paddingBottom: "1.25rem",
+    marginTop: "0rem",
+    marginLeft: 'auto',
+    marginRight: 'auto',
+    [theme.breakpoints.down(1025)]: {
+      textAlign: "center",
+    },
+},
+line1: {
+  backgroundImage: "linear-gradient(120deg, #F68320 0%, #F68320 100%)",
+  backgroundRepeat: "no-repeat",
+  backgroundSize: "100% 0.2em",
+  backgroundPosition: "0 88%",
+  transition: "background-size 0.25s ease-in",
+},
   serviceItem: {
     flex: "50%",
     paddingLeft: "1rem",
@@ -52,7 +85,7 @@ const useStyles = makeStyles((theme) => ({
 const services = [
   {
     serviceName: "Website Design & Development",
-    imgUrl: "./Frame.png",
+    imgUrl: "./Frame@3x 2.png",
     serviceUrl: "/services/consolidated-load",
     serviceIcon1: "./globe.png",
     serviceIcon2: "./globe@2x.png",
@@ -62,7 +95,7 @@ const services = [
   },
   {
     serviceName: "Web Application Design & Development",
-    imgUrl: "./Frame.png",
+    imgUrl: "./Frame@3x.png",
     serviceUrl: "/services/full-load",
     serviceIcon1: "./iphone_portrait.png",
     serviceIcon2: "./iphone_portrait@2x.png",
@@ -72,7 +105,7 @@ const services = [
   },
   {
     serviceName: "Custom Software Development",
-    imgUrl: "./Frame.png",
+    imgUrl: "./Frame@3x 3.png",
     serviceUrl: "/services/clearing",
     serviceIcon1: "./code.png",
     serviceIcon2: "./code@2x.png",
@@ -88,41 +121,88 @@ export default function HomeServiceCards(props) {
 
   const mobileBreakpoint = useMediaQuery(theme.breakpoints.down(1025));
 
-  return (
-    <div className={classes.root}>
-      {services.map((service) => {
-        if (mobileBreakpoint) {
-          return (
-            <div className={classes.serviceItem}>
-              <ServiceCard
-                serviceName={service.serviceName}
-                serviceImage={service.imgUrl}
-                serviceIcon={service.serviceIcon}
-                shortDesc={service.shortDesc}
-                serviceUrl={service.serviceUrl}
-                serviceIcon1={service.serviceIcon1}
-                serviceIcon2={service.serviceIcon2}
-                serviceIcon3={service.serviceIcon3}
-              />
-            </div>
-          );
-        } else {
-          return (
-            <Link href={service.serviceUrl} key={service.serviceName}>
+  if (mobileBreakpoint){
+    return (
+      <div className={classes.root}>
+        <div className={classes.Title}>
+        <h2 className={classes.topTitle} >Services that bring <span className={classes.line1}>your vision</span> to life </h2>
+        <h4 className={classes.smallTitle} >Tap card for more information</h4>
+        </div>
+        {services.map((service) => {
+          if (mobileBreakpoint) {
+            return (
               <div className={classes.serviceItem}>
                 <ServiceCard
                   serviceName={service.serviceName}
                   serviceImage={service.imgUrl}
+                  serviceIcon={service.serviceIcon}
+                  shortDesc={service.shortDesc}
+                  serviceUrl={service.serviceUrl}
                   serviceIcon1={service.serviceIcon1}
                   serviceIcon2={service.serviceIcon2}
                   serviceIcon3={service.serviceIcon3}
-                  shortDesc={service.shortDesc}
                 />
               </div>
-            </Link>
-          );
-        }
-      })}
-    </div>
-  );
+            );
+          } else {
+            return (
+              <Link href={service.serviceUrl} key={service.serviceName}>
+                <div className={classes.serviceItem}>
+                  <ServiceCard
+                    serviceName={service.serviceName}
+                    serviceImage={service.imgUrl}
+                    serviceIcon1={service.serviceIcon1}
+                    serviceIcon2={service.serviceIcon2}
+                    serviceIcon3={service.serviceIcon3}
+                    shortDesc={service.shortDesc}
+                  />
+                </div>
+              </Link>
+            );
+          }
+        })}
+      </div>
+    );
+  } else {
+    return (
+      <div className={classes.root}>
+        <div className={classes.Title}>
+        <h2 className={classes.topTitle} >Services that bring <span className={classes.line1}>your vision</span> to life </h2>
+        </div>
+        {services.map((service) => {
+          if (mobileBreakpoint) {
+            return (
+              <div className={classes.serviceItem}>
+                <ServiceCard
+                  serviceName={service.serviceName}
+                  serviceImage={service.imgUrl}
+                  serviceIcon={service.serviceIcon}
+                  shortDesc={service.shortDesc}
+                  serviceUrl={service.serviceUrl}
+                  serviceIcon1={service.serviceIcon1}
+                  serviceIcon2={service.serviceIcon2}
+                  serviceIcon3={service.serviceIcon3}
+                />
+              </div>
+            );
+          } else {
+            return (
+              <Link href={service.serviceUrl} key={service.serviceName}>
+                <div className={classes.serviceItem}>
+                  <ServiceCard
+                    serviceName={service.serviceName}
+                    serviceImage={service.imgUrl}
+                    serviceIcon1={service.serviceIcon1}
+                    serviceIcon2={service.serviceIcon2}
+                    serviceIcon3={service.serviceIcon3}
+                    shortDesc={service.shortDesc}
+                  />
+                </div>
+              </Link>
+            );
+          }
+        })}
+      </div>
+    );
+  }
 }
