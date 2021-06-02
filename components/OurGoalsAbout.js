@@ -63,7 +63,7 @@ const useStyles = makeStyles((theme) => ({
         marginBottom: "4rem",
         [theme.breakpoints.down(1025)]: {
             display: "inline-block",
-            marginBottom: "0rem",
+            marginBottom: "3rem",
         },
     },
     card2: {
@@ -210,7 +210,7 @@ export default function OurGoalsAbout() {
                         </div>
                     </div>
                     <div className={classes.card2}>
-                        <img src={"./Frame 2.png"} className={classes.cardImage}/>
+                        <img src={"./Frame 3.png"} className={classes.cardImage}/>
                         <div className={classes.card1Text}>
                             <h3 className={classes.cardTitle2}>Software Development</h3>
                             <p className={classes.cardText2}>
