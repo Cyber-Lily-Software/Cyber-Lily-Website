@@ -4,8 +4,7 @@ import { makeStyles, useTheme } from "@material-ui/core/styles";
 const useStyles = makeStyles((theme) => ({
     root: {
         alignItems: 'center',
-        paddingLeft: '12%',
-        paddingRight: '6%',
+        
         marginTop: '3%',
         marginBottom: '5%',
         [theme.breakpoints.down(1025)]: {
@@ -42,6 +41,8 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
         width: '100%',
         marginTop: '4%',
+        paddingLeft: '12%',
+        paddingRight: '6%',
         [theme.breakpoints.down(1025)]: {
             textAlign: "center",
             display: 'block',
