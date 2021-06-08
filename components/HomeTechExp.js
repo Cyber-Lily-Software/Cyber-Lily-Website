@@ -46,6 +46,8 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.down(1025)]: {
             textAlign: "center",
             display: 'block',
+            paddingLeft: '0%',
+            paddingRight: '0%',
         },
     },
     title_text: {
