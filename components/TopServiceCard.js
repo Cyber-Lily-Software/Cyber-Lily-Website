@@ -31,6 +31,9 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.down(1025)]: {
           textAlign: "center",
         },
+        [theme.breakpoints.down(420)]: {
+            fontSize: "1.75rem",
+        },
     },
     line1: {
         backgroundImage: "linear-gradient(120deg, #F68320 0%, #F68320 100%)",
@@ -40,7 +43,7 @@ const useStyles = makeStyles((theme) => ({
         transition: "background-size 0.25s ease-in",
     },
     line2: {
-        marginLeft: '40%',
+        marginLeft: '50%',
         backgroundImage: "linear-gradient(120deg, #F68320 0%, #F68320 100%)",
         backgroundRepeat: "no-repeat",
         backgroundSize: "100% 0.2em",
@@ -68,7 +71,7 @@ const useStyles = makeStyles((theme) => ({
         width: '30%',
         marginLeft: '5%',
         [theme.breakpoints.down(1025)]: {
-            width: '50%',
+            width: '40%',
             marginLeft: '0%',
         },
         [theme.breakpoints.down(769)]: {
