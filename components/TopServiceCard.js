@@ -54,6 +54,7 @@ const useStyles = makeStyles((theme) => ({
         fontWeight: 400,
         fontSize: '1rem',
         lineHeight: '1.5rem',
+        marginTop: '-1.5rem',
         [theme.breakpoints.down(1025)]: {
             paddingLeft: '17%',
             paddingRight: '17%',
