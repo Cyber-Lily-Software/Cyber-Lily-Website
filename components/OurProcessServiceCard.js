@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
             maxWidth: "80%",
             minHeight: '31.25rem',
             [theme.breakpoints.down(1025)]: {
-                maxWidth: "90%",
+                maxWidth: "95%",
                 display: 'block',
                 alignItems: 'center',
                 minHeight: '22rem',
@@ -32,13 +32,11 @@ const useStyles = makeStyles((theme) => ({
             },
             [theme.breakpoints.down(420)]: {
                 maxWidth: "100%",
-                marginLeft: '5%',
-                marginRight: '5%',
+                marginLeft: '2%',
+                marginRight: '2%',
             },
         },
         innerCard: {
-            display: "flex",
-            textAlign: "center",
         },
         avatar: {
             backgroundColor: "#FFF7E8",
@@ -119,6 +117,8 @@ const useStyles = makeStyles((theme) => ({
             marginBottom: "0rem !important",
             [theme.breakpoints.down(1025)]: {
                 textAlign: "center",
+                marginLeft: '-2rem',
+                marginRight: '-2rem',
             },
         },
     }));
@@ -171,10 +171,12 @@ const useStyles = makeStyles((theme) => ({
     const mobileBreakpoint = useMediaQuery(theme.breakpoints.down(4000));
     return (
         <div className={classes.root}>
-            {getAvatar(props.avatar)}
-            <div className={classes.descText}>
-                <p className={classes.title}>{props.processName}</p>
-                <p>{props.shortDesc}</p>
+            <div className={classes.innerCard}>
+                {getAvatar(props.avatar)}
+                <div className={classes.descText}>
+                    <p className={classes.title}>{props.processName}</p>
+                    <p>{props.shortDesc}</p>
+                </div>
             </div>
         </div>
     );
