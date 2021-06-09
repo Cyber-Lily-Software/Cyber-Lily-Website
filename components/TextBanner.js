@@ -1,4 +1,4 @@
-import { bannerStyles } from "../styles/TextBanner";
+import { bannerStyles } from "../styles/TextBannerStyles";
 
 export default function TextBanner(props) {
   // props.headerText -> text for header banner
