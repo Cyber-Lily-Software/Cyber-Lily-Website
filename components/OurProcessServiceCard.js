@@ -15,7 +15,25 @@ const useStyles = makeStyles((theme) => ({
             minHeight: '31.25rem',
             [theme.breakpoints.down(1025)]: {
                 maxWidth: "90%",
-                minHeight: '10.25rem',
+                display: 'block',
+                alignItems: 'center',
+                minHeight: '22rem',
+                marginTop: '3.25rem',
+                boxShadow: '0px 4px 8px rgba(67, 67, 92, 0.16)',
+                height: '19rem !important',
+                borderRadius: '0.5rem',
+                paddingLeft: '10%',
+                paddingRight: '10%',
+                paddingTop: '2rem',
+            },
+            [theme.breakpoints.down(769)]: {
+                paddingLeft: '5%',
+                paddingRight: '5%',
+            },
+            [theme.breakpoints.down(420)]: {
+                maxWidth: "100%",
+                marginLeft: '5%',
+                marginRight: '5%',
             },
         },
         innerCard: {
@@ -28,18 +46,14 @@ const useStyles = makeStyles((theme) => ({
             marginLeft: "44%",
             [theme.breakpoints.down(1025)]: {
                 position: "relative",
-                marginRight: "-2rem",
-                marginLeft: "4rem",
+                marginRight: "auto",
+                marginLeft: "auto",
             },
             [theme.breakpoints.down(769)]: {
                 position: "relative",
-                marginRight: "1rem",
-                marginLeft: "-1rem",
             },
             [theme.breakpoints.down(420)]: {
                 position: "relative",
-                marginRight: "0rem",
-                marginLeft: "0rem",
             }
         },
         avatar2: {
@@ -48,17 +62,11 @@ const useStyles = makeStyles((theme) => ({
             marginLeft: "43%",
             [theme.breakpoints.down(1025)]: {
                 position: "relative",
-                marginRight: "-5rem",
-                marginLeft: "7rem",
+                marginRight: "auto",
+                marginLeft: "auto",
             },
             [theme.breakpoints.down(769)]: {
                 position: "relative",
-                marginRight: "-2rem",
-                marginLeft: "2rem",
-            },
-            [theme.breakpoints.down(420)]: {
-                marginRight: "0rem",
-                marginLeft: "0rem",
             },
         },
         avatar3: {
@@ -67,19 +75,12 @@ const useStyles = makeStyles((theme) => ({
             marginLeft: "44%",
             [theme.breakpoints.down(1025)]: {
                 position: "relative",
-                marginRight: "-11rem",
-                marginLeft: "12rem",
+                marginRight: "auto",
+                marginLeft: "auto",
             },
             [theme.breakpoints.down(769)]: {
                 position: "relative",
-                marginRight: "-7rem",
-                marginLeft: "6rem",
             },
-            [theme.breakpoints.down(420)]: {
-                position: "relative",
-                marginRight: "-4.5rem",
-                marginLeft: "4rem",
-            }
         },
         avatar4: {
             backgroundColor: "#FEF3E9",
@@ -87,19 +88,12 @@ const useStyles = makeStyles((theme) => ({
             marginLeft: "44%",
             [theme.breakpoints.down(1025)]: {
                 position: "relative",
-                marginRight: "-10rem",
-                marginLeft: "11.5rem",
+                marginRight: "auto",
+                marginLeft: "auto",
             },
             [theme.breakpoints.down(769)]: {
                 position: "relative",
-                marginRight: "-6.5rem",
-                marginLeft: "6rem",
             },
-            [theme.breakpoints.down(420)]: {
-                position: "relative",
-                marginRight: "-3.5rem",
-                marginLeft: "3rem",
-            }
         },
         descText: {
             textAlign: "center",
@@ -113,6 +107,7 @@ const useStyles = makeStyles((theme) => ({
                 textAlign: "center",
                 marginLeft: "auto",
                 marginRight: "auto",
+                marginBottom: '3rem',
             },
         },
         title: {

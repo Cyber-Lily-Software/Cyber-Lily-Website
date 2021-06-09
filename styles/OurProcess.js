@@ -10,31 +10,33 @@ const useStyles = makeStyles({
         backgroundColor: "#F9F9FA",
         paddingLeft: "7.5rem",
         [theme.breakpoints.down(1025)]: {
+          paddingLeft: "5rem",
+          paddingRight: "5rem",
+        },
+        [theme.breakpoints.down(769)]: {
+          paddingLeft: "2rem",
+          paddingRight: "0rem",
+        },
+        [theme.breakpoints.down(420)]: {
           paddingLeft: "0rem",
           textAlign: "center !important",
           alignContent: "center !important",
           marginLeft: "auto",
           marginRight: "auto",
         },
-        [theme.breakpoints.down(769)]: {
-          paddingLeft: "0rem",
-        },
       },
       processItem: {
         width: "25%",
         paddingBottom: "1rem",
         [theme.breakpoints.down(1025)]: {
+          width: "50%",
+        },
+        [theme.breakpoints.down(420)]: {
           width: "100%",
           textAlign: "center",
           alignContent: "center",
           marginLeft: "auto",
           marginRight: "auto",
-          paddingLeft: "10.63rem",
-          paddingRight: "10.63rem",
-        },
-        [theme.breakpoints.down(420)]: {
-          paddingLeft: "1.25rem",
-          paddingRight: "1.25rem",
         }
       },
       topText: {
@@ -48,6 +50,7 @@ const useStyles = makeStyles({
           textAlign: "center",
           [theme.breakpoints.down(1025)]: {
             textAlign: "center",
+            marginBottom: '0rem !important',
           },
           
       },
