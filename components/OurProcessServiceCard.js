@@ -41,7 +41,7 @@ const useStyles = makeStyles((theme) => ({
             textAlign: "center",
         },
         avatar: {
-            backgroundColor: "#E6F3E9",
+            backgroundColor: "#FFF7E8",
             position: "absolute",
             marginLeft: "44%",
             [theme.breakpoints.down(1025)]: {
@@ -57,7 +57,7 @@ const useStyles = makeStyles((theme) => ({
             }
         },
         avatar2: {
-            backgroundColor: "#F1EBF2",
+            backgroundColor: "#FEF3E9",
             position: "absolute",
             marginLeft: "43%",
             [theme.breakpoints.down(1025)]: {
@@ -70,7 +70,7 @@ const useStyles = makeStyles((theme) => ({
             },
         },
         avatar3: {
-            backgroundColor: "#FEF3E9",
+            backgroundColor: "#F1EBF2",
             position: "absolute",
             marginLeft: "44%",
             [theme.breakpoints.down(1025)]: {
@@ -83,7 +83,7 @@ const useStyles = makeStyles((theme) => ({
             },
         },
         avatar4: {
-            backgroundColor: "#FEF3E9",
+            backgroundColor: "#E6F3E9",
             position: "absolute",
             marginLeft: "44%",
             [theme.breakpoints.down(1025)]: {
