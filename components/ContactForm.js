@@ -21,8 +21,8 @@ const useStyles = makeStyles((theme) => ({
     root: {
         margin: theme.spacing(1),
         width: '33.38rem',
-        height: "39rem",
-        maxHeight: "45rem",
+        // height: "39rem",
+        maxHeight: "49rem",
         background: "#FFFFFF",
         boxShadow: "0px 8px 24px rgba(77, 77, 77, 0.2)",
         borderRadius: "12px",
@@ -33,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
       },
       innerCard: {
         display: "flex",
-        marginTop: "2.5rem",
+        paddingTop: "2.5rem",
         transformStyle: "preserve-3d",
         transition: "0.8s transform",
         [theme.breakpoints.down(415)]: {
@@ -251,7 +251,7 @@ const useStyles = makeStyles((theme) => ({
                             label="I want a quote" 
                             onChange={event => {
                               document.getElementById('selectorDiv').style.display = 'block';
-                              document.getElementById('root').style.height = '50rem';
+                              document.getElementById('root').style.height = '55rem';
                             }} />
                         </RadioGroup>
                       </FormControl>
