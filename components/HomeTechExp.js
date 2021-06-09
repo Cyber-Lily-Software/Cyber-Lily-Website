@@ -4,7 +4,6 @@ import { makeStyles, useTheme } from "@material-ui/core/styles";
 const useStyles = makeStyles((theme) => ({
     root: {
         alignItems: 'center',
-        
         marginTop: '3%',
         marginBottom: '5%',
         [theme.breakpoints.down(1025)]: {
@@ -22,8 +21,8 @@ const useStyles = makeStyles((theme) => ({
         fontWeight: 700,
         fontSize: "2.5rem",
         lineHeight: "2.5rem",
-        paddingBottom: "1.25rem",
         marginTop: "0rem",
+        marginBottom: "0rem",
         marginLeft: 'auto',
         marginRight: 'auto',
         [theme.breakpoints.down(1025)]: {
@@ -41,8 +40,7 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
         width: '100%',
         marginTop: '4%',
-        paddingLeft: '12%',
-        paddingRight: '6%',
+        paddingLeft: '8%',
         [theme.breakpoints.down(1025)]: {
             textAlign: "center",
             display: 'block',
@@ -61,13 +59,14 @@ const useStyles = makeStyles((theme) => ({
         fontWeight: 700,
         fontSize: '2.25rem',
         lineHeight: '3rem',
+        marginBottom: '0rem',
         [theme.breakpoints.down(1025)]: {
             width: '100%',
             textAlign: 'center',
         },
     },
     cardText: {
-        width: '80%',
+        width: '70%',
         fontWeight: 400,
         fontSize: '1rem',
         lineHeight: '1.75rem',
@@ -79,8 +78,7 @@ const useStyles = makeStyles((theme) => ({
     },
     cardImage: {
         minWidth: '40%',
-        marginRight: '8%',
-        marginLeft: '-3%',
+        marginRight: '10%',
         [theme.breakpoints.down(1025)]: {
             width: '105%',
             marginRight: 'auto',
