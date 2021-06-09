@@ -7,9 +7,17 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
         paddingLeft: '20%',
         marginTop: '5%',
+        [theme.breakpoints.down(1025)]: {
+          display: 'block',
+          paddingLeft: '0%',
+          textAlign: 'center',
+        },
     },
     titleText: {
         width: '45%',
+        [theme.breakpoints.down(1025)]: {
+            width: '100%',
+        },
     },
     title: {
         textAlign: 'left',
@@ -38,15 +46,33 @@ const useStyles = makeStyles((theme) => ({
         backgroundSize: "100% 0.2em",
         backgroundPosition: "0 88%",
         transition: "background-size 0.25s ease-in",
+        [theme.breakpoints.down(1025)]: {
+            marginLeft: '0%',
+        },
     },
     text: {
         fontWeight: 400,
         fontSize: '1rem',
         lineHeight: '1.5rem',
+        [theme.breakpoints.down(1025)]: {
+            paddingLeft: '17%',
+            paddingRight: '17%',
+        },
+        [theme.breakpoints.down(769)]: {
+            paddingLeft: '10%',
+            paddingRight: '10%',
+        },
     },
     image: {
         width: '30%',
         marginLeft: '5%',
+        [theme.breakpoints.down(1025)]: {
+            width: '50%',
+            marginLeft: '0%',
+        },
+        [theme.breakpoints.down(769)]: {
+            width: '100%',
+        },
     },
 }));
 
