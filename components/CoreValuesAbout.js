@@ -27,6 +27,7 @@ const useStyles = makeStyles((theme) => ({
   valueItem: {
     width: "33%",
     paddingBottom: "1rem",
+    verticalAlign: 'baseline',
     [theme.breakpoints.down(1025)]: {
       width: "100%",
       textAlign: "center",

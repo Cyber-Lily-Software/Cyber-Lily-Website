@@ -11,9 +11,13 @@ const useStyles = makeStyles((theme) => ({
             display: "flex",
             textAlign: "center",
             perspective: "40rem",
-            maxWidth: "70%",
+            maxHeight: '10rem',
+            maxWidth: "80%",
             [theme.breakpoints.down(1025)]: {
                 maxWidth: "90%",
+            },
+            [theme.breakpoints.down(420)]: {
+                maxHeight: '20rem',
             },
         },
         innerCard: {
@@ -82,6 +86,7 @@ const useStyles = makeStyles((theme) => ({
             fontSize: "1rem",
             lineHeight: "1.5rem",
             paddingTop: "0rem",
+            marginBottom: "0rem",
             marginTop: "1.25rem",
             [theme.breakpoints.down(1025)]: {
                 marginTop: "-2.5rem",
@@ -89,6 +94,9 @@ const useStyles = makeStyles((theme) => ({
                 marginLeft: "auto",
                 marginRight: "auto",
             },
+        },
+        text: {
+            marginTop: '1rem',
         },
         title: {
             textAlign: "left",
@@ -144,7 +152,7 @@ const useStyles = makeStyles((theme) => ({
             {getAvatar(props.avatar)}
             <div className={classes.descText}>
                 <p className={classes.title}>{props.valueName}</p>
-                <p>{props.shortDesc}</p>
+                <p className={classes.text}>{props.shortDesc}</p>
             </div>
         </div>
     );
