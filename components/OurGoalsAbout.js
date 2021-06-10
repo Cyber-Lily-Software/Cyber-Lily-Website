@@ -77,7 +77,9 @@ const useStyles = makeStyles((theme) => ({
         marginLeft: "2.875rem",
         [theme.breakpoints.down(1025)]: {
             textAlign: "center",
-            marginLeft: "0rem",
+            marginLeft: "auto",
+            marginRight: "auto",
+
         },
     },
     cardImage:{
@@ -142,9 +144,10 @@ const useStyles = makeStyles((theme) => ({
         position: "relative",
         marginTop: "6rem !important",
         [theme.breakpoints.down(1025)]: {
-            width: "90%",
+            width: "95%",
             marginLeft: "auto",
             marginRight: "auto",
+            marginBottom: '4%',
         },
         [theme.breakpoints.down(420)]: {
             marginTop: "3rem !important",
@@ -158,9 +161,10 @@ const useStyles = makeStyles((theme) => ({
         position: "relative",
         marginTop: "6rem !important",
         [theme.breakpoints.down(1025)]: {
-            width: "90%",
+            width: "97%",
             marginLeft: "auto",
             marginRight: "auto",
+            marginBottom: '4%',
         },
         [theme.breakpoints.down(420)]: {
             marginTop: "3rem !important",
