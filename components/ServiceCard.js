@@ -114,8 +114,6 @@ export default function ServiceCard(props) {
 
   const mobileBreakpoint = useMediaQuery(theme.breakpoints.down(4000));
 
-  console.log(props);
-
   return (
     <div className={classes.root}>
       <div className={classes.innerCard}>

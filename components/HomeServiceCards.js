@@ -85,31 +85,31 @@ line1: {
 const services = [
   {
     serviceName: "Website Design & Development",
-    imgUrl: "./Frame@3x 2.png",
+    imgUrl: "./Frame_service_card@3x 2.png",
     serviceUrl: "/services/consolidated-load",
-    serviceIcon1: "./globe.png",
-    serviceIcon2: "./globe@2x.png",
-    serviceIcon3: "./globe@3x.png",
+    serviceIcon1: "./globe_service_card.png",
+    serviceIcon2: "./globe_service_card@2x.png",
+    serviceIcon3: "./globe_service_card@3x.png",
     shortDesc:
       "We design and develop custom websites from scratch, tailored specifically to your business’s needs. We pride ourselves on never using any templates for the design of our websites. We organize hosting for your websites through Amazon Web Services.",
   },
   {
     serviceName: "Web Application Design & Development",
-    imgUrl: "./Frame@3x.png",
+    imgUrl: "./Frame_service_card@3x.png",
     serviceUrl: "/services/full-load",
-    serviceIcon1: "./iphone_portrait.png",
-    serviceIcon2: "./iphone_portrait@2x.png",
-    serviceIcon3: "././iphone_portrait@3x.png",
+    serviceIcon1: "./iphone_portrait_service_card.png",
+    serviceIcon2: "./iphone_portrait_service_card@2x.png",
+    serviceIcon3: "././iphone_portrait_service_card@3x.png",
     shortDesc:
       "We design and develop scalable, enterprise grade web applications that suit your user’s and business’s needs. We organize hosting for your web applications through Amazon Web Services. Whatever solution works best for your needs, we will find.",
   },
   {
     serviceName: "Custom Software Development",
-    imgUrl: "./Frame@3x 3.png",
+    imgUrl: "./Frame_service_card@3x 3.png",
     serviceUrl: "/services/clearing",
-    serviceIcon1: "./code.png",
-    serviceIcon2: "./code@2x.png",
-    serviceIcon3: "./code@3x.png",
+    serviceIcon1: "./code_service_card.png",
+    serviceIcon2: "./code_service_card@2x.png",
+    serviceIcon3: "./code_service_card@3x.png",
     shortDesc:
       "Our team of developers and designers can build custom software, tailored to your business’s needs. Our solutions are built specific to your user’s and business’s needs.",
   },
