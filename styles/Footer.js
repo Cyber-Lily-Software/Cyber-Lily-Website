@@ -26,7 +26,6 @@ const useStyles = makeStyles({
         marginLeft: "7.625rem",
         marginRight: "auto",
         textAlign: "left",
-
         [theme.breakpoints.down(769)]: {
           marginLeft: "1.25rem",
           marginRight: "1.25rem",
@@ -45,7 +44,7 @@ const useStyles = makeStyles({
         fontWeight: "400",
         fontSize: "1rem",
         marginTop: "0rem",
-        color: "#E8E8EB",
+        color: '#E8E8EB !important',
       },
       footerColumnTwo: {
         [theme.breakpoints.down(769)]: {
@@ -63,6 +62,7 @@ const useStyles = makeStyles({
         fontWeight: '700',
         display: "inline-block",
         fontSize: "1rem",
+        color: '#FFFFFF',
         [theme.breakpoints.up(770)]: {
           marginTop: "2.75rem",
         },
@@ -82,6 +82,7 @@ const useStyles = makeStyles({
         fontWeight: '700',
         display: "inline-block",
         fontSize: "1rem",
+        color: '#FFFFFF',
         [theme.breakpoints.up(770)]: {
           marginTop: "2.75rem",
         },
@@ -101,6 +102,7 @@ const useStyles = makeStyles({
         fontWeight: '700',
         display: "inline-block",
         fontSize: "1rem",
+        color: '#FFFFFF',
         [theme.breakpoints.up(770)]: {
           marginTop: "2.75rem",
         },

@@ -13,6 +13,8 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     backgroundColor: "#FFFFFF",
     paddingLeft: "7.5rem",
+    marginBottom: '10%',
+    marginTop: '3%',
     [theme.breakpoints.down(1025)]: {
       paddingLeft: "0rem",
       textAlign: "center !important",

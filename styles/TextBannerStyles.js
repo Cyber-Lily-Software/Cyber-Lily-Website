@@ -27,7 +27,7 @@ export const bannerStyles = makeStyles((theme) => ({
   headerText: {
     fontWeight: "700",
     fontSize: "2.5rem",
-    color: "#ffffff",
+    color: "#ffffff !important",
     [theme.breakpoints.down(769)]: {
       textAlign: "center",
     },
