@@ -123,11 +123,9 @@ const useStyles = makeStyles((theme) => ({
             marginLeft: "29%",
         },
         [theme.breakpoints.down(420)]: {
-            paddingBottom: "10rem !important",
             marginTop: "0rem",
             fontWeight: 500,
             marginLeft: "15%",
-            marginBottom: "0rem !important",
         },
         [theme.breakpoints.down(380)]: {
             paddingBottom: "10rem !important",
@@ -150,7 +148,7 @@ const useStyles = makeStyles((theme) => ({
             marginBottom: '4%',
         },
         [theme.breakpoints.down(420)]: {
-            marginTop: "3rem !important",
+            marginTop: "4rem !important",
         },
     },
     cardText2: {
@@ -167,7 +165,7 @@ const useStyles = makeStyles((theme) => ({
             marginBottom: '4%',
         },
         [theme.breakpoints.down(420)]: {
-            marginTop: "3rem !important",
+            marginTop: "4rem !important",
         },
     },
     tellMeMoreButton: {
