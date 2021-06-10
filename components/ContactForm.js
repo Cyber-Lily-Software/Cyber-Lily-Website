@@ -21,7 +21,6 @@ const useStyles = makeStyles((theme) => ({
     root: {
         margin: theme.spacing(1),
         width: '33.38rem',
-        // height: "39rem",
         maxHeight: "49rem",
         background: "#FFFFFF",
         boxShadow: "0px 8px 24px rgba(77, 77, 77, 0.2)",
@@ -30,6 +29,9 @@ const useStyles = makeStyles((theme) => ({
         alignItems: "center",
         paddingLeft: "3rem",
         paddingRight: "3rem",
+        [theme.breakpoints.down(420)]: {
+          height: "43rem",
+        },
       },
       innerCard: {
         display: "flex",
@@ -275,17 +277,17 @@ const useStyles = makeStyles((theme) => ({
                         }}
                         >
                           <option aria-label="Select budget range USD" value="none">Select budget range USD</option>
-                          <option value={500}>500-1000</option>
-                          <option value={1000}>1000-1500</option>
-                          <option value={1500}>1500-3000</option>
-                          <option value={3000}>3000-4000</option>
-                          <option value={1500}>4000-5000</option>
-                          <option value={1500}>5000-6000</option>
-                          <option value={1500}>6000-7000</option>
-                          <option value={1500}>7000-8000</option>
-                          <option value={1500}>8000-9000</option>
-                          <option value={1500}>9000-10000</option>
-                          <option value={1500}>10000-whatever it takes</option>
+                          <option value={500}>$500-$1000</option>
+                          <option value={1000}>$1000-$1500</option>
+                          <option value={1500}>$1500-$3000</option>
+                          <option value={3000}>$3000-$4000</option>
+                          <option value={1500}>$4000-$5000</option>
+                          <option value={1500}>$5000-$6000</option>
+                          <option value={1500}>$6000-$7000</option>
+                          <option value={1500}>$7000-$8000</option>
+                          <option value={1500}>$8000-$9000</option>
+                          <option value={1500}>$9000-$10 000</option>
+                          <option value={1500}>$10 000-$10 000+</option>
                         </CssSelect>
                       </FormControl>
                     </div>
