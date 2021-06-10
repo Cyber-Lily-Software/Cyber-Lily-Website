@@ -12,6 +12,7 @@ const useStyles = makeStyles((theme) => ({
         paddingTop: "5rem",
         paddingLeft: "7.5rem",
         display: "flex",
+        marginBottom: '5%',
         [theme.breakpoints.down(1025)]: {
             paddingLeft: "0rem",
         },
