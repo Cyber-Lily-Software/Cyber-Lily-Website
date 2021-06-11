@@ -12,6 +12,8 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     marginLeft: "10%",
     marginRight: "10%",
+    paddingTop: "6.25rem",
+    paddingBottom: "6.25rem",
     [theme.breakpoints.down(769)]: {
       marginLeft: "0% !important",
       marginRight: "0% !important",
@@ -23,38 +25,38 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   Title: {
-    width: '100%',
-    textAlign: 'center',
+    width: "100%",
+    textAlign: "center",
   },
   smallTitle: {
-    marginTop: '-2rem',
+    marginTop: "-2rem",
     fontWeight: 400,
-    fontSize: '1rem',
-    lineHeight: '1.5rem',
-    color: '#43435C',
+    fontSize: "1rem",
+    lineHeight: "1.5rem",
+    color: "#43435C",
   },
   topTitle: {
     alignItems: "center",
-    textAlign: 'center',
+    textAlign: "center",
     fontWeight: 700,
     fontSize: "2.5rem",
     lineHeight: "2.5rem",
-    maxWidth: '30rem',
+    maxWidth: "30rem",
     paddingBottom: "1.25rem",
     marginTop: "0rem",
-    marginLeft: 'auto',
-    marginRight: 'auto',
+    marginLeft: "auto",
+    marginRight: "auto",
     [theme.breakpoints.down(1025)]: {
       textAlign: "center",
     },
-},
-line1: {
-  backgroundImage: "linear-gradient(120deg, #F68320 0%, #F68320 100%)",
-  backgroundRepeat: "no-repeat",
-  backgroundSize: "100% 0.2em",
-  backgroundPosition: "0 88%",
-  transition: "background-size 0.25s ease-in",
-},
+  },
+  line1: {
+    backgroundImage: "linear-gradient(120deg, #F68320 0%, #F68320 100%)",
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "100% 0.2em",
+    backgroundPosition: "0 88%",
+    transition: "background-size 0.25s ease-in",
+  },
   serviceItem: {
     flex: "50%",
     paddingLeft: "1rem",
@@ -86,7 +88,7 @@ const services = [
   {
     serviceName: "Website Design & Development",
     imgUrl: "./Frame_service_card@3x 2.png",
-    serviceUrl: "/services/consolidated-load",
+    serviceUrl: "/service-website",
     serviceIcon1: "./globe_service_card.png",
     serviceIcon2: "./globe_service_card@2x.png",
     serviceIcon3: "./globe_service_card@3x.png",
@@ -96,7 +98,7 @@ const services = [
   {
     serviceName: "Web Application Design & Development",
     imgUrl: "./Frame_service_card@3x.png",
-    serviceUrl: "/services/full-load",
+    serviceUrl: "/service-web-app",
     serviceIcon1: "./iphone_portrait_service_card.png",
     serviceIcon2: "./iphone_portrait_service_card@2x.png",
     serviceIcon3: "././iphone_portrait_service_card@3x.png",
@@ -106,7 +108,7 @@ const services = [
   {
     serviceName: "Custom Software Development",
     imgUrl: "./Frame_service_card@3x 3.png",
-    serviceUrl: "/services/clearing",
+    serviceUrl: "/service-custom",
     serviceIcon1: "./code_service_card.png",
     serviceIcon2: "./code_service_card@2x.png",
     serviceIcon3: "./code_service_card@3x.png",
@@ -121,12 +123,14 @@ export default function HomeServiceCards(props) {
 
   const mobileBreakpoint = useMediaQuery(theme.breakpoints.down(1025));
 
-  if (mobileBreakpoint){
+  if (mobileBreakpoint) {
     return (
       <div className={classes.root}>
         <div className={classes.Title}>
-        <h2 className={classes.topTitle} >Services that bring <span className={classes.line1}>your vision</span> to life </h2>
-        <h4 className={classes.smallTitle} >Tap card for more information</h4>
+          <h2 className={classes.topTitle}>
+            Services that bring <span className={classes.line1}>your vision</span> to life{" "}
+          </h2>
+          <h4 className={classes.smallTitle}>Tap card for more information</h4>
         </div>
         {services.map((service) => {
           if (mobileBreakpoint) {
@@ -167,7 +171,9 @@ export default function HomeServiceCards(props) {
     return (
       <div className={classes.root}>
         <div className={classes.Title}>
-        <h2 className={classes.topTitle} >Services that bring <span className={classes.line1}>your vision</span> to life </h2>
+          <h2 className={classes.topTitle}>
+            We give life to your <span className={classes.line1}>vision</span>
+          </h2>
         </div>
         {services.map((service) => {
           if (mobileBreakpoint) {

@@ -25,13 +25,13 @@ export const useStyles = makeStyles((theme) => ({
     margin: "auto",
     "& > h1": {
       lineHeight: "3.5rem",
-      fontSize: "3.5rem",
+      fontSize: "3rem",
       marginRight: "1.5rem",
     },
     "& > p": {
       lineHeight: "1.5rem",
       marginRight: "7.75rem",
-      fontSize: "1.3rem",
+      fontSize: "1rem",
     },
     [theme.breakpoints.down(1025)]: {
       textAlign: "center",

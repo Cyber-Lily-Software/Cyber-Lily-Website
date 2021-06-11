@@ -87,7 +87,7 @@ const useStyles = makeStyles((theme) => ({
     color: "#FFFFFF !important",
     backgroundColor: "#EF530B !important",
     radius: "0.25rem",
-    width: "39.8%",
+    width: "45%",
     height: "3rem",
     textTransform: "capitalize !important",
     marginLeft: "auto",
@@ -102,7 +102,7 @@ const useStyles = makeStyles((theme) => ({
       marginTop: "3.5rem !important",
     },
     [theme.breakpoints.up(1026)]: {
-      width: "30%",
+      width: "45%",
       marginTop: "6.5rem !important",
     },
   },
