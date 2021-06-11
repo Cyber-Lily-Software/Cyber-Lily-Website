@@ -11,10 +11,16 @@ export const useStyles = makeStyles((theme) => ({
     alignItems: "stretch",
     rowGap: "2rem",
     gap: "1.5rem",
-    [theme.breakpoints.down(769)]: {
+    [theme.breakpoints.down(1025)]: {
       gridTemplateColumns: "1fr 1fr 1fr",
-      marginLeft: "3.75rem",
-      marginRight: "3.75rem",
+      marginLeft: "5rem",
+      marginRight: "6.3rem",
+    },
+    [theme.breakpoints.down(769)]: {
+      paddingLeft: "3.75rem",
+      paddingRight: "3.75rem",
+      marginRight: 0,
+      marginLeft: 0,
     },
     [theme.breakpoints.down(435)]: {
       gridTemplateColumns: "1fr 1fr",
