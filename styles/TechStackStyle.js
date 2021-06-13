@@ -30,6 +30,8 @@ export const useStyles = makeStyles((theme) => ({
       marginLeft: "1.25rem",
       marginRight: "1.25rem",
       rowGap: "0.75rem",
+      paddingLeft: "0rem",
+      paddingRight: "0rem",
     },
   },
   iconBox: {
