@@ -34,6 +34,21 @@ export const useStyles = makeStyles((theme) => ({
       paddingRight: "0rem",
     },
   },
+  heading: {
+    width: '100%',
+    textAlign: 'center',
+    fontWeight: 700,
+    fontSize: '2.5rem',
+    lineHeight: '3.25rem',
+    marginBottom: '0rem',
+  },
+  line1: {
+    backgroundImage: "linear-gradient(120deg, #F68320 0%, #F68320 100%)",
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "100% 0.2em",
+    backgroundPosition: "0 88%",
+    transition: "background-size 0.25s ease-in",
+  },
   iconBox: {
     boxShadow: "0px 4px 8px rgba(67, 67, 92, 0.16)",
     borderRadius: "12px",
