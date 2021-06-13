@@ -22,24 +22,13 @@ const techIcons = [
     { imgSrc: "postgresql_logo.svg", className: "postgresqlIcon" }
 ]
 
-export default function ServiceWebApp() {
+export default function ServiceWebsite() {
   return (
     <div>
-        <Head>
-        <title>Cyber Lily Software - Zimbabwe Web Development Agency</title>
+      <Head>
+        <title>Services Website Design - Cyber Lily Software - Zimbabwe Web Development Agency</title>
         <link rel="icon" href="/favicon.ico" />
-        </Head>
-        <Navigation />
-        <TextBanner headerText={'Reliable and engaging web solutions for your business'}/>
-        <TopServiceCard
-        serviceTitle={'Web application'}
-        serviceImage={'./wadd_service@3x.png'}
-        shortDesc={""}
-        />
-        <OurProcessServicesWebApp />
-        <TechStack techStackItems={techIcons} />
-        <GitFooter />
-        <Footer />
+      </Head>
     </div>
   );
 }
