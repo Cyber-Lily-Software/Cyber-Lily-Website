@@ -3,22 +3,12 @@ import { customTheme as theme } from '../src/theme';
 
 const useStyles = makeStyles({
     root: {
-        width: "100%",
+        minWidth: "100% !important",
         display: "flex",
         flexWrap: "wrap",
         alignItems: "center",
         backgroundColor: "#F9F9FA",
-        paddingLeft: "7.5rem",
-        [theme.breakpoints.down(1025)]: {
-          paddingLeft: "5rem",
-          paddingRight: "5rem",
-        },
-        [theme.breakpoints.down(769)]: {
-          paddingLeft: "2rem",
-          paddingRight: "0rem",
-        },
         [theme.breakpoints.down(420)]: {
-          paddingLeft: "0rem",
           textAlign: "center !important",
           alignContent: "center !important",
           marginLeft: "auto",

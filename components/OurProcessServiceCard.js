@@ -7,14 +7,13 @@ import clsx from "clsx";
 import { makeStyles, useTheme, withStyles} from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
-        root: {
+        main: {
             display: "flex",
             textAlign: "center",
-            perspective: "40rem",
-            maxWidth: "80%",
+            perspective: "60rem",
+            width: "100%",
             minHeight: '31.25rem',
             [theme.breakpoints.down(1025)]: {
-                maxWidth: "95%",
                 display: 'block',
                 alignItems: 'center',
                 minHeight: '22rem',
@@ -22,26 +21,39 @@ const useStyles = makeStyles((theme) => ({
                 boxShadow: '0px 4px 8px rgba(67, 67, 92, 0.16)',
                 height: '19rem !important',
                 borderRadius: '0.5rem',
-                paddingLeft: '10%',
+                // paddingLeft: '0% !important',
                 paddingRight: '10%',
                 paddingTop: '2rem',
             },
             [theme.breakpoints.down(769)]: {
-                paddingLeft: '5%',
-                paddingRight: '5%',
+                width: "100%",
             },
             [theme.breakpoints.down(420)]: {
-                maxWidth: "100%",
-                marginLeft: '2%',
-                marginRight: '2%',
+                width: "100%",
+                paddingRight: '10%',
+                paddingLeft: '10%',
             },
         },
         innerCard: {
+            textAlign: "center",
+            alignItems: 'center',
+            paddingLeft: '10%',
+            paddingRight: '10%',
+            [theme.breakpoints.down(1025)]: {
+                paddingLeft: '10%',
+                paddingRight: '2%',
+            },
+            [theme.breakpoints.down(420)]: {
+                paddingRight: '0%',
+                paddingLeft: '0%',
+            },
         },
         avatar: {
             backgroundColor: "#FFF7E8",
+            alignSelf: 'center',
             position: "absolute",
-            marginLeft: "44%",
+            marginLeft: "35%",
+            marginRight: "auto",
             [theme.breakpoints.down(1025)]: {
                 position: "relative",
                 marginRight: "auto",
@@ -57,7 +69,7 @@ const useStyles = makeStyles((theme) => ({
         avatar2: {
             backgroundColor: "#FEF3E9",
             position: "absolute",
-            marginLeft: "43%",
+            marginLeft: "35%",
             [theme.breakpoints.down(1025)]: {
                 position: "relative",
                 marginRight: "auto",
@@ -70,7 +82,7 @@ const useStyles = makeStyles((theme) => ({
         avatar3: {
             backgroundColor: "#F1EBF2",
             position: "absolute",
-            marginLeft: "44%",
+            marginLeft: "35%",
             [theme.breakpoints.down(1025)]: {
                 position: "relative",
                 marginRight: "auto",
@@ -83,7 +95,7 @@ const useStyles = makeStyles((theme) => ({
         avatar4: {
             backgroundColor: "#E6F3E9",
             position: "absolute",
-            marginLeft: "44%",
+            marginLeft: "35%",
             [theme.breakpoints.down(1025)]: {
                 position: "relative",
                 marginRight: "auto",
@@ -170,7 +182,7 @@ const useStyles = makeStyles((theme) => ({
 
     const mobileBreakpoint = useMediaQuery(theme.breakpoints.down(4000));
     return (
-        <div className={classes.root}>
+        <div className={classes.main}>
             <div className={classes.innerCard}>
                 {getAvatar(props.avatar)}
                 <div className={classes.descText}>

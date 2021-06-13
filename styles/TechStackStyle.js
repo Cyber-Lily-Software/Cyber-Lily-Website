@@ -3,6 +3,8 @@ import { makeStyles } from "@material-ui/core/styles";
 export const useStyles = makeStyles((theme) => ({
   iconContainer: {
     display: "grid",
+    marginTop: '5%',
+    marginBottom: '5%',
     gridTemplateColumns: "1fr 1fr 1fr 1fr",
     gridAutoRows: "1fr",
     columnGap: "1.5rem",
