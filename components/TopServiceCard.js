@@ -80,7 +80,7 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.down(769)]: {
             width: '50%',
         },
-        [theme.breakpoints.down(769)]: {
+        [theme.breakpoints.down(435)]: {
             width: '100%',
         },
     },
