@@ -5,8 +5,9 @@ const useStyles = makeStyles((theme) => ({
     root: {
         width: '100%', 
         display: 'flex',
-        paddingLeft: '20%',
+        paddingLeft: '10%',
         marginTop: '5%',
+        marginBottom: '5%',
         [theme.breakpoints.down(1025)]: {
           display: 'block',
           paddingLeft: '0%',
@@ -15,6 +16,7 @@ const useStyles = makeStyles((theme) => ({
     },
     titleText: {
         width: '45%',
+        marginTop: '5%',
         [theme.breakpoints.down(1025)]: {
             width: '100%',
         },
@@ -58,9 +60,10 @@ const useStyles = makeStyles((theme) => ({
         fontSize: '1rem',
         lineHeight: '1.5rem',
         marginTop: '-1.5rem',
+        width: '90%',
         [theme.breakpoints.down(1025)]: {
-            paddingLeft: '17%',
-            paddingRight: '17%',
+            marginLeft: 'auto',
+            marginRight: 'auto',
         },
         [theme.breakpoints.down(769)]: {
             paddingLeft: '10%',
@@ -69,10 +72,13 @@ const useStyles = makeStyles((theme) => ({
     },
     image: {
         width: '30%',
-        marginLeft: '5%',
+        marginLeft: '10%',
         [theme.breakpoints.down(1025)]: {
             width: '40%',
             marginLeft: '0%',
+        },
+        [theme.breakpoints.down(769)]: {
+            width: '50%',
         },
         [theme.breakpoints.down(769)]: {
             width: '100%',

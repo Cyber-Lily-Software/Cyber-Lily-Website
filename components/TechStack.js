@@ -1,4 +1,5 @@
 import TechnologyBox from "./TechnologyBox";
+import clsx from "clsx";
 
 import { useStyles } from "../styles/TechStackStyle";
 
@@ -8,8 +9,8 @@ export default function TechStack(props) {
   return (
     <div className={techClasses.iconContainer}>
       {props.techStackItems.map((techStackItem) => (
-        <div key={techStackItem.imgSrc} className={techClasses.iconBox}>
-          <TechnologyBox imgSrc={techStackItem.imgSrc} />
+        <div key={techStackItem.imgSrc} className={clsx(techClasses.iconBox, techClasses[techStackItem.boxName])}>
+          <TechnologyBox imgSrc={techStackItem.imgSrc} imgClass={techStackItem.className} />
         </div>
       ))}
     </div>
