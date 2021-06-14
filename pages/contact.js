@@ -9,14 +9,37 @@ import Footer from "../components/footer";
 import { makeStyles, useTheme, withStyles} from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
+    formDetails: {
+      [theme.breakpoints.down(1025)]: {
+        textAlign: 'center',
+      },
+    },
     form: {
-        marginTop: '-30%',
-        marginLeft: '60%',
-        marginBottom: '5%',
+      marginTop: '-30%',
+      marginLeft: '60%',
+      marginBottom: '5%',
+      [theme.breakpoints.down(1025)]: {
+        marginTop: '5%',
+        marginLeft: '23%',
+        // marginRight: 'auto',
+      },
+      [theme.breakpoints.down(769)]: {
+        marginTop: '5%',
+        marginLeft: '15%',
+        marginRight: 'auto',
+      },
+      [theme.breakpoints.down(435)]: {
+        marginTop: '5%',
+        marginLeft: '0%',
+        marginRight: '0%',
+      },
     },
     details: {
-        marginTop: '5%',
-        marginLeft: '5%',
+      marginTop: '5%',
+      marginLeft: '5%',
+      [theme.breakpoints.down(1025)]: {
+        marginLeft: '0%',
+      },
     },
 }));
 
@@ -31,11 +54,13 @@ export default function Contact() {
       </Head>
       <Navigation />
       <TextBanner headerText={'Ready to kick off a project? Looking for some advice?'}/>
-      <div className={classes.details}>
-      <ChatDetailsContact />
-      </div>
-      <div className={classes.form}>
-      <ContactForm />
+      <div>
+        <div className={classes.details}>
+        <ChatDetailsContact />
+        </div>
+        <div className={classes.form}>
+        <ContactForm />
+        </div>
       </div>
       <Footer />
     </div>
