@@ -5,6 +5,8 @@ export const flowChartClasses = makeStyles((theme) => ({
     width: "100%",
     backgroundColor: "#e8e8eb",
     minWidth: "calc(900px + 128px)",
+    overflow: "hidden",
+    overflowY: "scroll",
   },
   flowChart: {
     margin: 0,
