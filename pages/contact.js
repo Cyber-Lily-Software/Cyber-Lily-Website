@@ -18,6 +18,10 @@ const useStyles = makeStyles((theme) => ({
       marginTop: '-30%',
       marginLeft: '60%',
       marginBottom: '5%',
+      [theme.breakpoints.down(1440)]: {
+        marginTop: '-40%',
+      marginLeft: '60%',
+      },
       [theme.breakpoints.down(1025)]: {
         marginTop: '5%',
         marginLeft: '23%',
