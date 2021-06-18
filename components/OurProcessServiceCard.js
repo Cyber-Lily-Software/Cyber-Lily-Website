@@ -21,8 +21,7 @@ const useStyles = makeStyles((theme) => ({
                 boxShadow: '0px 4px 8px rgba(67, 67, 92, 0.16)',
                 height: '19rem !important',
                 borderRadius: '0.5rem',
-                // paddingLeft: '0% !important',
-                paddingRight: '10%',
+                paddingRight: '8%',
                 paddingTop: '2rem',
             },
             [theme.breakpoints.down(769)]: {
@@ -110,14 +109,22 @@ const useStyles = makeStyles((theme) => ({
             fontWeight: 400,
             fontSize: "1rem",
             lineHeight: "1.5rem",
-            paddingTop: "0rem",
-            marginTop: "1.25rem",
+            paddingTop: "-1rem",
+            paddingLeft: "10%",
+            paddingRight: "10%",
             [theme.breakpoints.down(1025)]: {
+                paddingTop: "1rem",
                 marginTop: "-2.5rem",
                 textAlign: "center",
                 marginLeft: "auto",
                 marginRight: "auto",
                 marginBottom: '3rem',
+                paddingLeft: "5%",
+                paddingRight: "5%",
+            },
+            [theme.breakpoints.down(769)]: {
+                paddingLeft: "0%",
+                paddingRight: "0%",
             },
         },
         title: {
@@ -125,9 +132,9 @@ const useStyles = makeStyles((theme) => ({
             fontWeight: 500,
             fontSize: "2rem",
             lineHeight: "1.5rem",
-            paddingTop: "1rem",
-            marginBottom: "0rem !important",
+            paddingTop: '5%',
             [theme.breakpoints.down(1025)]: {
+                paddingTop: '0%',
                 textAlign: "center",
                 marginLeft: '-2rem',
                 marginRight: '-2rem',
@@ -185,8 +192,8 @@ const useStyles = makeStyles((theme) => ({
         <div className={classes.main}>
             <div className={classes.innerCard}>
                 {getAvatar(props.avatar)}
+                <p className={classes.title}>{props.processName}</p>
                 <div className={classes.descText}>
-                    <p className={classes.title}>{props.processName}</p>
                     <p>{props.shortDesc}</p>
                 </div>
             </div>

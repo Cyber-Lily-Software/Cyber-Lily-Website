@@ -61,14 +61,19 @@ const useStyles = makeStyles((theme) => ({
         lineHeight: '1.5rem',
         marginTop: '-1.5rem',
         width: '90%',
+        marginBottom: '5%',
         [theme.breakpoints.down(1025)]: {
             marginLeft: 'auto',
             marginRight: 'auto',
         },
         [theme.breakpoints.down(769)]: {
-            paddingLeft: '10%',
-            paddingRight: '10%',
+            paddingLeft: '5%',
+            paddingRight: '5%',
         },
+        [theme.breakpoints.down(435)]: {
+            paddingLeft: '0%',
+            paddingRight: '0%',
+          },
     },
     image: {
         width: '30%',
@@ -80,7 +85,7 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.down(769)]: {
             width: '50%',
         },
-        [theme.breakpoints.down(435)]: {
+        [theme.breakpoints.down(769)]: {
             width: '100%',
         },
     },
@@ -89,8 +94,6 @@ const useStyles = makeStyles((theme) => ({
 export default function TopServiceCard(props) {
     const classes = useStyles();
     const theme = useTheme();
-
-    console.log(props)
 
     if(props.serviceTitle === 'Website') {
         return(
