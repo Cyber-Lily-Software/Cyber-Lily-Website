@@ -7,7 +7,7 @@ export const useStyles = makeStyles((theme) => ({
   },
   bannerContent: {
     width: "100%",
-    height: "100%",
+    height: 836,
     background: "linear-gradient(180deg, #141433 25.52%, #1c1c39 71.87%, #20203d 93.23%, #2c2c47 100%)",
     display: "flex",
     paddingLeft: "7.5rem",
@@ -18,11 +18,13 @@ export const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down(435)]: {
       paddingRight: "1.25rem",
       paddingLeft: "1.25rem",
+      height: 592,
     },
   },
   bannerText: {
     color: "#ffffff",
     margin: "auto",
+    width: 486,
     "& > h1": {
       lineHeight: "3.5rem",
       fontSize: "3rem",
@@ -49,6 +51,7 @@ export const useStyles = makeStyles((theme) => ({
     },
     [theme.breakpoints.down(435)]: {
       textAlign: "center",
+      width: 335,
       "& > h1": {
         fontSize: "2rem",
         lineHeight: "2.5rem",
@@ -67,9 +70,31 @@ export const useStyles = makeStyles((theme) => ({
       marginBottom: "unset",
     },
   },
-  bannerImage: {
+  bannerImageContainer: {
     margin: "auto",
     paddingBottom: "2rem",
+  },
+  bannerImg: {
+    width: "100%",
+    height: "100%",
+  },
+  bannerImage: {
+    [theme.breakpoints.down(1920)]: {
+      width: 1380,
+      height: 934,
+    },
+    [theme.breakpoints.down(1440)]: {
+      width: 690,
+      height: 467
+    },
+    [theme.breakpoints.down(769)]: {
+      width: 615,
+      height: 416,
+    },
+    [theme.breakpoints.down(435)]: {
+      width: 320,
+      height: 260,
+    },
   },
   bannerContactButton: {
     display: "none",

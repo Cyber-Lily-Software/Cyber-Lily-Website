@@ -12,14 +12,10 @@ export default function LandingBanner() {
           <h1>Simple Solutions to Complex Problems</h1>
           <p>We design and develop amazing web products that grow your business.</p>
         </div>
-        <div className={styles.bannerImage}>
-          <picture>
-            <source media="(min-width: 2560px)" srcSet="/home_page/banner_home@2x.png" />
-            <source media="(min-width: 1440px)" srcSet="/home_page/banner_home.png" />
-            <source media="(min-width: 1024px)" srcSet="/home_page/banner_tablet.png" />
-            <source media="(min-width: 768px)" srcSet="/home_page/banner_tablet.png" />
-            <img src="/home_page/banner_mobile.png" />
-          </picture>
+        <div className={styles.bannerImageContainer}>
+          <div className={styles.bannerImage}>
+            <img src="/home_page_banner.svg" className={styles.bannerImg} />
+          </div>
         </div>
         <div className={styles.bannerContactButton}>
           <Button>Get in touch</Button>

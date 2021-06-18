@@ -3,13 +3,12 @@ import { React } from "react";
 import clsx from "clsx";
 
 import { flowChartClasses } from "../styles/FlowChartStyles";
-import { CallMissedSharp } from "@material-ui/icons";
 
 export default function FlowChart() {
   const styles = flowChartClasses();
 
   return (
-    <div>
+    <div className={styles.flowChartContainer}>
       <div className={styles.background}>
         <div className={styles.title}>
           <h1 className={styles.titleText}>
