@@ -16,7 +16,7 @@ export default function About() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navigation />
-      <TextBanner headerText={'Hello we are nerd'}/>
+      <TextBanner headerText={'Making Use of Computer Science to Transform Businesses of Any Size'}/>
       <WhoWeAreAbout />
       <OurGoalsAbout />
       <CoreValuesAbout />

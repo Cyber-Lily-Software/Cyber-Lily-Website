@@ -28,6 +28,7 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.down(1025)]: {
           textAlign: "center",
         },
+        
     },
     line1: {
       backgroundImage: "linear-gradient(120deg, #F68320 0%, #F68320 100%)",
