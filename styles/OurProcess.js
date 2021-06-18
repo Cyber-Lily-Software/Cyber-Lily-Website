@@ -48,7 +48,11 @@ const useStyles = makeStyles({
             textAlign: "center",
             marginBottom: '0rem !important',
           },
-          
+          [theme.breakpoints.down(435)]: {
+            fontWeight: 500,
+            fontSize: "1.75rem",
+            lineHeight: "2rem",
+          },
       },
       line1: {
         backgroundImage: "linear-gradient(120deg, #F68320 0%, #F68320 100%)",
