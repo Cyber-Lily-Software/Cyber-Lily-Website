@@ -24,7 +24,7 @@ export default function ServiceCustom() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navigation />
-      <TextBanner headerText={'Reliable and engaging web solutions for your business'}/>
+      <TextBanner headerText={'Custom software development services that grows your business'}/>
       <TopServiceCard 
       serviceTitle={'Custom software'}
       serviceImage={'./wdd_service@3x.png'}

@@ -41,6 +41,11 @@ export const useStyles = makeStyles((theme) => ({
     fontSize: '2.5rem',
     lineHeight: '3.25rem',
     marginBottom: '0rem',
+    [theme.breakpoints.down(435)]: {
+      fontWeight: 500,
+      fontSize: "1.75rem",
+      lineHeight: "2rem",
+    },
   },
   line1: {
     backgroundImage: "linear-gradient(120deg, #F68320 0%, #F68320 100%)",

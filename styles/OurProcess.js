@@ -8,6 +8,12 @@ const useStyles = makeStyles({
         flexWrap: "wrap",
         alignItems: "center",
         backgroundColor: "#F9F9FA",
+        paddingLeft: '5%',
+        paddingRight: '5%',
+        [theme.breakpoints.down(1025)]: {
+          paddingLeft: '1%',
+          paddingRight: '1%',
+        },
         [theme.breakpoints.down(420)]: {
           textAlign: "center !important",
           alignContent: "center !important",
@@ -42,7 +48,11 @@ const useStyles = makeStyles({
             textAlign: "center",
             marginBottom: '0rem !important',
           },
-          
+          [theme.breakpoints.down(435)]: {
+            fontWeight: 500,
+            fontSize: "1.75rem",
+            lineHeight: "2rem",
+          },
       },
       line1: {
         backgroundImage: "linear-gradient(120deg, #F68320 0%, #F68320 100%)",
