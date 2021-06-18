@@ -42,6 +42,9 @@ const useStyles = makeStyles((theme) => ({
         lineHeight: "1.5rem",
         width: "49.56rem",
         marginTop: "0rem",
+        [theme.breakpoints.up(1025)]: {
+            width: "90%",
+        },
         [theme.breakpoints.down(1025)]: {
             textAlign: "center",
             marginLeft: "auto",
@@ -143,6 +146,9 @@ const useStyles = makeStyles((theme) => ({
         }
     },
     text: {
+        [theme.breakpoints.up(1300)]: {
+            width: "50%",
+        },
         [theme.breakpoints.down(1025)]: {
         },
     },
