@@ -30,7 +30,7 @@ export default function ServiceWebApp() {
         <link rel="icon" href="/favicon.ico" />
         </Head>
         <Navigation />
-        <TextBanner headerText={'Reliable and engaging web solutions for your business'}/>
+        <TextBanner headerText={'Building applications the right way for your business'}/>
         <TopServiceCard
         serviceTitle={'Web application'}
         serviceImage={'./wadd_service@3x.png'}
