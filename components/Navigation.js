@@ -19,15 +19,15 @@ const navigationItems = [
     subNav: [
       {
         navText: "Website Design & Development",
-        url: "/services/web-design",
+        url: "/service-website",
       },
       {
         navText: "Web Application Design & Development",
-        url: "services/web-application",
+        url: "/service-web-app",
       },
       {
         navText: "Custom Software Development",
-        url: "services/custom-software",
+        url: "/service-custom",
       },
     ],
   },

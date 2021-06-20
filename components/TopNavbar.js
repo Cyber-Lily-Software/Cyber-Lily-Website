@@ -9,8 +9,8 @@ import { useStyles } from "../styles/TopNavbarStyle";
 
 const routeMap = {
   "/": "Home",
-  "/Services": "Services",
-  "/About": "About",
+  "/services": "Services",
+  "/about": "About",
 };
 
 export default function TopNavbar(props) {
