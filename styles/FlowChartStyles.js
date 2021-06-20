@@ -2,13 +2,14 @@ import { makeStyles } from "@material-ui/core/styles";
 
 export const flowChartClasses = makeStyles((theme) => ({
   flowChartContainer: {
-    overflowX: "auto",
+    [theme.breakpoints.down(769)]: {
+      overflowX: "hidden",
+    },
   },
   background: {
     width: "100%",
     backgroundColor: "#e8e8eb",
-    [theme.breakpoints.down(768)]: {
-    }
+    [theme.breakpoints.down(768)]: {},
   },
   flowChart: {
     margin: 0,
@@ -28,8 +29,8 @@ export const flowChartClasses = makeStyles((theme) => ({
       marginLeft: "2rem",
       width: "100%",
       "&::-webkit-scrollbar": {
-        display: "none"
-      }
+        display: "none",
+      },
     },
   },
   flowChartBackground: {

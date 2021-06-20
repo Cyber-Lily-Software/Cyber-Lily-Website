@@ -79,13 +79,13 @@ export const useStyles = makeStyles((theme) => ({
     height: "100%",
   },
   bannerImage: {
-    [theme.breakpoints.down(1920)]: {
+    [theme.breakpoints.down(1921)]: {
       width: 1380,
       height: 934,
     },
-    [theme.breakpoints.down(1440)]: {
+    [theme.breakpoints.down(1441)]: {
       width: 690,
-      height: 467
+      height: 467,
     },
     [theme.breakpoints.down(769)]: {
       width: 615,
