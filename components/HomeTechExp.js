@@ -66,7 +66,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   cardText: {
-    width: "70%",
+    width: "80%",
     fontWeight: 400,
     fontSize: "1rem",
     lineHeight: "1.75rem",
