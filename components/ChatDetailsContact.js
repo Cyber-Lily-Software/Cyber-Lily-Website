@@ -138,7 +138,7 @@ export default function WhoWeAreAbout() {
                 <Avatar className={classes.phoneAvatar} src="./phone@3x.png" />
                 <Typography className={classes.text2}>+27 723257125</Typography>
                 <Avatar className={classes.phoneAvatar} src="./phone@3x.png" />
-                <Typography className={classes.text2}>+263 00 000 000</Typography>
+                <Typography className={classes.text2}>+263 774 947 635</Typography>
             </div>
         </div>
     );
