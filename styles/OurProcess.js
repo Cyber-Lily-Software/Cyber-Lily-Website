@@ -3,22 +3,18 @@ import { customTheme as theme } from '../src/theme';
 
 const useStyles = makeStyles({
     root: {
-        width: "100%",
+        minWidth: "100% !important",
         display: "flex",
         flexWrap: "wrap",
         alignItems: "center",
         backgroundColor: "#F9F9FA",
-        paddingLeft: "7.5rem",
+        paddingLeft: '5%',
+        paddingRight: '5%',
         [theme.breakpoints.down(1025)]: {
-          paddingLeft: "5rem",
-          paddingRight: "5rem",
-        },
-        [theme.breakpoints.down(769)]: {
-          paddingLeft: "2rem",
-          paddingRight: "0rem",
+          paddingLeft: '1%',
+          paddingRight: '1%',
         },
         [theme.breakpoints.down(420)]: {
-          paddingLeft: "0rem",
           textAlign: "center !important",
           alignContent: "center !important",
           marginLeft: "auto",
@@ -52,7 +48,11 @@ const useStyles = makeStyles({
             textAlign: "center",
             marginBottom: '0rem !important',
           },
-          
+          [theme.breakpoints.down(435)]: {
+            fontWeight: 500,
+            fontSize: "1.75rem",
+            lineHeight: "2rem",
+          },
       },
       line1: {
         backgroundImage: "linear-gradient(120deg, #F68320 0%, #F68320 100%)",
