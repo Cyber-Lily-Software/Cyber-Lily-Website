@@ -109,7 +109,7 @@ export default function TopNavbar() {
         </div>
         <div className={classes.bottomStrip}>
             <Grid container direction="row">
-                <Grid item className={classes.bottomGridGrid} xs={12} sm={6} lg={4}>
+                <Grid item className={classes.bottomGridGrid} xs={12} sm={6} lg={6}>
                     <p weight={400}>&#169; 2021 Cyber Lily Software | Sitemap | Privacy Policy</p>
                 </Grid>
                 <Grid item className={classes.bottomGridComp} xs={12} sm={6}>

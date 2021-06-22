@@ -48,7 +48,7 @@ const useStyles = makeStyles({
   },
   footerColumnTwo: {
     [theme.breakpoints.down(1025)]: {
-      marginLeft: "3.875rem",
+      marginLeft: "1.5rem",
     },
     [theme.breakpoints.down(435)]: {
       marginLeft: "0.5rem !important",
@@ -161,11 +161,14 @@ const useStyles = makeStyles({
   bottomGridGrid: {
     marginTop: "0.625rem",
     alignItems: "right",
-    paddingLeft: "6.25rem",
+    paddingLeft: "5.25rem",
     [theme.breakpoints.down(1025)]: {
       marginTop: "0.625rem",
       alignItems: "left",
       fontSize: "0.875rem",
+      paddingLeft: "2.25rem !important",
+    },
+    [theme.breakpoints.down(769)]: {
       paddingLeft: "1.25rem !important",
     },
     [theme.breakpoints.down(460)]: {
