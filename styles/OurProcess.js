@@ -10,11 +10,15 @@ const useStyles = makeStyles({
         backgroundColor: "#F9F9FA",
         paddingLeft: '5%',
         paddingRight: '5%',
+        [theme.breakpoints.down(1550)]: {
+          paddingLeft: '0%',
+          paddingRight: '0%',
+        },
         [theme.breakpoints.down(1025)]: {
           paddingLeft: '1%',
           paddingRight: '1%',
         },
-        [theme.breakpoints.down(420)]: {
+        [theme.breakpoints.down(435)]: {
           textAlign: "center !important",
           alignContent: "center !important",
           marginLeft: "auto",
@@ -27,7 +31,7 @@ const useStyles = makeStyles({
         [theme.breakpoints.down(1025)]: {
           width: "50%",
         },
-        [theme.breakpoints.down(420)]: {
+        [theme.breakpoints.down(435)]: {
           width: "100%",
           textAlign: "center",
           alignContent: "center",

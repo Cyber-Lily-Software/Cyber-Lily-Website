@@ -13,6 +13,7 @@ const useStyles = makeStyles((theme) => ({
             perspective: "60rem",
             width: "100%",
             minHeight: '31.25rem',
+           
             [theme.breakpoints.down(1025)]: {
                 display: 'block',
                 alignItems: 'center',
@@ -27,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
             [theme.breakpoints.down(769)]: {
                 width: "100%",
             },
-            [theme.breakpoints.down(420)]: {
+            [theme.breakpoints.down(435)]: {
                 width: "100%",
                 paddingRight: '10%',
                 paddingLeft: '10%',
@@ -38,11 +39,15 @@ const useStyles = makeStyles((theme) => ({
             alignItems: 'center',
             paddingLeft: '10%',
             paddingRight: '10%',
+            [theme.breakpoints.down(1550)]: {
+                paddingLeft: '0%',
+                paddingRight: '0%',
+            },
             [theme.breakpoints.down(1025)]: {
                 paddingLeft: '10%',
                 paddingRight: '2%',
             },
-            [theme.breakpoints.down(420)]: {
+            [theme.breakpoints.down(435)]: {
                 paddingRight: '0%',
                 paddingLeft: '0%',
             },
@@ -50,9 +55,8 @@ const useStyles = makeStyles((theme) => ({
         avatar: {
             backgroundColor: "#FFF7E8",
             alignSelf: 'center',
-            position: "absolute",
-            marginLeft: "35%",
             marginRight: "auto",
+                marginLeft: "auto",
             [theme.breakpoints.down(1025)]: {
                 position: "relative",
                 marginRight: "auto",
@@ -61,14 +65,14 @@ const useStyles = makeStyles((theme) => ({
             [theme.breakpoints.down(769)]: {
                 position: "relative",
             },
-            [theme.breakpoints.down(420)]: {
+            [theme.breakpoints.down(435)]: {
                 position: "relative",
             }
         },
         avatar2: {
             backgroundColor: "#FEF3E9",
-            position: "absolute",
-            marginLeft: "35%",
+            marginRight: "auto",
+                marginLeft: "auto",
             [theme.breakpoints.down(1025)]: {
                 position: "relative",
                 marginRight: "auto",
@@ -80,8 +84,8 @@ const useStyles = makeStyles((theme) => ({
         },
         avatar3: {
             backgroundColor: "#F1EBF2",
-            position: "absolute",
-            marginLeft: "35%",
+            marginRight: "auto",
+                marginLeft: "auto",
             [theme.breakpoints.down(1025)]: {
                 position: "relative",
                 marginRight: "auto",
@@ -93,8 +97,8 @@ const useStyles = makeStyles((theme) => ({
         },
         avatar4: {
             backgroundColor: "#E6F3E9",
-            position: "absolute",
-            marginLeft: "35%",
+            marginRight: "auto",
+            marginLeft: "auto",
             [theme.breakpoints.down(1025)]: {
                 position: "relative",
                 marginRight: "auto",
@@ -109,9 +113,12 @@ const useStyles = makeStyles((theme) => ({
             fontWeight: 400,
             fontSize: "1rem",
             lineHeight: "1.5rem",
-            paddingTop: "-1rem",
             paddingLeft: "10%",
             paddingRight: "10%",
+            [theme.breakpoints.down(1550)]: {
+                paddingLeft: '5%',
+                paddingRight: '5%',
+            },
             [theme.breakpoints.down(1025)]: {
                 paddingTop: "1rem",
                 marginTop: "-2.5rem",
@@ -130,9 +137,10 @@ const useStyles = makeStyles((theme) => ({
         title: {
             textAlign: "center",
             fontWeight: 500,
-            fontSize: "2rem",
-            lineHeight: "1.5rem",
-            paddingTop: '5%',
+            fontSize: "1.5rem",
+            lineHeight: "2rem",
+            marginTop: '5%',
+            marginBottom: '5%',
             [theme.breakpoints.down(1025)]: {
                 paddingTop: '0%',
                 textAlign: "center",
