@@ -12,7 +12,7 @@ export default function GetInTouchFooter() {
       <img className={classes.logo} src="./logomark.png" />
       <p className={classes.textBlock}>Reach out and let's grow your</p>
       <p className={classes.textBlock2}>product together.</p>
-      <Button variant="contained" disableElevation className={classes.contactButton}>
+      <Button href="/contact" variant="contained" disableElevation className={classes.contactButton}>
         Get In Touch
       </Button>
     </div>
