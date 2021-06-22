@@ -186,6 +186,10 @@ export const useStyles = makeStyles((theme) => ({
       fontWeight: 500,
       "& $subNavButton": {
         fontWeight: 500,
+        "&:hover": {
+          backgroundColor: "#e8e8eb",
+          transition: "none",
+        },
       },
       "&:nth-child(1)": {
         borderRadius: "8px 8px 0px 0px",
@@ -224,6 +228,7 @@ export const useStyles = makeStyles((theme) => ({
     "& .MuiButton-root": {
       fontWeight: 400,
       textTransform: "capitalize",
+      transition: "none !important",
     },
   },
   navButton: {

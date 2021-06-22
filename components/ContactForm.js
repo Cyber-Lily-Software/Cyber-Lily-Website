@@ -31,6 +31,9 @@ const useStyles = makeStyles((theme) => ({
         paddingRight: "3rem",
         [theme.breakpoints.down(420)]: {
           height: "43rem",
+          width: '95%',
+          paddingLeft: "1rem",
+          paddingRight: "1rem",
         },
       },
       innerCard: {
@@ -69,6 +72,10 @@ const useStyles = makeStyles((theme) => ({
         marginLeft: "0.1rem",
         marginRight: '2rem',
         width: "12.59rem",
+        [theme.breakpoints.down(420)]: {
+          width: "9.5rem",
+          marginRight: '1rem',
+        },
       },
       radioBorder2: {
         border: "1px solid #141433",
@@ -77,7 +84,8 @@ const useStyles = makeStyles((theme) => ({
         marginRight: '0rem !important',
         paddingRight: '0rem !important',
         width: "12.59rem",
-        '& .MuiFormControlLabel-root': {
+        [theme.breakpoints.down(420)]: {
+          width: "9.5rem",
         },
       },
       sendButton: {
@@ -123,6 +131,7 @@ const useStyles = makeStyles((theme) => ({
       },
       formControl: {
         width: "100%",
+        
       },
       select: {
         width: "100%",

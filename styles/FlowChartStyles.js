@@ -1,21 +1,37 @@
 import { makeStyles } from "@material-ui/core/styles";
 
 export const flowChartClasses = makeStyles((theme) => ({
+  flowChartContainer: {
+    [theme.breakpoints.down(769)]: {
+      overflowX: "hidden",
+    },
+  },
   background: {
     width: "100%",
     backgroundColor: "#e8e8eb",
+    [theme.breakpoints.down(768)]: {},
   },
   flowChart: {
     margin: 0,
-    width: "100%",
     marginLeft: "auto",
     marginRight: "auto",
     width: "calc(100% - 128px)",
     maxWidth: 1380,
     minHeight: 450,
     position: "relative",
-    // display: "flex",
     backgroundColor: "#e8e8eb",
+    [theme.breakpoints.down(769)]: {
+      overflowX: "auto",
+      "-ms-overflow-style": "none",
+      scrollbarWidth: "none",
+      minHeight: 300,
+      marginRight: 0,
+      marginLeft: "2rem",
+      width: "100%",
+      "&::-webkit-scrollbar": {
+        display: "none",
+      },
+    },
   },
   flowChartBackground: {
     position: "absolute",
@@ -206,5 +222,32 @@ export const flowChartClasses = makeStyles((theme) => ({
     lineHeight: "1.75rem",
     color: "#43435C",
     fill: "#43435C",
+  },
+  line1: {
+    backgroundImage: "linear-gradient(120deg, #F68320 0%, #F68320 100%)",
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "100% 0.2em",
+    backgroundPosition: "0 88%",
+    transition: "background-size 0.25s ease-in",
+  },
+  title: {
+    textAlign: "center",
+    paddingTop: "6.25rem",
+    width: "100vw",
+  },
+  titleText: {
+    fontSize: "2.5rem",
+    fontWeight: 700,
+  },
+  swipeContainer: {
+    visibility: "hidden",
+    [theme.breakpoints.down(769)]: {
+      width: "100vw",
+      visibility: "visible",
+      textAlign: "right",
+      paddingBottom: "3.5rem",
+      paddingRight: "1.5rem",
+      fontWeight: 500,
+    },
   },
 }));
