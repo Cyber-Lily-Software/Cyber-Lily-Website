@@ -13,6 +13,7 @@ const useStyles = makeStyles((theme) => ({
             perspective: "60rem",
             width: "100%",
             minHeight: '31.25rem',
+           
             [theme.breakpoints.down(1025)]: {
                 display: 'block',
                 alignItems: 'center',
@@ -27,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
             [theme.breakpoints.down(769)]: {
                 width: "100%",
             },
-            [theme.breakpoints.down(420)]: {
+            [theme.breakpoints.down(435)]: {
                 width: "100%",
                 paddingRight: '10%',
                 paddingLeft: '10%',
@@ -38,6 +39,10 @@ const useStyles = makeStyles((theme) => ({
             alignItems: 'center',
             paddingLeft: '10%',
             paddingRight: '10%',
+            [theme.breakpoints.down(1550)]: {
+                paddingLeft: '0%',
+                paddingRight: '0%',
+            },
             [theme.breakpoints.down(1025)]: {
                 paddingLeft: '10%',
                 paddingRight: '2%',
@@ -112,6 +117,10 @@ const useStyles = makeStyles((theme) => ({
             paddingTop: "-1rem",
             paddingLeft: "10%",
             paddingRight: "10%",
+            [theme.breakpoints.down(1550)]: {
+                paddingLeft: '5%',
+                paddingRight: '5%',
+            },
             [theme.breakpoints.down(1025)]: {
                 paddingTop: "1rem",
                 marginTop: "-2.5rem",
