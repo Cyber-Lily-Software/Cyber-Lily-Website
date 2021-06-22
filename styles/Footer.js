@@ -18,7 +18,7 @@ const useStyles = makeStyles({
     },
     columnContainer: {
         width: "100%",
-        [theme.breakpoints.up(770)]: {
+        [theme.breakpoints.up(1026)]: {
           marginBottom: "2.75rem",
         },
     },
@@ -26,14 +26,14 @@ const useStyles = makeStyles({
         marginLeft: "7.625rem",
         marginRight: "auto",
         textAlign: "left",
-        [theme.breakpoints.down(769)]: {
+        [theme.breakpoints.down(1025)]: {
           marginLeft: "1.25rem",
           marginRight: "1.25rem",
           borderBottom: "0.0625rem solid #FFFFFF",
           maxHeight: "13.25rem",
           paddingBottom: "1.5rem",
         },
-        [theme.breakpoints.down(400)]: {
+        [theme.breakpoints.down(435)]: {
           marginLeft: "1.25rem",
           marginRight: "1.25rem",
           borderBottom: "0.0625rem solid #FFFFFF",
@@ -47,8 +47,11 @@ const useStyles = makeStyles({
         color: '#E8E8EB !important',
       },
       footerColumnTwo: {
-        [theme.breakpoints.down(769)]: {
+        [theme.breakpoints.down(1025)]: {
           marginLeft: "3.875rem",
+        },
+        [theme.breakpoints.down(435)]: {
+          marginLeft: "0.5rem !important",
         },
       },
       line1: {
@@ -63,7 +66,7 @@ const useStyles = makeStyles({
         display: "inline-block",
         fontSize: "1rem",
         color: '#FFFFFF',
-        [theme.breakpoints.up(770)]: {
+        [theme.breakpoints.up(1026)]: {
           marginTop: "2.75rem",
         },
         [theme.breakpoints.down(450)]: {
@@ -83,7 +86,7 @@ const useStyles = makeStyles({
         display: "inline-block",
         fontSize: "1rem",
         color: '#FFFFFF',
-        [theme.breakpoints.up(770)]: {
+        [theme.breakpoints.up(1026)]: {
           marginTop: "2.75rem",
         },
         [theme.breakpoints.down(450)]: {
@@ -103,16 +106,16 @@ const useStyles = makeStyles({
         display: "inline-block",
         fontSize: "1rem",
         color: '#FFFFFF',
-        [theme.breakpoints.up(770)]: {
+        // [theme.breakpoints.up(770)]: {
           marginTop: "2.75rem",
-        },
+        // },
         [theme.breakpoints.down(450)]: {
           marginBottom: 0,
           marginTop: "1.5rem !important",
         },
       },
       bottomStrip: {
-        [theme.breakpoints.up(770)]: {
+        [theme.breakpoints.up(1025)]: {
           borderTop: "0.0625rem solid #FFFFFF",
           marginRight: "1.25rem",
           marginLeft: "1.25rem",
@@ -154,12 +157,10 @@ const useStyles = makeStyles({
         },
       },
       bottomGridGrid: {
-        [theme.breakpoints.up(770)]: {
           marginTop: "0.625rem",
           alignItems: "right",
           paddingLeft: "6.25rem",
-        },
-        [theme.breakpoints.down(769)]: {
+        [theme.breakpoints.down(1025)]: {
           marginTop: "0.625rem",
           alignItems: "left",
           fontSize: "0.875rem",
