@@ -56,7 +56,7 @@ const useStyles = makeStyles((theme) => ({
             backgroundColor: "#FFF7E8",
             alignSelf: 'center',
             position: "absolute",
-            marginLeft: "35%",
+            marginLeft: "45%",
             marginRight: "auto",
             [theme.breakpoints.down(1025)]: {
                 position: "relative",
@@ -73,7 +73,7 @@ const useStyles = makeStyles((theme) => ({
         avatar2: {
             backgroundColor: "#FEF3E9",
             position: "absolute",
-            marginLeft: "35%",
+            marginLeft: "45%",
             [theme.breakpoints.down(1025)]: {
                 position: "relative",
                 marginRight: "auto",
@@ -86,7 +86,7 @@ const useStyles = makeStyles((theme) => ({
         avatar3: {
             backgroundColor: "#F1EBF2",
             position: "absolute",
-            marginLeft: "35%",
+            marginLeft: "45%",
             [theme.breakpoints.down(1025)]: {
                 position: "relative",
                 marginRight: "auto",
@@ -99,7 +99,7 @@ const useStyles = makeStyles((theme) => ({
         avatar4: {
             backgroundColor: "#E6F3E9",
             position: "absolute",
-            marginLeft: "35%",
+            marginLeft: "45%",
             [theme.breakpoints.down(1025)]: {
                 position: "relative",
                 marginRight: "auto",
@@ -139,8 +139,8 @@ const useStyles = makeStyles((theme) => ({
         title: {
             textAlign: "center",
             fontWeight: 500,
-            fontSize: "2rem",
-            lineHeight: "1.5rem",
+            fontSize: "1.5rem",
+            lineHeight: "2rem",
             paddingTop: '5%',
             [theme.breakpoints.down(1025)]: {
                 paddingTop: '0%',
