@@ -31,7 +31,7 @@ const useStyles = makeStyles({
         [theme.breakpoints.down(1025)]: {
           width: "50%",
         },
-        [theme.breakpoints.down(420)]: {
+        [theme.breakpoints.down(435)]: {
           width: "100%",
           textAlign: "center",
           alignContent: "center",

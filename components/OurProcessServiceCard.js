@@ -47,7 +47,7 @@ const useStyles = makeStyles((theme) => ({
                 paddingLeft: '10%',
                 paddingRight: '2%',
             },
-            [theme.breakpoints.down(420)]: {
+            [theme.breakpoints.down(435)]: {
                 paddingRight: '0%',
                 paddingLeft: '0%',
             },
@@ -66,7 +66,7 @@ const useStyles = makeStyles((theme) => ({
             [theme.breakpoints.down(769)]: {
                 position: "relative",
             },
-            [theme.breakpoints.down(420)]: {
+            [theme.breakpoints.down(435)]: {
                 position: "relative",
             }
         },
