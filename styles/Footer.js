@@ -117,8 +117,8 @@ const useStyles = makeStyles({
   bottomStrip: {
     [theme.breakpoints.up(1026)]: {
       borderTop: "0.0625rem solid #FFFFFF",
-      marginRight: "1.25rem",
-      marginLeft: "1.5rem",
+      marginRight: "2rem",
+      marginLeft: "2rem",
       paddingBottom: "1.875rem",
       maxHeight: "4.5rem",
     },
