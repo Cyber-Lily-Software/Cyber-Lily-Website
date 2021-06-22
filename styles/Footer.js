@@ -124,21 +124,25 @@ const useStyles = makeStyles({
     },
     [theme.breakpoints.down(1025)]: {
       marginRight: "1.25rem",
-      marginLeft: "1.3rem",
+      marginLeft: "-4.5rem",
       paddingBottom: "1.875rem",
       maxHeight: "6.5rem",
       textAlign: "center",
     },
-    [theme.breakpoints.down(760)]: {
+    [theme.breakpoints.down(769)]: {
       marginRight: "1.25rem",
       paddingBottom: "1.875rem",
       maxHeight: "6.5rem",
+      marginLeft: "1.3rem",
       textAlign: "center",
     },
   },
   bottomGridComp: {
-    [theme.breakpoints.up(1025)]: {
+    [theme.breakpoints.up(1026)]: {
       paddingLeft: "36% !important",
+    },
+    [theme.breakpoints.up(1020)]: {
+      paddingLeft: "30% !important",
     },
     [theme.breakpoints.up(1000)]: {
       paddingLeft: "26%",
