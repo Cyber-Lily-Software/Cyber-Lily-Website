@@ -55,9 +55,8 @@ const useStyles = makeStyles((theme) => ({
         avatar: {
             backgroundColor: "#FFF7E8",
             alignSelf: 'center',
-            position: "absolute",
-            marginLeft: "45%",
             marginRight: "auto",
+                marginLeft: "auto",
             [theme.breakpoints.down(1025)]: {
                 position: "relative",
                 marginRight: "auto",
@@ -72,8 +71,8 @@ const useStyles = makeStyles((theme) => ({
         },
         avatar2: {
             backgroundColor: "#FEF3E9",
-            position: "absolute",
-            marginLeft: "45%",
+            marginRight: "auto",
+                marginLeft: "auto",
             [theme.breakpoints.down(1025)]: {
                 position: "relative",
                 marginRight: "auto",
@@ -85,8 +84,8 @@ const useStyles = makeStyles((theme) => ({
         },
         avatar3: {
             backgroundColor: "#F1EBF2",
-            position: "absolute",
-            marginLeft: "45%",
+            marginRight: "auto",
+                marginLeft: "auto",
             [theme.breakpoints.down(1025)]: {
                 position: "relative",
                 marginRight: "auto",
@@ -98,8 +97,8 @@ const useStyles = makeStyles((theme) => ({
         },
         avatar4: {
             backgroundColor: "#E6F3E9",
-            position: "absolute",
-            marginLeft: "45%",
+            marginRight: "auto",
+            marginLeft: "auto",
             [theme.breakpoints.down(1025)]: {
                 position: "relative",
                 marginRight: "auto",
@@ -114,7 +113,6 @@ const useStyles = makeStyles((theme) => ({
             fontWeight: 400,
             fontSize: "1rem",
             lineHeight: "1.5rem",
-            paddingTop: "-1rem",
             paddingLeft: "10%",
             paddingRight: "10%",
             [theme.breakpoints.down(1550)]: {
@@ -141,7 +139,8 @@ const useStyles = makeStyles((theme) => ({
             fontWeight: 500,
             fontSize: "1.5rem",
             lineHeight: "2rem",
-            paddingTop: '5%',
+            marginTop: '5%',
+            marginBottom: '5%',
             [theme.breakpoints.down(1025)]: {
                 paddingTop: '0%',
                 textAlign: "center",
