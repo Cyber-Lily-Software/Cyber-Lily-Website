@@ -16,26 +16,26 @@ import SportsBasketballIcon from '@material-ui/icons/SportsBasketball';
         },
         {
           text: "Work Process",
-          url: "/workprocess",
+          url: "/",
         },
         {
           text: "Technology Toolkit",
-          url: "/techtoolkit",
+          url: "/service-website",
         },
       ];
 
       const serviceNavItems = [
         {
-          text: "Website Design & Devlopment",
-          url: "/webdesigndevelop/",
+          text: "Website Design & Development",
+          url: "/service-website",
         },
         {
           text: "Web Application Design & Development",
-          url: "/webappdesigndev",
+          url: "/service-web-app",
         },
         {
           text: "Custom Software Design & Development",
-          url: "/softwaredesigndev",
+          url: "/service-custom",
         },
       ];
 
