@@ -106,25 +106,25 @@ const useStyles = makeStyles({
     display: "inline-block",
     fontSize: "1rem",
     color: "#FFFFFF",
-    // [theme.breakpoints.up(770)]: {
+    [theme.breakpoints.up(1026)]: {
     marginTop: "2.75rem",
-    // },
+    },
     [theme.breakpoints.down(450)]: {
       marginBottom: 0,
       marginTop: "1.5rem !important",
     },
   },
   bottomStrip: {
-    [theme.breakpoints.up(1025)]: {
+    [theme.breakpoints.up(1026)]: {
       borderTop: "0.0625rem solid #FFFFFF",
       marginRight: "1.25rem",
-      marginLeft: "1.25rem",
+      marginLeft: "1.5rem",
       paddingBottom: "1.875rem",
       maxHeight: "4.5rem",
     },
-    [theme.breakpoints.down(769)]: {
+    [theme.breakpoints.down(1025)]: {
       marginRight: "1.25rem",
-      marginLeft: "1.25rem",
+      marginLeft: "1.3rem",
       paddingBottom: "1.875rem",
       maxHeight: "6.5rem",
       textAlign: "center",
