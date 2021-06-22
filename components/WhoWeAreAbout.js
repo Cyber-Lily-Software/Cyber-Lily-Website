@@ -12,6 +12,7 @@ const useStyles = makeStyles((theme) => ({
         paddingTop: "5rem",
         paddingLeft: "7.5rem",
         display: "flex",
+        marginBottom: '5%',
         [theme.breakpoints.down(1025)]: {
             paddingLeft: "0rem",
         },
@@ -27,6 +28,7 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.down(1025)]: {
           textAlign: "center",
         },
+        
     },
     line1: {
       backgroundImage: "linear-gradient(120deg, #F68320 0%, #F68320 100%)",
@@ -41,6 +43,9 @@ const useStyles = makeStyles((theme) => ({
         lineHeight: "1.5rem",
         width: "49.56rem",
         marginTop: "0rem",
+        [theme.breakpoints.up(1025)]: {
+            width: "90%",
+        },
         [theme.breakpoints.down(1025)]: {
             textAlign: "center",
             marginLeft: "auto",
@@ -142,6 +147,9 @@ const useStyles = makeStyles((theme) => ({
         }
     },
     text: {
+        [theme.breakpoints.up(1300)]: {
+            width: "50%",
+        },
         [theme.breakpoints.down(1025)]: {
         },
     },
