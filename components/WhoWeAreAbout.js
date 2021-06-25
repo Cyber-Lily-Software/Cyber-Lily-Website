@@ -214,8 +214,8 @@ export default function WhoWeAreAbout() {
                     </p>
                 </div>
                 <div className={classes.bothImages}>
-                    <img className={classes.image} src={"./andrei-3 1.png"}/>
-                    <img className={classes.image} src={"./macky 1.png"}/>
+                    <img className={classes.image} src={"./andrei-3 1.svg"}/>
+                    <img className={classes.image} src={"./macky 1.svg"}/>
                     <Typography className={classes.imageLabel1}>Andrei Dreyer</Typography>
                     <Typography className={classes.imageLabel_12}>Co-founder</Typography>
                     <Avatar className={classes.avatar1} src="./coolicon@3x.png" />
