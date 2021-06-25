@@ -87,7 +87,7 @@ const useStyles = makeStyles((theme) => ({
 const services = [
   {
     serviceName: "Website Design & Development",
-    imgUrl: "./Frame_service_card@3x 2.png",
+    imgUrl: "./Website.svg",
     serviceUrl: "/service-website",
     serviceIcon1: "./globe_service_card.png",
     serviceIcon2: "./globe_service_card@2x.png",
@@ -97,7 +97,7 @@ const services = [
   },
   {
     serviceName: "Web Application Design & Development",
-    imgUrl: "./Frame_service_card@3x.png",
+    imgUrl: "./WebApp.svg",
     serviceUrl: "/service-web-app",
     serviceIcon1: "./iphone_portrait_service_card.png",
     serviceIcon2: "./iphone_portrait_service_card@2x.png",
@@ -107,7 +107,7 @@ const services = [
   },
   {
     serviceName: "Custom Software Development",
-    imgUrl: "./Frame_service_card@3x 3.png",
+    imgUrl: "./CustomSoft.svg",
     serviceUrl: "/service-custom",
     serviceIcon1: "./code_service_card.png",
     serviceIcon2: "./code_service_card@2x.png",
