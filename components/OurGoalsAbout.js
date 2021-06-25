@@ -196,7 +196,7 @@ export default function OurGoalsAbout() {
                      but to help grow, streamline and improve each partner’s business through software.</p>
                 <div className={classes.cards}>
                     <div className={classes.card1}>
-                        <img className={classes.cardImage} src={"./Frame.png"}/>
+                        <img className={classes.cardImage} src={"./webApp.svg"}/>
                         <div className={classes.card1Text}>
                             <h3 className={classes.cardTitle1}>Web Development</h3>
                             <p className={classes.cardText}>Should we develop a website for you,
@@ -212,7 +212,7 @@ export default function OurGoalsAbout() {
                         </div>
                     </div>
                     <div className={classes.card2}>
-                        <img src={"./Frame 3.png"} className={classes.cardImage}/>
+                        <img src={"./CustomSoft.svg"} className={classes.cardImage}/>
                         <div className={classes.card1Text}>
                             <h3 className={classes.cardTitle2}>Software Development</h3>
                             <p className={classes.cardText2}>
