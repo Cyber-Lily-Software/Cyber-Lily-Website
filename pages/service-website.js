@@ -33,7 +33,7 @@ export default function ServiceWebsite() {
       <TextBanner headerText={'Reliable and engaging web solutions for your business'}/>
       <TopServiceCard 
       serviceTitle={'Website'}
-      serviceImage={'./csdd_service@3x.png'}
+      serviceImage={'./website.svg'}
       shortDesc={"Get more information about your company out there! A web presence allows people to find out everything they need to know about you without back and forth emails. Our website service is all about creating your online presence with the intention of using the website to passively bring you business and capture the interest of potential clients. We design and develop beautiful, modern and secure information based websites. "}
       />
       <OurProcessServicesWebDev />
