@@ -33,7 +33,7 @@ export default function ServiceWebApp() {
         <TextBanner headerText={'Building applications the right way for your business'}/>
         <TopServiceCard
         serviceTitle={'Web application'}
-        serviceImage={'./wadd_service@3x.png'}
+        serviceImage={'./webApp.svg'}
         shortDesc={""}
         />
         <OurProcessServicesWebApp />

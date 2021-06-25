@@ -27,7 +27,7 @@ export default function ServiceCustom() {
       <TextBanner headerText={'Custom software development services that grows your business'}/>
       <TopServiceCard 
       serviceTitle={'Custom software'}
-      serviceImage={'./wdd_service@3x.png'}
+      serviceImage={'./customSoft.svg'}
       shortDesc={"This service is similar to that of the web application service however is more tailored to being a local application, that is, an application that runs locally on your pc and does not need to be accessed through a web browser. This service also covers the development of mobile applications, that is, applications that run on a smartphone. These applications may have internet capabilities however they run independently and do not need to make use of a browser in order to execute their intended purpose. "}
       />
       <OurProcessServicesSoft />
