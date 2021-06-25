@@ -109,10 +109,10 @@ export default function HomeTechExp(props) {
               quick and easy process.
             </p>
           </div>
-          <img className={classes.cardImage} src={"./Home_fe@3x.png"} />
+          <img className={classes.cardImage} src={"./FrontEnd.svg"} />
         </div>
         <div className={classes.card}>
-          <img className={classes.cardImage} src={"./Home_be@3x 2.png"} />
+          <img className={classes.cardImage} src={"./BackEnd.svg"} />
           <div className={classes.title_text}>
             <h2 className={classes.cardTitle}> Back End </h2>
             <p className={classes.cardText}>
