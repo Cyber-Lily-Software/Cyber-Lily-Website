@@ -1,4 +1,11 @@
 import React, { useState } from 'react';
+
+import Swal from "sweetalert2";
+import emailjs from "emailjs-com";
+
+import { useFormik } from "formik";
+import * as Yup from "yup";
+
 import Link from "next/link";
 import TextField from '@material-ui/core/TextField';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
@@ -210,12 +217,51 @@ const useStyles = makeStyles((theme) => ({
       checked: {},
     })((props) => <Checkbox color="default" {...props} />);
     
+    const CONTACT_TEMPLATE_ID = process.env.CONTACT_TEMPLATE_ID;
+    const EMAILJS_SERVICE_ID = process.env.EMAILJS_SERVICE_ID;
+    const EMAILJS_USER_ID = process.env.EMAILJS_USER_ID;
+
     export default function ContactForm() {
     const classes = useStyles();
     const theme = useTheme();
 
     const [state, setState] = useState(0);
     const [value, setValue] = React.useState('query');
+  
+    const { width } = props;
+    const lgThanMd = width === "sm" || width === "xs";
+
+    const { values, touched, errors, isSubmitting, handleChange2, handleBlur, handleSubmit, handleReset, isValid, dirty } = useFormik({
+      initialValues: {
+        name: "",
+        surname: "",
+        email: "",
+        contactNumber: "",
+        feedback: "",
+      },
+
+      validationSchema: Yup.object().shape({
+        name: Yup.string().required("Name"),
+        surname: Yup.string().required("Surname"),
+        email: Yup.string().email("Please enter a valid email").required("Please enter your email"),
+        contactNumber: Yup.string().required("Contact Number"),
+        feedback: Yup.string().required("Please enter a message"),
+      }),
+
+      onSubmit: (values, { setSubmitting }) => {
+        const templateId = CONTACT_TEMPLATE_ID;
+
+        //This is a custom method from EmailJS that takes the information
+        //from the form and sends the email with the information gathered
+        //and formats the email based on the templateID provided.
+
+        sendFeedback(templateId, {
+          message: values.feedback,
+          from_name: values.name,
+          reply_to: values.email,
+        });
+      },
+    });
   
     const handleChange = (event) => {
       const name = event.target.name;
@@ -229,16 +275,21 @@ const useStyles = makeStyles((theme) => ({
       setValue(event.target.value);
     };
 
+    function validateEmail (email) {
+      const regexp = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      return regexp.test(email);
+    }
+
     const mobileBreakpoint = useMediaQuery(theme.breakpoints.down(4000));
   
     return (
-        <form id="root" className={classes.root} noValidate autoComplete="off">
+        <form id="root" className={classes.root} validate autoComplete="off">
             <div className={classes.innerCard}>
                 <div className={classes.front}>
                     <p className={classes.formFieldLabel}>Full Name</p>
                     <CssTextField id="outlined-basic" border= "1px solid #141433" placeholder="e.g. John Doe" variant="outlined" className={classes.textField} aria-describedby="outlined-weight-helper-text" required={true}/>
                     <p className={classes.formFieldLabel}>Email address</p>
-                    <CssTextField id="outlined-basic" placeholder="e.g. johndoe@gmail.com" variant="outlined" className={classes.textField}/>
+                    <CssTextField error={validateEmail(email)} type='email' id="outlined-basic" placeholder="e.g. johndoe@gmail.com" variant="outlined" onChange={(e) => getEmail(e.target.value)} className={classes.textField} errorText={'Please enter a valid email address.'}/>
                     <p className={classes.formFieldLabel}>How can we help you?</p>
                     <div className={classes.selector}>
                       <FormControl component="fieldset" >
