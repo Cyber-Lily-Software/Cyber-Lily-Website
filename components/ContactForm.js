@@ -228,23 +228,16 @@ const useStyles = makeStyles((theme) => ({
     const [state, setState] = useState(0);
     const [value, setValue] = React.useState('query');
   
-    const { width } = props;
-    const lgThanMd = width === "sm" || width === "xs";
-
     const { values, touched, errors, isSubmitting, handleChange2, handleBlur, handleSubmit, handleReset, isValid, dirty } = useFormik({
       initialValues: {
         name: "",
-        surname: "",
         email: "",
-        contactNumber: "",
         feedback: "",
       },
 
       validationSchema: Yup.object().shape({
         name: Yup.string().required("Name"),
-        surname: Yup.string().required("Surname"),
         email: Yup.string().email("Please enter a valid email").required("Please enter your email"),
-        contactNumber: Yup.string().required("Contact Number"),
         feedback: Yup.string().required("Please enter a message"),
       }),
 
