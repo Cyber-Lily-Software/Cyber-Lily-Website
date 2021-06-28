@@ -268,11 +268,6 @@ const useStyles = makeStyles((theme) => ({
       setValue(event.target.value);
     };
 
-    function validateEmail (email) {
-      const regexp = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-      return regexp.test(email);
-    }
-
     const mobileBreakpoint = useMediaQuery(theme.breakpoints.down(4000));
   
     return (
@@ -282,7 +277,15 @@ const useStyles = makeStyles((theme) => ({
                     <p className={classes.formFieldLabel}>Full Name</p>
                     <CssTextField id="outlined-basic" border= "1px solid #141433" placeholder="e.g. John Doe" variant="outlined" className={classes.textField} aria-describedby="outlined-weight-helper-text" required={true}/>
                     <p className={classes.formFieldLabel}>Email address</p>
-                    <CssTextField error={validateEmail(email)} type='email' id="outlined-basic" placeholder="e.g. johndoe@gmail.com" variant="outlined" onChange={(e) => getEmail(e.target.value)} className={classes.textField} errorText={'Please enter a valid email address.'}/>
+                    <CssTextField
+                      type='email'
+                      id="outlined-basic"
+                      placeholder="e.g. johndoe@gmail.com"
+                      variant="outlined"
+                      onChange={handleChange2}
+                      className={classes.textField}
+                      errorText={'Please enter a valid email address.'}
+                      />
                     <p className={classes.formFieldLabel}>How can we help you?</p>
                     <div className={classes.selector}>
                       <FormControl component="fieldset" >
@@ -361,7 +364,7 @@ const useStyles = makeStyles((theme) => ({
                         className={classes.checkbox}
                     />
                     <div className={classes.buttonDiv}>
-                        <Button variant="contained" href={""} disableElevation className={classes.sendButton}>
+                        <Button variant="contained" type="submit" disableElevation className={classes.sendButton}>
                             Send
                         </Button>
                     </div>
