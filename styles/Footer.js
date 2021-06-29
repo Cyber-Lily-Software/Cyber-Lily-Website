@@ -29,14 +29,14 @@ const useStyles = makeStyles({
     [theme.breakpoints.down(1025)]: {
       marginLeft: "1.25rem",
       marginRight: "1.25rem",
-      borderBottom: "0.0625rem solid #FFFFFF",
+      borderBottom: "0.0625rem solid #8A8A99",
       maxHeight: "13.25rem",
       paddingBottom: "1.5rem",
     },
     [theme.breakpoints.down(435)]: {
       marginLeft: "1.25rem",
       marginRight: "1.25rem",
-      borderBottom: "0.0625rem solid #FFFFFF",
+      borderBottom: "0.0625rem solid #8A8A99",
       maxHeight: "12.25rem",
     },
   },
@@ -45,6 +45,7 @@ const useStyles = makeStyles({
     fontSize: "1rem",
     marginTop: "0rem",
     color: "#E8E8EB !important",
+    
   },
   footerColumnTwo: {
     [theme.breakpoints.down(1025)]: {
@@ -116,7 +117,7 @@ const useStyles = makeStyles({
   },
   bottomStrip: {
     [theme.breakpoints.up(1026)]: {
-      borderTop: "0.0625rem solid #FFFFFF",
+      borderTop: "0.0625rem solid #8A8A99",
       marginRight: "2rem",
       marginLeft: "2rem",
       paddingBottom: "1.875rem",
@@ -204,6 +205,9 @@ const useStyles = makeStyles({
     marginTop: "0.75rem",
     marginBottom: "0",
     padding: "0",
+    "&:hover": {
+      fontWeight: "700",
+    }
   },
 });
 
