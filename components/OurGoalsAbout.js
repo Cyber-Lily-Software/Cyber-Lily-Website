@@ -211,7 +211,7 @@ export default function OurGoalsAbout() {
             </div>
             <div>
               <Link href="/service-website">
-                <Button className={classes.tellMeMoreButton} variant="outlined" color="#EF530B">
+                <Button className={classes.tellMeMoreButton} variant="outlined">
                   Tell me more
                 </Button>
               </Link>
@@ -229,7 +229,7 @@ export default function OurGoalsAbout() {
             </div>
             <div>
               <Link href="/service-custom">
-                <Button className={classes.tellMeMoreButton} variant="outlined" color="#EF530B">
+                <Button className={classes.tellMeMoreButton} variant="outlined">
                   Tell me more
                 </Button>
               </Link>

@@ -13,8 +13,8 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     backgroundColor: "#FFFFFF",
     paddingLeft: "7.5rem",
-    marginBottom: '10%',
-    marginTop: '3%',
+    marginBottom: "10%",
+    marginTop: "3%",
     [theme.breakpoints.down(1025)]: {
       paddingLeft: "0rem",
       textAlign: "center !important",
@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
   valueItem: {
     width: "33%",
     paddingBottom: "1rem",
-    verticalAlign: 'baseline',
+    verticalAlign: "baseline",
     [theme.breakpoints.down(1025)]: {
       width: "100%",
       textAlign: "center",
@@ -42,21 +42,20 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down(420)]: {
       paddingLeft: "1.25rem",
       paddingRight: "1.25rem",
-    }
+    },
   },
   topText: {
-      width: "100%",
-      alignItems: "center",
-      fontWeight: 700,
-      fontSize: "2.5rem",
-      lineHeight: "1.5rem",
-      marginBottom: "4rem !important",
-      marginTop: "5rem !important",
-      textAlign: "left",
-      [theme.breakpoints.down(1025)]: {
-        textAlign: "center",
-      },
-      
+    width: "100%",
+    alignItems: "center",
+    fontWeight: 700,
+    fontSize: "2.5rem",
+    lineHeight: "1.5rem",
+    marginBottom: "4rem !important",
+    marginTop: "5rem !important",
+    textAlign: "left",
+    [theme.breakpoints.down(1025)]: {
+      textAlign: "center",
+    },
   },
   line1: {
     backgroundImage: "linear-gradient(120deg, #F68320 0%, #F68320 100%)",
@@ -105,37 +104,39 @@ export default function HomeServiceCards(props) {
 
   return (
     <div className={classes.root}>
-        <h2 className={classes.topText} >Our <span className={classes.line1}>core values</span></h2>
-        {values.map((value) => {
-            if (mobileBreakpoint) {
-            return (
-                <div className={classes.valueItem}>
-                  <CoreValuesCard
-                      valueName={value.valueName}
-                      avatar={value.avatar}
-                      valueIcon={value.valueIcon}
-                      shortDesc={value.shortDesc}
-                      valueIcon1={value.valueIcon1}
-                      valueIcon2={value.valueIcon2}
-                      valueIcon3={value.valueIcon3}
-                  />
-                </div>
-            );
-            } else {
-            return (
-                <div className={classes.valueItem}>
-                    <CoreValuesCard
-                    valueName={value.valueName}
-                    avatar={value.avatar}
-                    valueIcon1={value.valueIcon1}
-                    valueIcon2={value.valueIcon2}
-                    valueIcon3={value.valueIcon3}
-                    shortDesc={value.shortDesc}
-                    />
-                </div>
-            );
-            }
-        })}
+      <h2 className={classes.topText}>
+        Our <span className={classes.line1}>core values</span>
+      </h2>
+      {values.map((value) => {
+        if (mobileBreakpoint) {
+          return (
+            <div className={classes.valueItem} key={value.valueName}>
+              <CoreValuesCard
+                valueName={value.valueName}
+                avatar={value.avatar}
+                valueIcon={value.valueIcon}
+                shortDesc={value.shortDesc}
+                valueIcon1={value.valueIcon1}
+                valueIcon2={value.valueIcon2}
+                valueIcon3={value.valueIcon3}
+              />
+            </div>
+          );
+        } else {
+          return (
+            <div className={classes.valueItem} key={value.valueName}>
+              <CoreValuesCard
+                valueName={value.valueName}
+                avatar={value.avatar}
+                valueIcon1={value.valueIcon1}
+                valueIcon2={value.valueIcon2}
+                valueIcon3={value.valueIcon3}
+                shortDesc={value.shortDesc}
+              />
+            </div>
+          );
+        }
+      })}
     </div>
   );
 }
