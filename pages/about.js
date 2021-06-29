@@ -16,7 +16,7 @@ export default function About() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navigation />
-      <TextBanner headerText={'Making Use of Computer Science to Transform Businesses of Any Size'}/>
+      <TextBanner headerText={"Making use of Computer Science to transform your business"} />
       <WhoWeAreAbout />
       <OurGoalsAbout />
       <CoreValuesAbout />
