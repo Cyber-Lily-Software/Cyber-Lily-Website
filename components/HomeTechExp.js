@@ -68,7 +68,7 @@ const useStyles = makeStyles((theme) => ({
   cardText: {
     width: "80%",
     fontWeight: 400,
-    fontSize: "1rem",
+    fontSize: "1.125rem",
     lineHeight: "1.75rem",
     [theme.breakpoints.down(1025)]: {
       width: "100%",

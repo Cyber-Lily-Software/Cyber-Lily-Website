@@ -16,26 +16,26 @@ import SportsBasketballIcon from '@material-ui/icons/SportsBasketball';
         },
         {
           text: "Work Process",
-          url: "/workprocess",
+          url: "/",
         },
         {
           text: "Technology Toolkit",
-          url: "/techtoolkit",
+          url: "/service-website",
         },
       ];
 
       const serviceNavItems = [
         {
-          text: "Website Design & Devlopment",
-          url: "/webdesigndevelop/",
+          text: "Website Design & Development",
+          url: "/service-website",
         },
         {
           text: "Web Application Design & Development",
-          url: "/webappdesigndev",
+          url: "/service-web-app",
         },
         {
           text: "Custom Software Design & Development",
-          url: "/softwaredesigndev",
+          url: "/service-custom",
         },
       ];
 
@@ -60,7 +60,7 @@ export default function TopNavbar() {
         <div className={classes.footerContainer}>
             <div className={classes.columnContainer}>
                 <Grid container orientation="column">
-                    <Grid item xs={12} sm={12} md={4}>
+                    <Grid item xs={12} sm={12} md={12} lg={4}>
                         <div className={classes.footerColumns}>
                             <div className={classes.footerColumnTwo}>
                               <h2 className={classes.headers} ><span className={classes.line1}>COMPANY</span></h2>
@@ -76,7 +76,7 @@ export default function TopNavbar() {
                             </div>
                         </div>
                     </Grid>
-                    <Grid item xs={12} sm={12} md={4}>
+                    <Grid item xs={12} sm={12} md={12} lg={4}>
                         <div className={classes.footerColumns}>
                           <div className={classes.footerColumnTwo}>
                             <h2 className={classes.headers2} ><span className={classes.line2}>SERVICES</span></h2>
@@ -92,13 +92,13 @@ export default function TopNavbar() {
                           </div>
                         </div>
                     </Grid>
-                    <Grid item xs={12} sm={12} md={4}>
+                    <Grid item xs={12} sm={12} md={12} lg={4}>
                         <div className={classes.footerColumns}>
                           <div className={classes.footerColumnTwo}>
                             <h2 className={classes.headers3} ><span className={classes.line3}>GET IN TOUCH</span></h2>
                             <div className={classes.footerLinks}>
                               {getInTouchNavItems.map((companyNavItem) => (
-                                  <p className={classes.p}>{companyNavItem.text}</p>
+                                  <p className={classes.pCompany}>{companyNavItem.text}</p>
                               ))}
                             </div>
                           </div>
@@ -109,7 +109,7 @@ export default function TopNavbar() {
         </div>
         <div className={classes.bottomStrip}>
             <Grid container direction="row">
-                <Grid item className={classes.bottomGridGrid} xs={12} sm={6}>
+                <Grid item className={classes.bottomGridGrid} xs={12} sm={6} lg={6}>
                     <p weight={400}>&#169; 2021 Cyber Lily Software | Sitemap | Privacy Policy</p>
                 </Grid>
                 <Grid item className={classes.bottomGridComp} xs={12} sm={6}>

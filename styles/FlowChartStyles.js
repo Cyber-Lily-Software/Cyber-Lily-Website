@@ -17,7 +17,7 @@ export const flowChartClasses = makeStyles((theme) => ({
     marginRight: "auto",
     width: "calc(100% - 128px)",
     maxWidth: 1380,
-    minHeight: 450,
+    minHeight: 400,
     position: "relative",
     backgroundColor: "#e8e8eb",
     [theme.breakpoints.down(769)]: {

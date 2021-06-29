@@ -23,7 +23,7 @@ export default function FlowChart() {
               xmlns="http://www.w3.org/2000/svg"
               xmlnsXlink="http://wwww.w3.org/1999/xlink"
               fill="none"
-              viewBox="0 0 1035 375"
+              viewBox="0 0 1035 300"
             >
               <g className={styles.flowChartEdgeGroup} data-line-group="1" id="flowChart-2_edge-1_2">
                 <path
