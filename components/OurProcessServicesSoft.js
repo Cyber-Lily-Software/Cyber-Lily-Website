@@ -4,7 +4,7 @@ import OurProcessServiceCard from "./OurProcessServiceCard";
 
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
-import {useStyles} from '../styles/OurProcess';
+import { useStyles } from "../styles/OurProcess";
 
 const processs = [
   {
@@ -53,37 +53,39 @@ export default function OurProcessServicesSoft(props) {
 
   return (
     <div className={classes.root}>
-        <h2 className={classes.topText} >Our <span className={classes.line1}>process</span></h2>
-        {processs.map((process) => {
-            if (mobileBreakpoint) {
-            return (
-                <div className={classes.processItem}>
-                  <OurProcessServiceCard
-                      processName={process.processName}
-                      avatar={process.avatar}
-                      processIcon={process.processIcon}
-                      shortDesc={process.shortDesc}
-                      processIcon1={process.processIcon1}
-                      processIcon2={process.processIcon2}
-                      processIcon3={process.processIcon3}
-                  />
-                </div>
-            );
-            } else {
-            return (
-                <div className={classes.processItem}>
-                    <OurProcessServiceCard
-                    processName={process.processName}
-                    avatar={process.avatar}
-                    processIcon1={process.processIcon1}
-                    processIcon2={process.processIcon2}
-                    processIcon3={process.processIcon3}
-                    shortDesc={process.shortDesc}
-                    />
-                </div>
-            );
-            }
-        })}
+      <h2 className={classes.topText}>
+        Our <span className={classes.line1}>process</span>
+      </h2>
+      {processs.map((process) => {
+        if (mobileBreakpoint) {
+          return (
+            <div className={classes.processItem} key={process.processName}>
+              <OurProcessServiceCard
+                processName={process.processName}
+                avatar={process.avatar}
+                processIcon={process.processIcon}
+                shortDesc={process.shortDesc}
+                processIcon1={process.processIcon1}
+                processIcon2={process.processIcon2}
+                processIcon3={process.processIcon3}
+              />
+            </div>
+          );
+        } else {
+          return (
+            <div className={classes.processItem} key={process.processName}>
+              <OurProcessServiceCard
+                processName={process.processName}
+                avatar={process.avatar}
+                processIcon1={process.processIcon1}
+                processIcon2={process.processIcon2}
+                processIcon3={process.processIcon3}
+                shortDesc={process.shortDesc}
+              />
+            </div>
+          );
+        }
+      })}
     </div>
   );
 }
