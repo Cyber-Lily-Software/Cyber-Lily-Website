@@ -148,10 +148,10 @@ const useStyles = makeStyles((theme) => ({
           },
         },
         '&:hover fieldset': {
-          borderColor: '#EF530B !important',
+          borderColor: 'black',
         },
         '&.Mui-focused fieldset': {
-          borderColor: '#EF530B !important',
+          borderColor: 'black !important',
         },
       },
       icon: {
@@ -169,10 +169,10 @@ const useStyles = makeStyles((theme) => ({
             borderColor: 'black',
           },
           '&:hover fieldset': {
-            borderColor: '#EF530B',
+            borderColor: 'black',
           },
           '&.Mui-focused fieldset': {
-            borderColor: '#EF530B',
+            borderColor: 'black',
           },
         },
       },
