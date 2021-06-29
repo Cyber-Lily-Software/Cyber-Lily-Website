@@ -135,7 +135,7 @@ export default function HomeServiceCards(props) {
         {services.map((service) => {
           if (mobileBreakpoint) {
             return (
-              <div className={classes.serviceItem}>
+              <div className={classes.serviceItem} key={service.serviceName}>
                 <ServiceCard
                   serviceName={service.serviceName}
                   serviceImage={service.imgUrl}
@@ -150,7 +150,7 @@ export default function HomeServiceCards(props) {
             );
           } else {
             return (
-              <div className={classes.serviceItem}>
+              <div className={classes.serviceItem} key={service.serviceName}>
                 <ServiceCard
                   serviceName={service.serviceName}
                   serviceImage={service.imgUrl}
@@ -176,7 +176,7 @@ export default function HomeServiceCards(props) {
         {services.map((service) => {
           if (mobileBreakpoint) {
             return (
-              <div className={classes.serviceItem}>
+              <div className={classes.serviceItem} key={service.serviceName}>
                 <ServiceCard
                   serviceName={service.serviceName}
                   serviceImage={service.imgUrl}
@@ -191,7 +191,7 @@ export default function HomeServiceCards(props) {
             );
           } else {
             return (
-              <div className={classes.serviceItem}>
+              <div className={classes.serviceItem} key={service.serviceName}>
                 <ServiceCard
                   serviceName={service.serviceName}
                   serviceImage={service.imgUrl}
