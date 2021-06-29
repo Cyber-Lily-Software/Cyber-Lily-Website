@@ -9,7 +9,9 @@ import { useStyles } from "../styles/TopNavbarStyle";
 
 const routeMap = {
   "/": "Home",
-  "/services": "Services",
+  "/service-website": "Services",
+  "/service-web-app": "Services",
+  "/service-custom": "Services",
   "/about": "About",
 };
 
@@ -25,13 +27,11 @@ export default function TopNavbar(props) {
         if (navItem.navText === "Services") {
           return (
             <div className={clsx(styles.navItem, styles.servicesNavItem)} key={navItem.navText}>
-              <Link href={navItem.navUrl}>
-                <Button
-                  className={clsx(styles.navButton, styles.servicesNavButton, routeMap[router.route] === navItem.text ? styles.activeLinkText : "")}
-                >
-                  {navItem.navText}
-                </Button>
-              </Link>
+              <Button
+                className={clsx(styles.navButton, styles.servicesNavButton, routeMap[router.route] === navItem.text ? styles.activeLinkText : "")}
+              >
+                {navItem.navText}
+              </Button>
               <div className={routeMap[router.route] === navItem.navText ? styles.servicesActiveLink : ""}></div>
               <ul className={styles.submenuList}>
                 {navItem.subNav.map((subNavItem) => (

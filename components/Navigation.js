@@ -62,9 +62,7 @@ export default function Navigation() {
   return (
     <header className={styles.navbarContainer}>
       <div className={styles.logoDiv}>
-        <Link href="/">
-          <Logo />
-        </Link>
+        <Logo />
       </div>
       <div className={styles.topNav} id="topNavbar">
         <TopNavbar navItems={navigationItems} />
