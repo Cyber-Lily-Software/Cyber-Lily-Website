@@ -99,7 +99,7 @@ const useStyles = makeStyles((theme) => ({
     },
     avatar: {
         backgroundColor: "#E8E8EB",
-        padding: '0.2rem',
+        padding: '0.5rem',
         [theme.breakpoints.down(1025)]: {
             marginLeft: '3.5rem',
         },
@@ -112,7 +112,7 @@ const useStyles = makeStyles((theme) => ({
     },
     phoneAvatar: {
         backgroundColor: "#E8E8EB",
-        padding: '0.2rem',
+        padding: '0.5rem',
         [theme.breakpoints.down(1025)]: {
             marginLeft: '3.5rem',
         },
