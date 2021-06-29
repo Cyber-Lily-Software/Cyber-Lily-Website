@@ -98,7 +98,7 @@ export default function TopNavbar() {
                             <h2 className={classes.headers3} ><span className={classes.line3}>GET IN TOUCH</span></h2>
                             <div className={classes.footerLinks}>
                               {getInTouchNavItems.map((companyNavItem) => (
-                                  <p className={classes.p}>{companyNavItem.text}</p>
+                                  <p className={classes.pCompany}>{companyNavItem.text}</p>
                               ))}
                             </div>
                           </div>

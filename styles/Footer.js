@@ -209,6 +209,11 @@ const useStyles = makeStyles({
       fontWeight: "700",
     }
   },
+  pCompany: {
+    marginTop: "0.75rem",
+    marginBottom: "0",
+    padding: "0",
+  }
 });
 
 export { useStyles };
