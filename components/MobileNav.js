@@ -77,7 +77,7 @@ export default function MobileNav(props) {
                     <div className={styles.subMenuContainer}>
                       <ul className={submenuOpen ? styles.subMenuListOpen : styles.subMenuList}>
                         {navItem.subNav.map((subNavItem) => (
-                          <Link href={subNavItem.url}>
+                          <Link href={subNavItem.url} key={subNavItem.url}>
                             <li key={subNavItem.navText} className={styles.serviceNavItem}>
                               <Button className={styles.serviceNavItemBtn}>{subNavItem.navText}</Button>
                             </li>
