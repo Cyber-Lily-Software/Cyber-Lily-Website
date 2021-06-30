@@ -225,11 +225,13 @@ export default function ContactForm() {
 
   const [state, setState] = useState(0);
   const [value, setValue] = React.useState("query");
+  const [budgetChoice, setBudgetChoice] = React.useState('');
 
-  const { values, touched, errors, isSubmitting, handleChange2, handleBlur, handleSubmit, handleReset, isValid, dirty } = useFormik({
+  const { values, touched, errors, isSubmitting, handleChange2, handleBudgetChange, handleBlur, handleSubmit, handleReset, isValid, dirty } = useFormik({
     initialValues: {
       name: "",
       email: "",
+      budget: "",
       feedback: "",
     },
 
@@ -241,7 +243,7 @@ export default function ContactForm() {
 
     onSubmit: (values, { setSubmitting }) => {
       const templateId = CONTACT_TEMPLATE_ID;
-
+      
       //This is a custom method from EmailJS that takes the information
       //from the form and sends the email with the information gathered
       //and formats the email based on the templateID provided.
@@ -249,6 +251,7 @@ export default function ContactForm() {
       sendFeedback(templateId, {
         message: values.feedback,
         from_name: values.name,
+        budget: values.budget,
         reply_to: values.email,
       });
     },
@@ -266,8 +269,11 @@ export default function ContactForm() {
     setValue(event.target.value);
   };
 
-  const mobileBreakpoint = useMediaQuery(theme.breakpoints.down(4000));
+  // const handleBudgetChange = (event) => {
+  //   setBudgetChoice(event.target.value);
+  // };
 
+  const mobileBreakpoint = useMediaQuery(theme.breakpoints.down(4000));
   return (
     <form id="root" className={classes.root} validate="true" autoComplete="off">
       <div className={classes.innerCard}>
@@ -327,7 +333,7 @@ export default function ContactForm() {
               <CssSelect
                 native={true}
                 value={state.age}
-                onChange={handleChange}
+                onChange={handleBudgetChange}
                 id="budgetSelect"
                 className={classes.select}
                 inputProps={{
