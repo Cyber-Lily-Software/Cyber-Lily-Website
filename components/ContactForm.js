@@ -241,12 +241,14 @@ export default function ContactForm() {
       feedback: Yup.string().required("Please enter a message"),
     }),
 
+    
+
     onSubmit: (values, { setSubmitting }) => {
       const templateId = CONTACT_TEMPLATE_ID;
-      
       //This is a custom method from EmailJS that takes the information
       //from the form and sends the email with the information gathered
       //and formats the email based on the templateID provided.
+
 
       sendFeedback(templateId, {
         message: values.feedback,
@@ -273,9 +275,28 @@ export default function ContactForm() {
   //   setBudgetChoice(event.target.value);
   // };
 
+  //Custom EmailJS method
+  const sendFeedback = (templateId, variables) => {
+    emailjs.send(EMAILJS_SERVICE_ID, templateId, variables, EMAILJS_USER_ID).then((res) => {
+        // Email successfully sent alert
+        Swal.fire({
+          title: "Email Successfully Sent",
+          icon: "success",
+        });
+      })
+      // Email Failed to send Error alert
+      .catch((err) => {
+        Swal.fire({
+          title: "Email Failed to Send",
+          icon: "error",
+        });
+        console.error("Email Error:", err);
+      });
+  };
+
   const mobileBreakpoint = useMediaQuery(theme.breakpoints.down(4000));
   return (
-    <form id="root" className={classes.root} validate="true" autoComplete="off">
+    <form id="root" className={classes.root} validate="true" autoComplete="off" onSubmit={handleSubmit}>
       <div className={classes.innerCard}>
         <div className={classes.front}>
           <p className={classes.formFieldLabel}>Full Name</p>
@@ -296,7 +317,6 @@ export default function ContactForm() {
             variant="outlined"
             onChange={handleChange2}
             className={classes.textField}
-            // errorText={"Please enter a valid email address."}
           />
           <p className={classes.formFieldLabel}>How can we help you?</p>
           <div className={classes.selector}>
@@ -370,7 +390,7 @@ export default function ContactForm() {
             className={classes.checkbox}
           />
           <div className={classes.buttonDiv}>
-            <Button variant="contained" type="submit" disableElevation className={classes.sendButton}>
+            <Button className={classes.sendButton} type="submit" variant="contained" disableElevation >
               Send
             </Button>
           </div>
