@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 import Swal from "sweetalert2";
 import emailjs from "emailjs-com";
+import { init } from "emailjs-com";
 
 import { useFormik } from "formik";
 import * as Yup from "yup";
@@ -225,23 +226,25 @@ export default function ContactForm() {
 
   const [state, setState] = useState(0);
   const [value, setValue] = React.useState("query");
-  const [budgetChoice, setBudgetChoice] = React.useState('');
+  const [budgetChoice, setBudgetChoice] = React.useState("");
 
-  const { values, touched, errors, isSubmitting, handleChange2, handleBudgetChange, handleBlur, handleSubmit, handleReset, isValid, dirty } = useFormik({
+  init(EMAILJS_USER_ID);
+
+  const { values, touched, errors, isSubmitting, handleChange, handleBlur, handleSubmit, handleReset, isValid, dirty } = useFormik({
     initialValues: {
       name: "",
       email: "",
-      budget: "",
+      budget: 0,
+      nda: false,
       feedback: "",
     },
 
     validationSchema: Yup.object().shape({
-      name: Yup.string().required("Name"),
+      name: Yup.string().required("Please enter a name"),
       email: Yup.string().email("Please enter a valid email").required("Please enter your email"),
+      budget: Yup.number(),
       feedback: Yup.string().required("Please enter a message"),
     }),
-
-    
 
     onSubmit: (values, { setSubmitting }) => {
       const templateId = CONTACT_TEMPLATE_ID;
@@ -249,23 +252,26 @@ export default function ContactForm() {
       //from the form and sends the email with the information gathered
       //and formats the email based on the templateID provided.
 
+      console.log(values);
+      console.log("firing");
 
       sendFeedback(templateId, {
         message: values.feedback,
         from_name: values.name,
         budget: values.budget,
         reply_to: values.email,
+        nda: values.nda,
       });
     },
   });
 
-  const handleChange = (event) => {
-    const name = event.target.name;
-    setState({
-      ...state,
-      [name]: event.target.state,
-    });
-  };
+  // const handleChange = (event) => {
+  //   const name = event.target.name;
+  //   setState({
+  //     ...state,
+  //     [name]: event.target.state,
+  //   });
+  // };
 
   const handleGroupChange = (event) => {
     setValue(event.target.value);
@@ -277,7 +283,9 @@ export default function ContactForm() {
 
   //Custom EmailJS method
   const sendFeedback = (templateId, variables) => {
-    emailjs.send(EMAILJS_SERVICE_ID, templateId, variables, EMAILJS_USER_ID).then((res) => {
+    emailjs
+      .send(EMAILJS_SERVICE_ID, templateId, variables, EMAILJS_USER_ID)
+      .then((res) => {
         // Email successfully sent alert
         Swal.fire({
           title: "Email Successfully Sent",
@@ -296,27 +304,38 @@ export default function ContactForm() {
 
   const mobileBreakpoint = useMediaQuery(theme.breakpoints.down(4000));
   return (
-    <form id="root" className={classes.root} validate="true" autoComplete="off" onSubmit={handleSubmit}>
+    <form id="root" className={classes.root} onSubmit={handleSubmit}>
       <div className={classes.innerCard}>
         <div className={classes.front}>
           <p className={classes.formFieldLabel}>Full Name</p>
           <CssTextField
-            id="outlined-basic"
+            id="name"
+            name="name"
             border="1px solid #141433"
             placeholder="e.g. John Doe"
             variant="outlined"
             className={classes.textField}
             aria-describedby="outlined-weight-helper-text"
             required={true}
+            value={values.name}
+            onChange={handleChange}
+            onBlur={handleBlur}
+            helperText={touched.name ? errors.name : ""}
+            error={touched.name && !!errors.name}
           />
           <p className={classes.formFieldLabel}>Email address</p>
           <CssTextField
             type="email"
-            id="outlined-basic"
+            name="email"
+            id="email"
             placeholder="e.g. johndoe@gmail.com"
             variant="outlined"
-            onChange={handleChange2}
             className={classes.textField}
+            onChange={handleChange}
+            value={values.email}
+            onBlur={handleBlur}
+            helperText={touched.email ? errors.email : ""}
+            error={touched.email && !!errors.email}
           />
           <p className={classes.formFieldLabel}>How can we help you?</p>
           <div className={classes.selector}>
@@ -352,9 +371,10 @@ export default function ContactForm() {
             <FormControl variant="outlined" className={classes.formControl}>
               <CssSelect
                 native={true}
-                value={state.age}
-                onChange={handleBudgetChange}
-                id="budgetSelect"
+                value={values.budget}
+                onChange={handleChange}
+                id="budget"
+                name="budget"
                 className={classes.select}
                 inputProps={{
                   classes: {
@@ -381,16 +401,37 @@ export default function ContactForm() {
             </FormControl>
           </div>
           <p className={classes.formFieldLabel}>Tell us more</p>
-          <CssTextField id="outlined-multiline-static" className={classes.textField} multiline rows={4} placeholder="Message" variant="outlined" />
+          <CssTextField
+            id="feedback"
+            name="feedback"
+            className={classes.textField}
+            multiline
+            rows={4}
+            placeholder="Message"
+            variant="outlined"
+            onChange={handleChange}
+            onBlur={handleBlur}
+            helperText={touched.feedback ? errors.feedback : ""}
+            error={touched.feedback && !!errors.feedback}
+          />
           <FormControlLabel
             value="end"
-            control={<OrangeCheckbox inputProps={{ "aria-label": "query" }} />}
+            control={
+              <OrangeCheckbox
+                name="nda"
+                id="nda"
+                value={values.nda}
+                onChange={handleChange}
+                onBlur={handleBlur}
+                inputProps={{ "aria-label": "query" }}
+              />
+            }
             label="Send me a non-disclosure agreement."
             labelPlacement="end"
             className={classes.checkbox}
           />
           <div className={classes.buttonDiv}>
-            <Button className={classes.sendButton} type="submit" variant="contained" disableElevation >
+            <Button className={classes.sendButton} type="submit" variant="contained" disableElevation>
               Send
             </Button>
           </div>
